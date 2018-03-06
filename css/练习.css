@@ -1,0 +1,50 @@
+   
+
+     .all{
+
+              width: 356px;
+              height: 411px;
+              background-color: rgb(240,246,255);
+              border:1px solid ;
+              margin: 5% auto;
+
+     }
+
+     header{
+
+	      background: white;
+
+
+       }
+
+
+       .#box1 img{  
+                    width: 30%;
+                    height: 12%;
+                   
+
+       }
+
+
+       .#box2{     
+       	     
+             height: 50px;
+             border:1px solid white;
+             text-align: center;
+             line-height: 25px;
+             position:absolute;
+             display: inline-block;
+             float:left;
+            
+
+       }
+
+
+       .c#box3 img{  
+                     width:10px; 
+                     height:10px;
+       	             position:absolute;
+       	             float:right;
+
+
+       }

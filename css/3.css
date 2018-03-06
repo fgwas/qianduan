@@ -1,0 +1,78 @@
+ 
+
+  body{
+  	    margin:5px;
+        background:rgb(104,205,214);
+        color: white;
+       
+          } 
+
+    .task1 img{
+
+    	  width: 50px;
+    	  height: 50px;
+
+    	  margin-top: 15px;
+    	  margin-left: 15px;
+             
+    }
+        
+    .task2 img{
+                 width:180px;
+                 height: 70px;
+                
+                 margin-top: 5%;
+                 margin-left: 50%;
+                
+    }
+
+       #s{
+          
+                font-size: 20px;
+          
+                text-align: center;
+                text-indent: 2em;
+                margin-top: 5%;
+
+
+
+          }
+
+    .task3 img{
+    	      width:60px;
+    	      height:60px;
+    	      margin-left:250px;
+              margin-top:10%;
+    	    
+    	
+    }	
+
+    .task3 {
+    	   float:left;
+    } 
+
+     .task3 p{
+
+     	margin-left:250px;
+     }     
+    
+    
+    .task4 img{
+                 width:60px;
+                 height:60px;
+                 margin-right:250px;
+                 margin-top:10%;
+             }
+
+    .task4 {
+    	   float:right;
+    }
+      .task4 p{
+      	 margin-right:250px;
+      }
+  
+
+
+
+
+    
