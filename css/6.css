@@ -1,48 +1,49 @@
 
 body {
     margin: 0;
+    font-family: Arial;
 
 }
 
 .all {
-    width: 720px;
-    height: 1280px;
+    max-width: 1200px;
     background-color: white;
+    margin: 0 auto;
 
 }
 
 header {
-    width: 720px;
-    height: 5%;
+
+    height: 89px;
     background: rgb(95, 192, 205);
 
 }
 
 .span1 {
-    display: block;
-    width: 15%;
+
+    width: 20%;
     height: 80%;
     background: rgb(85, 168, 179);
     color: white;
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
-    line-height: 50px;
+    line-height: 70px;
     border-radius: 10px;
     margin-top: 1%;
     float: left;
-    margin-left: 33%;
+    margin-left: 30%;
 
 }
 
 .span2 {
-    display: block;
-    width: 15%;
+
+    width: 20%;
     height: 80%;
     background: white;
     color: rgb(137, 208, 218);
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
-    line-height: 50px;
+    line-height: 70px;
     border-radius: 10px;
     margin-top: 1%;
     float: left;
@@ -53,26 +54,103 @@ header {
 
     float: right;
     margin-right: 20px;
-    margin-top: 1.2%;
+    margin-top: 2%;
 
 }
 
 .span4 {
-    display: block;
-    width: 100px;
+
     color: rgb(175, 186, 192);
     font-size: 25px;
     margin-left: 12%;
-    margin-top: 3%;
-
-}
-
-.span5 img {
-
-    display: block;
+    margin-top: 4%;
     float: left;
 
 }
 
+.span5 {
+    float: left;
+    margin-top: 5.5%;
+    padding-left: 8%;
 
+}
+
+.content {
+
+    font-size: 30px;
+}
+
+.div1 {
+    height: 100px;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-bottom: 1px solid #afbac0;
+}
+
+.div2 {
+    height: 160px;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-bottom: 1px solid #afbac0;
+}
+
+.span6 {
+    display: block;
+    color: #afbac0;
+    margin: 20px 10px 10px 75px;
+}
+
+.span7 {
+    color: #ec7050;
+    float: right;
+    background: url("../img/形状-3.png");
+    width: 80px;
+    height: 50px;
+    background-repeat: no-repeat;
+    padding-right: 20px;
+    background-position-x: right;
+    margin-right: 30px;
+    line-height: 30px;
+
+}
+
+.div3 {
+    height: 60px;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-bottom: 1px solid #afbac0;
+}
+
+footer {
+    position: relative;
+}
+
+.class1 img {
+    margin-left: 25%;
+    margin-top: -3%;
+
+}
+
+.class2 img {
+    margin-top: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.span8 {
+    display: block;
+    color: #95d4dd;
+    position: absolute;
+    left: 88%;
+}
+
+.span9 {
+    display: block;
+    color: #9f9f9f;
+    position: absolute;
+    right: 10%;
+}
 
