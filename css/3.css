@@ -18,19 +18,15 @@
     }
         
     .task2 img{
-                 width:180px;
-                 height: 70px;
-                
-                 margin-top: 5%;
-                 margin-left: 50%;
-                
+
+
+                 margin: 5% 40% 0 40%;
+
     }
 
        #s{
           
                 font-size: 20px;
-          
-                text-align: center;
                 text-indent: 2em;
                 margin-top: 5%;
 
@@ -39,10 +35,9 @@
           }
 
     .task3 img{
-    	      width:60px;
-    	      height:60px;
-    	      margin-left:250px;
-              margin-top:10%;
+
+    	      margin-left:90%;
+              margin-top:15%;
     	    
     	
     }	
@@ -53,22 +48,22 @@
 
      .task3 p{
 
-     	margin-left:250px;
+     	      margin-left:90%;
      }     
     
     
     .task4 img{
-                 width:60px;
-                 height:60px;
-                 margin-right:250px;
-                 margin-top:10%;
+
+
+                 margin-right:90%;
+                 margin-top:15%;
              }
 
     .task4 {
     	   float:right;
     }
       .task4 p{
-      	 margin-right:250px;
+      	    margin-right: 90%;
       }
   
 
