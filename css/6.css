@@ -1,0 +1,78 @@
+
+body {
+    margin: 0;
+
+}
+
+.all {
+    width: 720px;
+    height: 1280px;
+    background-color: white;
+
+}
+
+header {
+    width: 720px;
+    height: 5%;
+    background: rgb(95, 192, 205);
+
+}
+
+.span1 {
+    display: block;
+    width: 15%;
+    height: 80%;
+    background: rgb(85, 168, 179);
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 10px;
+    margin-top: 1%;
+    float: left;
+    margin-left: 33%;
+
+}
+
+.span2 {
+    display: block;
+    width: 15%;
+    height: 80%;
+    background: white;
+    color: rgb(137, 208, 218);
+    font-size: 25px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 10px;
+    margin-top: 1%;
+    float: left;
+
+}
+
+.span3 img {
+
+    float: right;
+    margin-right: 20px;
+    margin-top: 1.2%;
+
+}
+
+.span4 {
+    display: block;
+    width: 100px;
+    color: rgb(175, 186, 192);
+    font-size: 25px;
+    margin-left: 12%;
+    margin-top: 3%;
+
+}
+
+.span5 img {
+
+    display: block;
+    float: left;
+
+}
+
+
+
