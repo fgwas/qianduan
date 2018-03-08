@@ -15,7 +15,7 @@ header {
     position: relative;
 }
 
-.span1 {
+.back {
 
     color: white;
     font-size: 4rem;
@@ -25,7 +25,7 @@ header {
 
 }
 
-.span2 {
+.title{
     font-family: 黑体;
     color: white;
     font-size: 2rem;
@@ -36,7 +36,7 @@ header {
 
 }
 
-.task5 img {
+.banner img {
     width: 100%;
     left: 0;
 
@@ -82,20 +82,20 @@ content {
 
 }
 
-.span3 {
+.msg{
 
     margin-left: 40px;
     padding-left: 10px;
 
 }
 
-.task5-1 img {
+.star img {
 
     margin-left: 55px;
 
 }
 
-.span4 {
+.list {
     display: block;
     float: left;
     margin-left: 55px;
@@ -103,7 +103,7 @@ content {
 
 }
 
-.span5 {
+.span1 {
     display: block;
     color: white;
     float: left;
@@ -112,7 +112,7 @@ content {
 
 }
 
-.span6 {
+.news {
 
     display: block;
     float: left;
@@ -132,7 +132,7 @@ content {
     padding-bottom: 10px;
 }
 
-.span7 {
+.news1{
     display: block;
     width: 420px;
     float: left;
