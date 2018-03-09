@@ -1,0 +1,135 @@
+
+body {
+    margin: 0;
+}
+
+.all {
+    max-width: 640px;
+    background-color: #29bde0;
+    margin: 0 auto;
+}
+
+header {
+    height: 80px;
+}
+
+.left {
+    float: left;
+    margin-top: 4%;
+    margin-left: 5%;
+}
+
+.center {
+    font-size: 30px;
+    color: white;
+    float: left;
+    margin-top: 4%;
+    margin-left: 35%;
+
+}
+
+.right {
+    float: right;
+    margin-right: 5%;
+    margin-top: 4%;
+}
+
+content {
+    height: 1000px;
+}
+
+.task {
+    height: 80px;
+    background-color: #b9e9f5;
+}
+
+.tall {
+    font-size: 20px;
+    margin-left: 5%;
+    line-height: 80px;
+}
+
+.player {
+    float: right;
+    margin-top: 2%;
+    margin-right: 4%;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-top: 13px solid #b9e9f5;
+    border-right: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    border-left: 13px solid transparent;
+    margin-left: 8%;
+}
+
+.text {
+    color: white;
+    font-size: 18px;
+    margin-left: 10%;
+}
+.container{
+     max-width: 640px;
+     margin-left: 25px!important;
+
+}
+
+.box1{
+    width:135px;
+    height: 135px;
+    background-color: white;
+    margin-bottom: 25%;
+}
+
+.box2{
+    width: 125px;
+    height: 100px;
+    background-color: #f5c97b;
+    margin-left: 5px;
+    margin-top: 5px;
+    float: left;
+    color: black;
+    font-size: 25px;
+    text-align: center;
+    line-height: 100px;
+}
+.box3{
+    width:125px;
+    height:25px;
+    background-color: #83b09a;
+    float: left;
+    margin-left: 5px;
+    color:white;
+    font-size: 17px;
+    text-align: center;
+    line-height: 25px;
+}
+
+.icon img{
+    float: left;
+    margin-top: 140px;
+    margin-left: -198px;
+}
+.end{
+    position: fixed;
+    left:0;
+    bottom: 0;
+    width: 640px;
+    height: 160px;
+    background: #29bde0;
+}
+.box4{
+    height: 90px;
+    width: 76%;
+    background-color: #fbb435;
+    margin-left: 10%;
+    margin-top: 5%;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    line-height: 90px;
+}
+
+
