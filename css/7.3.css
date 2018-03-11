@@ -70,20 +70,23 @@ content {
     font-size: 18px;
     margin-left: 10%;
 }
-.container{
-     max-width: 640px;
-     margin-left: 25px!important;
+
+.container {
+    max-width: 640px;
+    margin-left: 25px !important;
 
 }
 
-.box1{
-    width:135px;
+.box1 {
+    width: 135px;
     height: 135px;
     background-color: white;
     margin-bottom: 25%;
+    position: relative;
+    overflow: hidden;
 }
 
-.box2{
+.box2 {
     width: 125px;
     height: 100px;
     background-color: #f5c97b;
@@ -95,32 +98,40 @@ content {
     text-align: center;
     line-height: 100px;
 }
-.box3{
-    width:125px;
-    height:25px;
+
+.box3 {
+    width: 125px;
+    height: 25px;
     background-color: #83b09a;
     float: left;
     margin-left: 5px;
-    color:white;
+    color: white;
     font-size: 17px;
     text-align: center;
     line-height: 25px;
+
 }
 
-.icon img{
-    float: left;
-    margin-top: 140px;
-    margin-left: -198px;
+.box6 img {
+    margin-top: 5%;
+    position: absolute;
+
 }
-.end{
+
+div:hover .box6 img {
+    top: 135px;
+}
+
+.end {
     position: fixed;
-    left:0;
+    left: 0;
     bottom: 0;
     width: 640px;
     height: 160px;
     background: #29bde0;
 }
-.box4{
+
+.box4 {
     height: 90px;
     width: 76%;
     background-color: #fbb435;
