@@ -8,7 +8,7 @@ body {
 
 img {
 
-    width: 60px;
+    width: 22px;
     height: 25px;
 
 }
@@ -57,11 +57,10 @@ header, footer {
 input {
 
     margin: 0;
-    padding: 0;
     outline: none;
-    border-top: 1px solid white;
-    border-right: 1px solid white;
-    border-bottom: 1px solid white;
+    border:none;
+    border-left: 2px solid #7f7f7f;
+    padding-left: 15px;
 }
 
 .box {
