@@ -1,28 +1,22 @@
 
 * {
     margin: 0;
-    max-width: 1920px;
+    /*max-width: 1920px;*/
     min-height: 0 !important;
 
 }
-
-.phone {
-    color: #29b078;
-    padding-left: 18%;
-    font-size: 17px;
+ul{
+    margin-bottom:0px;
 }
+/*body{*/
 
-.weixin img {
-    padding-left: 40%;
-    margin: 0 10px;
-}
+    /*min-width: 900px;*/
+/*}*/
 
-.qq img {
-    margin: 0;
-}
-
-.weibo {
-    margin: 0 10px;
+.text{
+    height: 40px;
+    line-height: 40px;
+    padding: 0 358px;
 }
 
 .top {
@@ -266,5 +260,6 @@ li {
 .k4 {
     position: relative;
     top: -20%;
-    left: 30%
+    padding-left: 30%;
+    align-content: center;
 }
