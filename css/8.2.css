@@ -110,6 +110,10 @@ dd {
     top: 15px;
 }
 
+dd:hover{
+    background-color: red;
+}
+
 b {
     color: #26a26f;
     margin-left: 140px;
