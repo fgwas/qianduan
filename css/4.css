@@ -56,7 +56,7 @@ header, footer {
 }
 
 input {
-
+    width:97% ;
     margin: 0;
     outline: none;
     border:none;
@@ -101,15 +101,17 @@ input {
 
 .link {
     color: rgb(153, 211, 211);
-    text-align: right;
     float: right;
     margin-right: 2%;
+    cursor: pointer;
+    background-color:#eff0f4;
+    border:none;
+
 }
 
 .loginbar {
 
     font-size: 1.5rem;
-    text-align: center;
     padding-top: 25px;
     border:none;
     background-color: #5FC0CD;
