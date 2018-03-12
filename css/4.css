@@ -107,10 +107,16 @@ input {
 }
 
 .loginbar {
-    display: block;
+
     font-size: 1.5rem;
     text-align: center;
     padding-top: 25px;
+    border:none;
+    background-color: #5FC0CD;
+    color: white;
+    cursor: pointer;
+    outline: none;
+
 
 }
 
