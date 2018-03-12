@@ -25,7 +25,7 @@ header {
 
 }
 
-.title{
+.title {
     font-family: 黑体;
     color: white;
     font-size: 2rem;
@@ -82,7 +82,7 @@ content {
 
 }
 
-.msg{
+.msg {
 
     margin-left: 40px;
     padding-left: 10px;
@@ -132,15 +132,13 @@ content {
     padding-bottom: 10px;
 }
 
-.news1{
+.news1 {
     display: block;
     width: 420px;
     float: left;
-
 }
 
 .box2 {
-
     width: 40%;
     height: 50px;
     border: 2px solid rgb(148, 213, 222);
@@ -148,11 +146,13 @@ content {
     float: left;
     margin-left: 5%;
     margin-top: 20px;
+    background-color: white;
     color: rgb(148, 213, 222);
     text-align: center;
     font-size: 25px;
     line-height: 50px;
-
+    cursor: pointer;
+    outline: none;
 }
 
 .box3 {
@@ -169,6 +169,9 @@ content {
     text-align: center;
     font-size: 25px;
     line-height: 50px;
+    cursor: pointer;
+    outline: none;
+
 }
 
         

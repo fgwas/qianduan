@@ -2,7 +2,7 @@
 * {
     margin: 0;
     max-width: 1920px;
-    min-height: 0!important;
+    min-height: 0 !important;
 
 }
 
@@ -91,17 +91,16 @@
     right: 350px
 }
 
-.background{
+.background {
     background-color: #fafafa;
     height: 1800px;
 }
 
-.row{
-    margin-left:0px;
-    margin-right:0px;
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
 
 }
-
 
 .s1 {
     width: 160px;
@@ -136,13 +135,16 @@
     text-align: center;
     padding-top: 150px;
 }
-.s5{
-    float:  left;
+
+.s5 {
+    float: left;
 }
-.s6{
-    float:  left;
+
+.s6 {
+    float: left;
 }
-.w0{
+
+.w0 {
     text-align: center;
     height: 200px;
     line-height: 200px;
@@ -150,16 +152,18 @@
     font-weight: 200;
 }
 
-.w1{
+.w1 {
     width: 195px;
     height: 120px;
     text-align: center;
     margin-top: 30px;
 
 }
-.w1 img{
+
+.w1 img {
     float: left;
 }
+
 .arrow {
     width: 50px;
     text-align: center;
@@ -168,92 +172,99 @@
     padding-left: 100px;
     margin-top: -15px;
 }
-.w2{
-    width: 195px;
-    height: 120px;
-    text-align: center;
-    margin-top: 30px;
-}
-.w3{
-    width: 195px;
-    height: 120px;
-    text-align: center;
-    margin-top: 30px;
 
-}
-.w4{
+.w2 {
     width: 195px;
     height: 120px;
     text-align: center;
     margin-top: 30px;
 }
 
-.white{
-      width:200px;
-      height: 300px;
-      box-shadow:5px 5px 5px #afbac0;
-      text-align: center;
+.w3 {
+    width: 195px;
+    height: 120px;
+    text-align: center;
+    margin-top: 30px;
+
 }
 
-.logo{
-          margin-left: -30px;
+.w4 {
+    width: 195px;
+    height: 120px;
+    text-align: center;
+    margin-top: 30px;
 }
 
-.u1{
+.white {
+    width: 200px;
+    height: 300px;
+    box-shadow: 5px 5px 5px #afbac0;
+    text-align: center;
+}
+
+.logo {
+    margin-left: -30px;
+}
+
+.u1 {
     font-size: 15px;
     color: #a6a6a6;
     clear: both;
     margin-left: 15%;
 }
-li{
+
+li {
     float: left;
     padding-left: 20px;
     margin: 10px 10px;
 }
 
-.foot{
-     width: 100%;
-     height: 200px;
-     background-color: #26a26f;
-     clear:left;
-     color: white;
+.foot {
+    width: 100%;
+    height: 200px;
+    background-color: #26a26f;
+    clear: left;
+    color: white;
 
 }
 
-.k1{
+.k1 {
     width: 250px;
     height: 110px;
     position: relative;
-    top:30%;
-    left:15%;
+    top: 30%;
+    left: 15%;
 }
-.k2{
+
+.k2 {
     width: 300px;
     height: 110px;
     position: relative;
-    top:-25%;
-    left:40%;
+    top: -25%;
+    left: 40%;
 }
 
-.span1{
+.span1 {
     margin-left: 10%;
 
 }
-.span1:hover{
+
+.span1:hover {
     position: relative;
     border-bottom: 2px solid white;
     text-decoration: none;
 }
 
-.k3{
+.k3 {
     width: 300px;
     height: 110px;
     position: relative;
     float: right;
-    top:-80%;
+    top: -80%;
 }
-.k4{
+
+.k4 {
     position: relative;
     top: -20%;
-    left:30%
+    left: 30%
 }
