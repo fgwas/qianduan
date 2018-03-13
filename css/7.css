@@ -1,11 +1,11 @@
 
 body {
     margin: 0;
+    background-color: #f0f0f0;
 }
 
 .all {
-    max-width: 640px;
-    background-color: #f0f0f0;
+    min-width: 630px;
     font-family: 黑体, serif;
 }
 
@@ -35,36 +35,18 @@ header {
 .c {
 
     line-height: 120px;
-    margin-left: 19%;
+    padding-left: 40%;
     font-size: 33px;
     color: #bcbcbc;
 }
-
-.d {
-    padding-left: 13%;
-    position: relative;
-    top: 7px;
-}
-
-main {
-    height: 1000px;
-}
-
 .e {
-
-    height: 790px;
     background-color: white;
-    margin-top: 2.7%;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin:2% 5%;
     border: 2px solid #e8e8e8;
 }
 
 .f {
     height: 90px;
-    border-top: 1px solid transparent;
-    border-right: 1px solid transparent;
-    border-left: 1px solid transparent;
     border-bottom: 2px solid #fccd78;
     color: #fccd78;
     text-align: center;
@@ -74,11 +56,9 @@ main {
 
 .g {
 
-    height: 135px;
+    height: 120px;
     background-color: #69d1e9;
-    margin-top: 5%;
-    margin-left: 5%;
-    margin-right: 6%;
+    margin:2% 5%;
     color: white;
     text-align: center;
     line-height: 135px;
@@ -93,11 +73,14 @@ main {
     color: #a3a3a3;
 }
 
+.but{
+    width: 100%;
+    height: 200px;
+}
 .i {
     float: right;
     position: relative;
-    top: -12%;
-    margin-right: .5%;
+    top: -57%;
 }
 
 .j {
