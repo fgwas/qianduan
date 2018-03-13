@@ -6,7 +6,7 @@ body {
 }
 
 .all {
-    max-width: 1200px;
+    min-width: 700px;
     background-color: white;
     margin: 0 auto;
 
@@ -82,17 +82,13 @@ header {
 
 .div1 {
     height: 100px;
-    border-top: 1px solid transparent;
-    border-right: 1px solid transparent;
-    border-left: 1px solid transparent;
+
     border-bottom: 1px solid #afbac0;
 }
 
 .div2 {
     height: 160px;
-    border-top: 1px solid transparent;
-    border-right: 1px solid transparent;
-    border-left: 1px solid transparent;
+
     border-bottom: 1px solid #afbac0;
 }
 
@@ -118,39 +114,34 @@ header {
 
 .div3 {
     height: 60px;
-    border-top: 1px solid transparent;
-    border-right: 1px solid transparent;
-    border-left: 1px solid transparent;
+
     border-bottom: 1px solid #afbac0;
 }
 
 footer {
-    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: #f8fafb;
+    text-align: center;
 }
 
-.class1 img {
-    margin-left: 25%;
-    margin-top: -3%;
-
-}
-
-.class2 img {
-    margin-top: 2%;
-    padding-left: 10%;
-    padding-right: 10%;
+.nav1{
+    display: inline-block;
 }
 
 .span8 {
+    color: #5fc0cd;
     display: block;
-    color: #95d4dd;
-    position: absolute;
-    left: 88%;
+
+}
+
+.nav2{
+    display: inline-block;
 }
 
 .span9 {
+    color: #aeafaf;
     display: block;
-    color: #9f9f9f;
-    position: absolute;
-    right: 10%;
+
 }
 
