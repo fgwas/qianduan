@@ -43,26 +43,26 @@ header {
 }
 
 .box {
-    width: 100%;
+    width: 95%;
     height: 900px;
     font-size: 20px;
     font-weight: initial;
 }
 
-.but-1 {
+.but {
     width: 100%;
     height: 100px;
     border-bottom: 1px solid #f5f6f7;
     padding-left: 5%;
 }
 
-.but-1-0 {
+.box-but1 {
     line-height: 100px;
     border-left: 2px solid #5fc0cd;
     padding-left: 2%;
 }
 
-.but-2 {
+.box-but2 {
     width: 100%;
     height: 100px;
     border-bottom: 1px solid #f5f6f7;
@@ -70,13 +70,17 @@ header {
 
 }
 
-.but-2-1-1 {
+.but-2-1 {
     border-right: 2px solid #f5f6f7;
     padding-right: 2%;
     line-height: 100px;
 }
 
-.but-2-1-2 {
+.but-2-1 {
+    margin-left: 2%;
+}
+
+.list {
     margin-left: 2%;
 }
 
@@ -85,7 +89,6 @@ header {
     display: inline-block;
     text-align: left;
     padding-left: 2%;
-
 
 }
 
