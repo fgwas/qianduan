@@ -109,7 +109,7 @@ footer {
 
 }
 
-.nav1 {
+.navleft {
     width: 40%;
     height: 50px;
     border: 2px solid rgb(148, 213, 222);
@@ -126,7 +126,7 @@ footer {
     outline: none;
 }
 
-.nav2 {
+.navright{
     width: 40%;
     height: 50px;
     border: 2px solid rgb(148, 213, 222);
