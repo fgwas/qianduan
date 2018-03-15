@@ -33,6 +33,7 @@ header {
     float: left;
     margin-left: 30%;
     cursor: pointer;
+    outline: none;
 
 }
 
@@ -49,6 +50,7 @@ header {
     margin-top: 1%;
     float: left;
     cursor: pointer;
+    outline:none;
 
 }
 
@@ -97,6 +99,12 @@ header {
     display: block;
     color: #afbac0;
     margin: 20px 10px 10px 75px;
+}
+
+.time img {
+    transform: translateY(25%);
+    width: 35px;
+    height: 35px;
 }
 
 .price {
