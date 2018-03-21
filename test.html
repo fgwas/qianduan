@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>类选择器</title>
+    <style>
+        .user.login /* 匹配同时包含user和login的元素 */
+        {
+            font-size: 35px;
+        }
+
+        .user .login{ /* 匹配含user下的含login的元素 */
+            background-color:green;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class='user'>你好。这是一个 DIV 元素，class='user'。
+    <div class='login'>你好。这是一个 DIV 元素，class='user login'。</div>
+</div>
+<div class='login'>你好。这是一个 DIV 元素，class='login'。</div>
+<div class='user login'>你好。这是一个 DIV 元素，class='user login'。</div>
+
+</body>
+</html>

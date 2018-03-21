@@ -67,11 +67,9 @@ header {
 
     color: rgb(175, 186, 192);
     font-size: 25px;
-    display:inline-block;
-    border:none;
-    padding:0 2%;
-
-
+    display: inline-block;
+    border: none;
+    padding: 0 2%;
 
 }
 
@@ -88,23 +86,20 @@ header {
 }
 
 .list1 {
-    width:30%;
+    width: 30%;
     display: inline-block;
-    padding:0 10%;
-
+    padding: 0 10%;
 
 }
 
-
-
 .main {
     height: 160px;
-    border-bottom: 1px solid #afbac0;
+    border-bottom: 1px solid #f5f6f7;
 }
 
 .time {
     display: block;
-    color: #afbac0;
+    color: #f5f6f7;
     margin: 20px 10px 10px 75px;
 }
 
@@ -137,11 +132,14 @@ footer {
     height: 100px;
     background-color: #f8fafb;
     text-align: center;
+    padding:5px 5px;
+   border-top:1px solid  #f3f6f7;
 }
 
 .navleft {
     display: inline-block;
 }
+
 
 .textleft {
     color: #5fc0cd;

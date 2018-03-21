@@ -1,0 +1,247 @@
+html {
+    font-size: 62.5%;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    min-height: 0 !important;
+    font-size: 1.5rem;
+}
+
+.top {
+    width: 100%;
+    line-height: 4rem;
+    background-color: #1d7ad9;
+    color: white;
+    text-align: right;
+    padding: 0 10%;
+
+}
+
+.left {
+    display: inline-block;
+    float: left;
+}
+
+.mid {
+    display: inline-block;
+    border-left: .2rem solid white;
+    padding-left: .5rem;
+    width: 5rem;
+    text-align: center;
+    outline: none;
+    color: white;
+}
+
+.top a:hover {
+    color: red;
+    outline: none;
+    text-decoration: none;
+}
+
+.right {
+    display: inline-block;
+    width: 10rem;
+    line-height: 4rem;
+    background-color: white;
+    color: black;
+    text-align: center;
+    outline: none;
+    border: none;
+}
+
+.bottom {
+    width: 100%;
+    line-height: 10rem;
+    background-color: #f9f9f9;
+    text-align: right;
+
+}
+
+.msg {
+    display: inline-block;
+    width: 8rem;
+    line-height: 4rem;
+    background-color: white;
+    text-align: center;
+    border-radius: .5rem;
+    outline: none;
+    border: none;
+    margin-right: 5%;
+}
+
+.msg:hover {
+    color: white;
+    background-color: #1d7ad9;
+}
+
+.list {
+    width: 100%;
+    height: 8rem;
+    background-color: white;
+    text-align: right;
+    padding-right: 8rem;
+    position: relative;
+
+}
+
+.user1 {
+    display: inline-block;
+    width: 11rem;
+    line-height: 8rem;
+    text-align: center;
+    border-top: .5rem solid #cccccc;
+    border-radius: .2rem;
+    margin: 3rem -1rem 0 0;
+    font-weight: 700;
+    color: #cccccc;
+}
+
+.circle1 {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: .1rem solid #cccccc;
+    background-color: #cccccc;
+    border-radius: 50%;
+    position: absolute;
+    top: 2.2rem;
+    right: 42rem;
+}
+
+.cub {
+    position: absolute;
+    top: -2.5rem;
+    color: white;
+}
+
+.circle2 {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: .1rem solid #cccccc;
+    background-color: #cccccc;
+    border-radius: 50%;
+    position: absolute;
+    top: 2.2rem;
+    right: 32rem;
+}
+
+.circle3 {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: .1rem solid #cccccc;
+    background-color: #cccccc;
+    border-radius: 50%;
+    position: absolute;
+    top: 2.2rem;
+    right: 22rem;
+}
+
+.circle4 {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: .1rem solid #cccccc;
+    background-color: #cccccc;
+    border-radius: 50%;
+    position: absolute;
+    top: 2.2rem;
+    right: 12rem;
+}
+
+.header {
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 0 1.5rem;
+    border-left: .5rem solid blue;
+    margin: 0 5rem;
+}
+
+.form {
+    padding: 1rem 5rem;
+}
+
+.ssr {
+    width: 100%;
+    line-height: 4rem;
+    color: blue;
+    padding: 0 3%;
+    background-color: #f3f3f3;
+    border-radius: .5rem;:: after
+}
+
+.ssh {
+    width: 100%;
+    line-height: 9rem;
+    margin-left: 3rem;
+}
+
+.ssh #box1 {
+    margin-left: 5rem;
+}
+
+#box2 {
+    margin-left: 5rem;
+}
+
+#box3 {
+    margin-left: 5rem;
+}
+
+input:focus{
+    outline: none;
+
+}
+
+input[type=radio] {
+    /*去除浏览器默认样式*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /*自定义样式*/
+    position: relative;
+    display: inline-block;
+    vertical-align: center;
+    width: 2rem;
+    height: 2rem;
+    border: .1rem solid #cccccc;
+    outline: none;
+    cursor: pointer;
+    /*设置为圆形，看起来是个单选框*/
+    border-radius: 20px;
+
+}
+
+
+input[type=radio]:after {
+    content: '';
+    position: absolute;
+    width: 1.2rem;
+    height: 1.2rem;
+    display: block;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    outline: none;
+    background: blue;
+    border-radius: 50%;
+    transform: scale(0);
+    /*增加一些动画*/
+    transition: all ease-in-out 100ms;
+
+}
+
+input[type=radio]:checked:after {
+    transform: scale(1);
+    outline: none;
+}
+
+
+
+
+
