@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style type="text/css">
+
+        .container {
+            display: table;
+        }
+
+        .row {
+            display: table-row;
+
+        }
+
+        .cell {
+            display: table-cell;margin:100px 100px;
+
+            width: 100px;
+            height: 100px;
+            border: 1px solid blue;
+            padding: 1em;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        /*................*/
+
+        .parent {
+            display: table;
+            width: 100%;
+            height: 300px;
+            background-color: red;
+        }
+
+        .son {
+            display: table-cell;
+            background-color: yellow;
+            height: 100px;
+            text-align: center;
+            vertical-align: middle;
+            /*padding:10px 10px;*/
+
+            /*margin:100px 100px 500px 10000px;*/
+        }
+
+        /*..................................................................*/
+
+        .table {
+            display: table;
+            background-color: snow;
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        .cell {
+            display: table-cell;
+            width: 30%;
+            margin: 10px;
+        }
+
+        /*.....................*/
+
+        .container {
+            overflow: hidden;
+            background-color: blue;
+            width: 70%;
+            margin: 0 auto;
+
+        }
+
+        .fl {
+            float: left;
+        }
+
+        .right {
+            display: table-cell;
+
+        }
+
+        /*......................*/
+
+
+
+        .box{
+            display:block;
+            line-height: 20px;
+            padding:0 20px 20px;
+            background-color: red;
+        }
+        .list-row{
+            display: table-row;
+        }
+
+        .list-cell {
+            display: table-cell;
+            width: 33.3%;
+            padding-bottom: 30px;
+            vertical-align: top;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<div class="container">
+    <div class="row">
+        <div class="cell">CELL A</div>
+        <div class="cell">CELL B</div>
+        <div class="cell">CELL C</div>
+    </div>
+</div>
+<!--..............-->
+
+
+<div class="parent">
+    <div class="son">sdgsdagsdg</div>
+    <div class="son">sdgsdagsdg</div>
+    <div class="son">sdgsdagsdg</div>
+    <div class="son">sdgsdagsdg</div>
+    <div class="son">sdgsdagsdg</div>
+    <div class="son">sdgsdagsdg</div>
+
+</div>
+
+<!--..............-->
+<!--使用table-cell实现等高布局-->
+<div class="table">
+    <div class="cell">
+        <p><a href="#"></a> 来自北京</p>
+        <p>签名：想找个保鲜盒把你给我的那些感动都装起来。当你让我伤心的时候就拿出来回味一下。</p>
+        <p>签名：想找个保鲜盒把你给我的那些感动都装起来。当你让我伤心的时候就拿出来回味一下。</p>
+    </div>
+    <div class="cell">
+        <p><a href="#"></a> 来自北京</p>
+        <p>签名：想找个保鲜盒把你给我的那些感动都装起来。当你让我伤心的时候就拿出来回味一下。</p>
+        <p>签名：想找个保鲜盒把你给我的那些感动都装起来。当你让我伤心的时候就拿出来回味一下。</p>
+    </div>
+    <div class="cell">
+        <p><a href="#"></a> 来自北京</p>
+        <p>签名：想找个保鲜盒把你给我的那些感动都装起来。当你让我伤心的时候就拿出来回味一下。</p>
+        <p>签名：想找个保鲜盒把你给我的那些感动都装起来。当你让我伤心的时候就拿出来回味一下。</p>
+    </div>
+</div>
+
+<!--..................-->
+
+<!--使用table-ceil实现左侧浮动右侧自适应-->
+<div class="container">
+    <a class="fl"><img width="300px" height="200px"
+                       src="img/img2/1.png"></a>
+    <div class="right">
+        <p><a href="#"></a> 来自北京</p>
+        <p>签名：想找个保鲜盒把你给我的那些感动都装起来。当你让我伤心的时候就拿出来回味一下。</p>
+        <p>
+            微博：坐在办公室，只听轰隆隆几声巨响，晴天也能打雷吗？原来街对面的芭莎咖啡厅被炸成了两截。这定点爆破也太失败了，也不清下场，把路过的汽车震得灰头土脸，愣在路中央不知如何是好。其次，房子只炸了一半，另一半屹立不倒，是乍药太水还是房子质量太好？</p>
+    </div>
+</div>
+
+
+<!--...................-->
+
+
+<div class="box">
+    <div class="box1">
+        <div class="list-row">
+            <div class="list-cell">
+                <ul>
+                    <li>中央政治局同志向党中央和习近平总书记述职</li>
+                    <li>中共中央印发《深化党和国家机构改革方案》</li>
+                    <li>社评论员：创造新时代的光辉业绩</li>
+                    <li>环保部:拟确定邢台等7地为环境改善成效明显市州</li>
+                    <li>百度获得北京市首批自动驾驶汽车测试牌照</li>
+                    <li>市民领独生子女奖金后生二孩 卫计局：至少双倍返还</li>
+                    <li>央行决定停止第四套人民币部分券别在市场上流通</li>
+                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
+                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
+                </ul>
+            </div>
+            <div class="list-cell">
+                <ul>
+                    <li>中央政治局同志向党中央和习近平总书记述职</li>
+                    <li>中共中央印发《深化党和国家机构改革方案》</li>
+                    <li>社评论员：创造新时代的光辉业绩</li>
+                    <li>环保部:拟确定邢台等7地为环境改善成效明显市州</li>
+                    <li>百度获得北京市首批自动驾驶汽车测试牌照</li>
+                    <li>市民领独生子女奖金后生二孩 卫计局：至少双倍返还</li>
+                    <li>央行决定停止第四套人民币部分券别在市场上流通</li>
+                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
+                    <li>政协委员谈两会：开创社会主义现代化建设新局面</l
+                    <li>央行决定停止第四套人民币部分券别在市场上流通</li>
+                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
+                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
+                </ul>
+            </div>
+            <div class="list-cell">
+                <ul>
+                    <li>中央政治局同志向党中央和习近平总书记述职</li>
+                    <li>中共中央印发《深化党和国家机构改革方案》</li>
+                    <li>社评论员：创造新时代的光辉业绩</li>
+                    <li>环保部:拟确定邢台等7地为环境改善成效明显市州</li>
+                    <li>百度获得北京市首批自动驾驶汽车测试牌照</li>
+                    <li>市民领独生子女奖金后生二孩 卫计局：至少双倍返还</li>
+                    <li>央行决定停止第四套人民币部分券别在市场上流通</li>
+                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
+                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
+                    <li>央行决定停止第四套人民币部分券别在市场上流通</li>
+                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
+                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
+                    <li>央行决定停止第四套人民币部分券别在市场上流通</li>
+                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
+                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
+                    <li>央行决定停止第四套人民币部分券别在市场上流通</li>
+                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
+                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="list-row">
+            <div class="list-cell">
+                <ul>
+                    <li>中央政治局同志向党中央和习近平总书记述职</li>
+                    <li>中共中央印发《深化党和国家机构改革方案》</li>
+                    <li>社评论员：创造新时代的光辉业绩</li>
+                    <li>环保部:拟确定邢台等7地为环境改善成效明显市州</li>
+                    <li>百度获得北京市首批自动驾驶汽车测试牌照</li>
+                    <li>市民领独生子女奖金后生二孩 卫计局：至少双倍返还</li>
+                    <li>央行决定停止第四套人民币部分券别在市场上流通</li>
+                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
+                    <li>政协委员谈两会：开创社会主义现代化建设新局面</l
+                    <li>央行决定停止第四套人民币部分券别在市场上流通</li>
+                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
+                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
+                </ul>
+            </div>
+            <div class="list-cell">
+                <ul>
+                    <li>中央政治局同志向党中央和习近平总书记述职</li>
+                    <li>中共中央印发《深化党和国家机构改革方案》</li>
+                    <li>社评论员：创造新时代的光辉业绩</li>
+                    <li>环保部:拟确定邢台等7地为环境改善成效明显市州</li>
+                    <li>百度获得北京市首批自动驾驶汽车测试牌照</li>
+                    <li>市民领独生子女奖金后生二孩 卫计局：至少双倍返还</li>
+                    <li>央行决定停止第四套人民币部分券别在市场上流通</li>
+                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
+                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
+                    <li>央行决定停止第四套人民币部分券别在市场上流通</li>
+                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
+                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
+                    <li>央行决定停止第四套人民币部分券别在市场上流通</li>
+                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
+                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
+                    <li>央行决定停止第四套人民币部分券别在市场上流通</li>
+                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
+                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
