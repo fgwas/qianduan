@@ -6,7 +6,19 @@ html {
 * {
     margin: 0;
     min-height: 0 !important;
-    font-size: 1.5rem;
+}
+
+@media screen and (min-width: 900px) {
+    body {
+        min-width: 75rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        max-width: 75rem;
+        min-width: 70rem;
+    }
 }
 
 .top {
@@ -50,105 +62,161 @@ html {
     border: none;
 }
 
-.fgg {
-    width: 100%;
-    line-height: 10rem;
-    background-color: #f9f9f9;
-    text-align: right;
+@media screen and (min-width: 900px) {
+    .dropdown {
+        display: none;
+    }
+
+    .fgg {
+        width: 100%;
+        line-height: 10rem;
+        background-color: #f9f9f9;
+        text-align: right;
+
+    }
+
+    .msg {
+        display: inline-block;
+        width: 8rem;
+        line-height: 4rem;
+        background-color: white;
+        text-align: center;
+        border-radius: .5rem;
+        outline: none;
+        border: none;
+        margin-right: 5%;
+    }
+
+    .msg:hover {
+        color: white;
+        background-color: #1d7ad9;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .fgg {
+        display: none;
+    }
+
+    .dropdown {
+        display: block;
+        width: 100%;
+        height: 5rem;
+        background-color: #f9f9f9;
+        padding: 0 10%;
+        line-height: 5rem;
+    }
 
 }
 
-.msg {
-    display: inline-block;
-    width: 8rem;
-    line-height: 4rem;
-    background-color: white;
-    text-align: center;
-    border-radius: .5rem;
-    outline: none;
-    border: none;
-    margin-right: 5%;
+@media screen and (min-width: 900px) {
+    
+    .list1{
+        display: none;
+    }
+    .list {
+        width: 100%;
+        height: 10rem;
+        background-color: white;
+        text-align: right;
+        padding-right: 10%;
+        position: relative;
+
+    }
+
+    .user1 {
+        display: inline-block;
+        width: 11rem;
+        line-height: 8rem;
+        text-align: center;
+        border-top: .5rem solid #cccccc;
+        border-radius: .2rem;
+        margin: 3rem -1rem 0 0;
+        font-weight: 700;
+        color: #cccccc;
+    }
+
+    .circle1 {
+        display: inline-block;
+        width: 2.5rem;
+        height: 2.5rem;
+        border: .1rem solid #cccccc;
+        background-color: #cccccc;
+        border-radius: 50%;
+        position: absolute;
+        top: 2.2rem;
+        right: 40%;
+    }
+
+    .cub {
+        position: absolute;
+        top: -2.9rem;
+        right: 40%;
+        color: white;
+    }
+
+    .circle2 {
+        display: inline-block;
+        width: 2.5rem;
+        height: 2.5rem;
+        border: .1rem solid #cccccc;
+        background-color: #cccccc;
+        border-radius: 50%;
+        position: absolute;
+        top: 2.2rem;
+        right: 31%;
+    }
+
+    .circle3 {
+        display: inline-block;
+        width: 2.5rem;
+        height: 2.5rem;
+        border: .1rem solid #cccccc;
+        background-color: #cccccc;
+        border-radius: 50%;
+        position: absolute;
+        top: 2.2rem;
+        right: 22%;
+    }
+
+    .circle4 {
+        display: inline-block;
+        width: 2.5rem;
+        height: 2.5rem;
+        border: .1rem solid #cccccc;
+        background-color: #cccccc;
+        border-radius: 50%;
+        position: absolute;
+        top: 2.2rem;
+        right: 12%;
+    }
 }
 
-.msg:hover {
-    color: white;
-    background-color: #1d7ad9;
-}
+@media screen and (max-width: 900px){
+    .list{
+        display: none;
+    }
+    .list1{
+        width: 100%;
+        height:10rem ;
+        text-align: right;
 
-.list {
-    width: 100%;
-    height: 8rem;
-    background-color: white;
-    text-align: right;
-    padding-right: 8rem;
-    position: relative;
+    }
 
-}
+    .user1 {
+        display: inline-block;
+        width: 11rem;
+        line-height: 5rem;
+        text-align: center;
+        border-top: .5rem solid #cccccc;
+        border-radius: .2rem;
+        margin: 3rem -1rem 0 0;
+        font-weight: 700;
+        color: #cccccc;
+    }
+    .circle1 {
 
-.user1 {
-    display: inline-block;
-    width: 11rem;
-    line-height: 8rem;
-    text-align: center;
-    border-top: .5rem solid #cccccc;
-    border-radius: .2rem;
-    margin: 3rem -1rem 0 0;
-    font-weight: 700;
-    color: #cccccc;
-}
-
-.circle1 {
-    display: inline-block;
-    width: 2.5rem;
-    height: 2.5rem;
-    border: .1rem solid #cccccc;
-    background-color: #cccccc;
-    border-radius: 50%;
-    position: absolute;
-    top: 2.2rem;
-    right: 42rem;
-}
-
-.cub {
-    position: absolute;
-    top: -2.5rem;
-    color: white;
-}
-
-.circle2 {
-    display: inline-block;
-    width: 2.5rem;
-    height: 2.5rem;
-    border: .1rem solid #cccccc;
-    background-color: #cccccc;
-    border-radius: 50%;
-    position: absolute;
-    top: 2.2rem;
-    right: 32rem;
-}
-
-.circle3 {
-    display: inline-block;
-    width: 2.5rem;
-    height: 2.5rem;
-    border: .1rem solid #cccccc;
-    background-color: #cccccc;
-    border-radius: 50%;
-    position: absolute;
-    top: 2.2rem;
-    right: 22rem;
-}
-
-.circle4 {
-    display: inline-block;
-    width: 2.5rem;
-    height: 2.5rem;
-    border: .1rem solid #cccccc;
-    background-color: #cccccc;
-    border-radius: 50%;
-    position: absolute;
-    top: 2.2rem;
-    right: 12rem;
+    }
 }
 
 .header {
