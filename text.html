@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html>
 <head>
@@ -17,11 +16,11 @@
 
     <!-- 打印和PDF输出样式 -->
     <script>
-        var link = document.createElement( 'link' );
+        var link = document.createElement('link');
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = window.location.search.match( /print-pdf/gi ) ? 'https://ptteng.github.io/PPT/css/reveal/print/pdf.css' : 'https://ptteng.github.io/PPT/css/reveal/print/paper.css';
-        document.getElementsByTagName( 'head' )[0].appendChild( link );
+        link.href = window.location.search.match(/print-pdf/gi) ? 'https://ptteng.github.io/PPT/css/reveal/print/pdf.css' : 'https://ptteng.github.io/PPT/css/reveal/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
     </script>
 </head>
 <body>
@@ -140,7 +139,9 @@
             <p style="text-align: left">Table会阻挡浏览器渲染引擎的渲染顺序。(会延迟页面的生成速度，让用户等待更久的时间。)</p>
             <p style="text-align: left">Table里显示图片时需要你把单个、有逻辑性的图片切成多个图。(增加设计的复杂度，增加页面加载时间，增加HTTP会话数。)</p>
             <p style="text-align: left">在某些浏览器中Table里的文字的拷贝会出现问题</p>
-            <p style="text-align: left">Table会影响其内部的某些布局属性的生效(比如<td>里的元素的height:100%)</p>
+            <p style="text-align: left">Table会影响其内部的某些布局属性的生效(比如
+            <td>里的元素的height:100%)
+            </p>
             <p style="text-align: left">Table对对于页面布局来说，从语义上看是不正确的。</p>
             <p style="text-align: left">table一旦设计完成就变成死的，很难通过CSS让它展现新的面貌。</p>
         </section>
@@ -150,9 +151,10 @@
         <section>
             <p style="text-align: left">
                 <a href="http://www.zhangxinxu.com/study/201201/display-table-cell-width-auto.html" target="_blank">
-                display:table-cell下的自适应布局效果实例页面</a></p>
+                    display:table-cell下的自适应布局效果实例页面</a></p>
             <p style="text-align: left">
-                <a href="http://www.zhangxinxu.com/wordpress/2010/10/%E6%88%91%E6%89%80%E7%9F%A5%E9%81%93%E7%9A%84%E5%87%A0%E7%A7%8Ddisplaytable-cell%E7%9A%84%E5%BA%94%E7%94%A8/" target="_blank">
+                <a href="http://www.zhangxinxu.com/wordpress/2010/10/%E6%88%91%E6%89%80%E7%9F%A5%E9%81%93%E7%9A%84%E5%87%A0%E7%A7%8Ddisplaytable-cell%E7%9A%84%E5%BA%94%E7%94%A8/"
+                   target="_blank">
                     我所知道的几种display:table-cell的应用</a></p>
         </section>
         <section>
@@ -160,7 +162,9 @@
         </section>
         <section>
             <h4>感谢观看</h4>
-            <p><small>BY : 杨梓雄/杨星 </small></p>
+            <p>
+                <small>BY : 杨梓雄/杨星</small>
+            </p>
         </section>
     </div>
 </div>
