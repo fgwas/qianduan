@@ -5,11 +5,12 @@
 @font-size: 14px;
 @color: #bfbfbf;
 
+
 html {
   font-size: 62.5%;
 }
 
-body, p{
+body, p {
   margin: 0;
   padding: 0;
 }
@@ -38,7 +39,7 @@ header {
   }
 
   .list {
-    height: 8rem;
+    height: 7rem;
     background-color: @base;
     color: white;
     padding:0 10%;
@@ -71,19 +72,14 @@ header {
       }
     }
   }
-
-  .logo1 {
-    width: 100%;
-
-  }
 }
 
-@media (min-width: 320px)and(max-width: 500px) {
+@media (min-width: 320px)and(max-width: 670px) {
   header {
     width: @fullwidth;
     .text {
-      height: 2rem;
-      line-height: 3rem;
+      height: 2.3rem;
+      line-height: 2.3rem;
       padding: 0 5%;
       a {
         font-size: @font-size;
@@ -106,6 +102,10 @@ header {
       height: 7rem;
       background-color: @base;
       color: white;
+
+      img{
+        display: none;
+      }
       ul {
         margin-right: 15%;
         li {
@@ -136,14 +136,16 @@ header {
   }
 }
 
-main {
+
+main{
   width: @fullwidth;
   padding: 0 10%;
   background-color: #fafafa;
-  p {
-    padding: 3em 0;
+  p{
     font-size: @font-size+2;
-    a {
+    line-height: 85px;
+    border-bottom: 1px solid #eceeef;
+    a{
       color: @base;
       &:hover {
         color: red;
@@ -151,118 +153,57 @@ main {
       }
     }
   }
-  .col-md-3 {
-    text-align: center;
 
-    .left-top {
-      font-size: @font-size;
-      line-height: 5rem;
-      background-color: white;
-      border: 2px solid #f7f7f7;
-      margin: 0;
-      padding: 0;
-    }
-
-    .left-mid {
-      font-size: @font-size;
-      background-color: white;
-      margin: 0;
-      padding: 0;
-      border-left: .2rem solid #f7f7f7;
-      border-right: .2rem solid #f7f7f7;
-      color: @base;
-
-      dl {
-        list-style-type: circle;
-        dd {
-          width: 1rem;
-          height: 1rem;
-          background-color: white;
-          border-radius: 50%;
-          font-size: 2rem;
-          border: 1px solid orange;
-          position: relative;
-          top: 22px;
-          left: 15%;
-
-          &:hover {
-            background-color: red;
-          }
-        }
-      }
-    }
-  }
-
-
-  .col-md-9{
-    color: #bebebe;
+  .list{
     font-size: @font-size;
-
-
-    .right-top{
-      background-color: white;
-      padding:0 5%;
-
-      .tudou {
-        float: left;
+    color: @base;
+    line-height: 65px;
+    border-bottom: 1px solid #f6f7f7;
+    a{
+      color: @base;
+      &:hover {
+        color: red;
+        text-decoration: none;
       }
-    }
-    .right-mid{
-      background-color: white;
-      padding:0 5%;
-      font-size: @font-size+2;
-      margin-bottom: 2em;
     }
 
   }
+
+
 }
 
-footer {
+
+
+
+footer{
   width: 100%;
   background-color: #26a26f;
   color: white;
-  padding: 0 10%;
+  padding:0 10%;
   font-size: @font-size;
 
-  .k1 {
+  .k1{
     height: 5em;
-    p {
-      margin: 1em 0;
+    p{
+      margin:1em 0;
     }
   }
 
-  .k2 {
+  .k2{
     .k1;
-    a {
-      margin: 1em 1em 0 0;
+    a{
+      margin:1em 1em 0 0;
       color: white;
       &:hover {
         color: red;
       }
     }
   }
-  .k3 {
+  .k3{
     text-align: center;
     margin-top: 1em;
   }
-  .k4 {
+  .k4{
     text-align: center;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
