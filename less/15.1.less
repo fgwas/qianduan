@@ -16,57 +16,56 @@ body, p {
 
 header {
   width: @fullwidth;
-  .text {
-    height: 2.3rem;
-    line-height: 2.3rem;
-    padding: 0 10%;
-    a {
-      font-size: @font-size;
-      color: @base;
-      &:hover {
-        text-decoration: none;
-        color: red;
+  .row {
+
+    .col-md-12 {
+      height: 2.3rem;
+      line-height: 2.3rem;
+      a {
+        font-size: @font-size;
+        color: @base;
+        &:hover {
+          text-decoration: none;
+          color: red;
+        }
+      }
+      .text-right {
+        float: right;
       }
     }
-    .text-right {
-      float: right;
-    }
-
-  }
-  .text1 {
-    display: none;
   }
 
   .list {
-    height: 8rem;
+    width: 100%;
+    height: 7rem;
     background-color: @base;
-    color: white;
-    padding:0 10%;
-    img {
-      padding:2em 0;
-    }
-
-    ul {
-      float: right;
-      li {
-        list-style: none;
-        font-size: 1.2em;
+    .col-md-12 {
+      img {
+        padding: 2em 0;
+      }
+      ul {
         float: right;
-        a {
-          display: block;
-          float: left;
-          width: 5em;
-          height: 5.2em;
-          line-height: 5em;
-          text-decoration: none;
-          text-align: center;
-          padding: 0 1.2em;
-          margin: 0 .5em;
-          font-size: @font-size+2;
-          &:hover {
-            position: relative;
-            border-bottom: .3em solid white;
+        li {
+          list-style: none;
+          font-size: 1.2em;
+          float: right;
+          a {
+            color: white;
+            display: block;
+            float: left;
+            width: 5em;
+            height: 5.2em;
+            line-height: 5em;
             text-decoration: none;
+            text-align: center;
+            padding: 0 1.2em;
+            margin: 0 .5em;
+            font-size: @font-size+2;
+            &:hover {
+              position: relative;
+              border-bottom: .3em solid white;
+              text-decoration: none;
+            }
           }
         }
       }
@@ -98,12 +97,12 @@ header {
   }
 }
 
-@media (min-width: 320px)and(max-width: 500px) {
+@media (min-width: 320px)and(max-width: 660px) {
   header {
     width: @fullwidth;
     .text {
-      height: 2rem;
-      line-height: 3rem;
+      height: 2.3rem;
+      line-height: 2.3rem;
       padding: 0 5%;
       a {
         font-size: @font-size;
@@ -118,14 +117,16 @@ header {
       }
 
     }
-    .text1 {
-      display: none;
-    }
 
     .list {
-      height: 7rem;
+      height: 8rem;
       background-color: @base;
       color: white;
+      padding:0 0;
+
+      img{
+        display: none;
+      }
       ul {
         margin-right: 15%;
         li {
@@ -267,7 +268,7 @@ main {
     .box2;
     padding-bottom: 5em;
 
-    .photos{
+    .col-md-12{
       width: 100%;
       background-color: white;
 
@@ -285,7 +286,7 @@ main {
   }
 }
 
-@media (min-width: 320px)and (max-width:1260px ) {
+@media (min-width: 320px)and (max-width:1360px ) {
   main {
     width: @fullwidth;
     padding: 0 10%;
@@ -333,7 +334,11 @@ main {
         font-weight: bold;
       }
 
-      .col-md-3 {
+      .col-md-3{
+
+        .arrow{
+          display: none;
+        }
 
         span{
           display: inline-block;

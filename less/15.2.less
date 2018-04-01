@@ -16,75 +16,11 @@ body, p{
 
 header {
   width: @fullwidth;
-  .text {
-    height: 2.3rem;
-    line-height: 2.3rem;
-    padding: 0 10%;
-    a {
-      font-size: @font-size;
-      color: @base;
-      &:hover {
-        text-decoration: none;
-        color: red;
-      }
-    }
-    .text-right {
-      float: right;
-    }
+  .row {
 
-  }
-  .text1 {
-    display: none;
-  }
-
-  .list {
-    height: 8rem;
-    background-color: @base;
-    color: white;
-    padding:0 10%;
-    img {
-      padding:2em 0;
-    }
-    ul {
-      float: right;
-      li {
-        list-style: none;
-        font-size: 1.2em;
-        float: right;
-        a {
-          display: block;
-          float: left;
-          width: 5em;
-          height: 5.2em;
-          line-height: 5em;
-          text-decoration: none;
-          text-align: center;
-          padding: 0 1.2em;
-          margin: 0 .5em;
-          font-size: @font-size+2;
-          &:hover {
-            position: relative;
-            border-bottom: .3em solid white;
-            text-decoration: none;
-          }
-        }
-      }
-    }
-  }
-
-  .logo1 {
-    width: 100%;
-
-  }
-}
-
-@media (min-width: 320px)and(max-width: 500px) {
-  header {
-    width: @fullwidth;
-    .text {
-      height: 2rem;
-      line-height: 3rem;
-      padding: 0 5%;
+    .col-md-12 {
+      height: 2.3rem;
+      line-height: 2.3rem;
       a {
         font-size: @font-size;
         color: @base;
@@ -96,24 +32,25 @@ header {
       .text-right {
         float: right;
       }
-
     }
-    .text1 {
-      display: none;
-    }
+  }
 
-    .list {
-      height: 7rem;
-      background-color: @base;
-      color: white;
+  .list {
+    width: 100%;
+    height: 7rem;
+    background-color: @base;
+    .col-md-12 {
+      img {
+        padding: 2em 0;
+      }
       ul {
-        margin-right: 15%;
+        float: right;
         li {
           list-style: none;
           font-size: 1.2em;
           float: right;
-          margin: 0 -1.6em;
           a {
+            color: white;
             display: block;
             float: left;
             width: 5em;
@@ -133,6 +70,76 @@ header {
         }
       }
     }
+  }
+
+  .logo1{
+    width: 100%;
+  }
+}
+
+@media (min-width: 320px)and(max-width: 780px) {
+  header {
+    width: @fullwidth;
+    .row {
+
+      .col-md-12 {
+        height: 2.3rem;
+        line-height: 2.3rem;
+        a {
+          font-size: @font-size;
+          color: @base;
+          &:hover {
+            text-decoration: none;
+            color: red;
+          }
+        }
+        .text-right {
+          float: right;
+        }
+      }
+    }
+
+    .list {
+      width: 100%;
+      height: 7rem;
+      background-color: @base;
+      #top{
+        img{
+          display: none;
+        }
+        ul {
+          float: right;
+          li {
+            list-style: none;
+            font-size: 1.2em;
+            float: right;
+            margin:0 -20px;
+            a {
+              color: white;
+              display: block;
+              float: left;
+              width: 5em;
+              height: 5.2em;
+              line-height: 5em;
+              text-decoration: none;
+              text-align: center;
+              padding: 0 1.2em;
+              margin: 0 .5em;
+              font-size: @font-size+2;
+              &:hover {
+                position: relative;
+                border-bottom: .3em solid white;
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .logo1{
+    width: 100%;
   }
 }
 
