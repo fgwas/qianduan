@@ -19,14 +19,14 @@ header {
   .row {
 
     .col-md-12 {
-      height: 2.3rem;
-      line-height: 2.3rem;
+      height: 2.8rem;
+      line-height: 2.8rem;
       a {
         font-size: @font-size;
         color: @base;
         &:hover {
           text-decoration: none;
-          color: red;
+
         }
       }
       .text-right {
@@ -45,6 +45,7 @@ header {
       }
       ul {
         float: right;
+        margin-right:-27px;
         li {
           list-style: none;
           font-size: 1.2em;
@@ -65,6 +66,7 @@ header {
               position: relative;
               border-bottom: .3em solid white;
               text-decoration: none;
+              color: white;
             }
           }
         }
@@ -83,14 +85,14 @@ header {
     .row {
 
       .col-md-12 {
-        height: 2.3rem;
-        line-height: 2.3rem;
+        height: 2.8rem;
+        line-height: 2.8rem;
         a {
           font-size: @font-size;
           color: @base;
           &:hover {
             text-decoration: none;
-            color: red;
+
           }
         }
         .text-right {
@@ -109,6 +111,7 @@ header {
         }
         ul {
           float: right;
+          margin-right: 0;
           li {
             list-style: none;
             font-size: 1.2em;
@@ -130,6 +133,7 @@ header {
                 position: relative;
                 border-bottom: .3em solid white;
                 text-decoration: none;
+                color: white;
               }
             }
           }
@@ -181,6 +185,7 @@ main {
 
       dl {
         list-style-type: circle;
+        padding-bottom: 1em;
         dd {
           width: 1rem;
           height: 1rem;
@@ -224,37 +229,74 @@ main {
   }
 }
 
-footer {
+footer{
   width: 100%;
   background-color: #26a26f;
   color: white;
-  padding: 0 10%;
+  padding:0 10%;
   font-size: @font-size;
 
-  .k1 {
+  .k1{
     height: 5em;
-    p {
-      margin: 1em 0;
+    p{
+      margin:1em 0;
     }
   }
 
-  .k2 {
+  .k2{
     .k1;
-    a {
-      margin: 1em 1em 0 0;
+    padding-left: 12%;
+    a{
+      margin:1em 1em 0 0;
       color: white;
-      &:hover {
-        color: red;
-      }
+
     }
   }
-  .k3 {
-    text-align: center;
+  .k3{
+    text-align: left;
     margin-top: 1em;
+    padding-left: 65%;
   }
-  .k4 {
-    text-align: center;
+
+}
+
+@media  (min-width: 320px) and (max-width: 768px){
+  footer{
+    width: 100%;
+    background-color: #26a26f;
+    color: white;
+    padding:0 10%;
+    font-size: @font-size;
+
+    .k1{
+      height: 5em;
+      p{
+        margin:1em 0;
+      }
+    }
+
+    .k2{
+      .k1;
+      padding-left: 0px;
+      a{
+        margin:1em 1em 0 0;
+        color: white;
+      }
+    }
+    .k3{
+      text-align: left;
+      margin-top: 1em;
+      padding-left:0px;
+    }
+
   }
+}
+
+.k4{
+  text-align: center;
+  border-top: 1px solid #2aac77;
+  background-color: #26a26f;
+  color: white;
 }
 
 
