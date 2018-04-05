@@ -6,7 +6,8 @@
     <meta name="viewport"
           content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <style type="text/css" media="screen">
+
+    <style type="text/css">
 
         .square {
             width: 20%;
@@ -18,14 +19,25 @@
             border-radius: 10%;
         }
 
-     body{
-           margin: 0 auto;
-     }
+        footer {
+            position: fixed;
+            width: 100%;
+            height: 50px;
+            background-color: rgba(250, 250, 250, .5);
+            text-align: center;
+        }
+
+        button {
+            line-height: 30px;
+            font-size: 20px;
+        }
+
+
     </style>
 </head>
+
 <body>
 
-
 <div class="square"></div>
 <div class="square"></div>
 <div class="square"></div>
@@ -36,6 +48,14 @@
 <div class="square"></div>
 <div class="square"></div>
 
+
+<footer>
+    <button onclick="start()"  value="开始" class="start">开始</button>
+    <button onclick="stop()" value="结束" class="stop">结束</button>
+</footer>
 
 </body>
+
+<script src="js/1.js"></script>
+
 </html>
