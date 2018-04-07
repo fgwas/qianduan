@@ -12,17 +12,8 @@ ul {
     margin-bottom: 0;
 }
 
-@media screen and (min-width: 1050px) {
-    body {
-        min-width: 100rem;
-    }
-}
 
-@media screen and (max-width: 1050px) {
-    body {
-        max-width: 100rem;
-    }
-}
+
 
 @media screen and (min-width: 1050px) {
     .text {
