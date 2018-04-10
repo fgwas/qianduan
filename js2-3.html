@@ -26,27 +26,60 @@
         <div class="left">
             玩家配比
         </div>
-        <div class="right">
-            <ul>
-                <li><span>杀手1人</span></li>
-                <li><span>杀手1人</span></li>
-                <li><span>杀手1人</span></li>
-                <li><span>杀手1人</span></li>
-                <li><span>杀手1人</span></li>
-            </ul>
-            <ul>
-                <li><span>杀手1人</span></li>
-                <li><span>杀手1人</span></li>
-                <li><span>杀手1人</span></li>
-                <li><span>杀手1人</span></li>
-                <li><span>杀手1人</span></li>
-            </ul>
+
+        <div class="left-right">
+            <div class="right" style="left">
+                <ul>
+                    <li><span>杀手1人</span></li>
+                    <li><span>杀手1人</span></li>
+                    <li><span>杀手1人</span></li>
+                    <li><span>杀手1人</span></li>
+                    <li><span>杀手1人</span></li>
+                </ul>
+            </div>
+            <div class="right" >
+                <ul>
+                    <li><span>平民1人</span></li>
+                    <li><span>平民1人</span></li>
+                    <li><span>平民1人</span></li>
+                    <li><span>平民1人</span></li>
+                    <li><span>平民1人</span></li>
+                </ul>
+            </div>
+
+            <div id="hum" onclick="hum()">
+                点击设置<img src="img/js2img/8888.png">
+            </div>
+            <div id="hum-1">
+                平民<input type="text" name="" value="2" min="4" max="18">人
+                杀手<input type="text" name="" value="2" min="4" max="18">人
+            </div>
         </div>
     </div>
 
+    <div class="box-mid">
+        <p>水民词组</p>
+        <p>幽灵词组</p>
+    </div>
 
+    <div class="box-bottom">
+        <div class="rrt">玩家人数
+            <input type="text" name="" value="4" min="4" max="18" id="tt" onkeyup="ttt">人
+        </div>
+        <div class="rry">
+            <button onclick="subnum()">-</button>
+            <input type="range" value="" min="4" max="18" onclick="test" id="nn">
+            <button onclick="addnum()">+</button>
+        </div>
+    </div>
 </main>
 
+<footer>
+    <button onclick="uuu()">去发牌</button>
+</footer>
 
 </body>
+
+<script src="js/js2-3.js"></script>
+
 </html>

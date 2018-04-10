@@ -42,8 +42,8 @@
 //     var square=document.getElementsByClassName("square");
 //     for (h=0;h<square.length;h++){
 //         square[h].style.background="orange";
-//     }
-// }
+//
+
 
 
 var t;

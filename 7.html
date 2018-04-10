@@ -11,14 +11,29 @@
     <title>Title</title>
     <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
 </head>
 <body>
 
 <header>
-    <a href="#">
+    <a href="#list-left"   class="back">
         <img src="img/7.1.png">
     </a>
+
+    <!--list-left-->
+
+    <div id="list-left" class="list">
+        <ul>
+            <li><img src="img/js2img/1111.png"><a>公告</a><img src="img/js2img/6666.png" class="right"></li>
+            <li><img src="img/js2img/2222.png"><a>设置</a><img src="img/js2img/6666.png" class="right"></li>
+            <li><img src="img/js2img/3333.png"><a>帮助</a><img src="img/js2img/6666.png" class="right"></li>
+            <li><img src="img/js2img/4444.png"><a>关于</a><img src="img/js2img/6666.png" class="right"></li>
+        </ul>
+    </div>
+    <div id="my-panel">
+        <p>Hello, world</p>
+    </div>
+    <a id="my-link" href="#my-panel">Open panel</a>
 </header>
 
 <main>
@@ -43,7 +58,11 @@
             <div class="but">
                 猜词版
             </div>
-            <a href="#" class="rig"><img src="img/7.3.png"></a>
+            <a onclick="rig()" class="rig">
+                <script type="text/javascript">
+
+                </script>
+                <img src="img/7.3.png"></a>
         </div>
         <p>有1133个用户正在玩此款游戏</p>
 
@@ -66,6 +85,6 @@
 
 </body>
 
-<script src="js/2.js"></script>
+<script src="js/7.js"></script>
 
 </html>
