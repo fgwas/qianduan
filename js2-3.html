@@ -7,6 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet/less" type="text/css" href="less/js2-3.less">
     <script src="https://cdn.bootcss.com/less.js/3.0.1/less.min.js"></script>
+
+
+
+
     <title>Title</title>
 </head>
 <body>
@@ -28,7 +32,7 @@
         </div>
 
         <div class="left-right">
-            <div class="right" style="left">
+            <div class="right" style="float: left">
                 <ul>
                     <li><span>杀手1人</span></li>
                     <li><span>杀手1人</span></li>
@@ -51,8 +55,8 @@
                 点击设置<img src="img/js2img/8888.png">
             </div>
             <div id="hum-1">
-                平民<input type="text" name="" value="2" min="4" max="18">人
-                杀手<input type="text" name="" value="2" min="4" max="18">人
+                平民<input type="text" name="" value="" min="4" max="18" id="ping">人
+                杀手<input type="text" name="" value="" min="4" max="18" id="sha">人
             </div>
         </div>
     </div>
@@ -64,12 +68,12 @@
 
     <div class="box-bottom">
         <div class="rrt">玩家人数
-            <input type="text" name="" value="4" min="4" max="18" id="tt" onkeyup="ttt">人
+            <input type="text" value="4" min="4" max="18" id="overall" oninput="overall()">人
         </div>
         <div class="rry">
-            <button onclick="subnum()">-</button>
-            <input type="range" value="" min="4" max="18" onclick="test" id="nn">
-            <button onclick="addnum()">+</button>
+            <button  id="sub">-</button>
+            <input type="range" value="4" min="4" max="18" id="nn" oninput="setVal()" onchange="setVal()">
+            <button id="add">+</button>
         </div>
     </div>
 </main>
@@ -80,6 +84,6 @@
 
 </body>
 
-<script src="js/js2-3.js"></script>
+<script src="js/js2-3.1.js"></script>
 
 </html>
