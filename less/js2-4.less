@@ -1,0 +1,228 @@
+@base: #f0f0f0;
+@bgcolor: #29bde0;
+@fullwidth: 100%;
+@fullheight: 100%;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: @base;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: @fullwidth;
+  height: 7rem;
+  text-align: center;
+  background-color: @bgcolor;
+  border-bottom: 1px solid #42c5e4;
+
+  .top-left {
+    float: left;
+    position: relative;
+    top: 2.6rem;
+    left: 2%;
+    cursor: pointer;
+  }
+  .top-right {
+    float: right;
+    position: relative;
+    top: 2.6rem;
+    right: 2%;
+    cursor: pointer;
+  }
+
+  a {
+    display: inline-block;
+    line-height: 8rem;
+    color: white;
+    font-size: 34px;
+
+  }
+}
+
+main {
+  .box1 {
+    width: 96%;
+    height: 380px;
+    margin: 5% 2%;
+    font-size: 30px;
+    text-align: center;
+    border: 1px solid #e8e8e8;
+
+    .top {
+      color: #24a7c6;
+      background-color: white !important;
+      border: 1px solid #e8e8e8;
+      background: url("../img/js2img/7878.png") no-repeat right;
+      cursor: pointer;
+    }
+
+    .mid {
+      background-color: white;
+      .right {
+        position: relative;
+        float: right;
+        width: 80%;
+
+        .tte1 {
+          margin-top: 2rem;
+          color: white;
+          background-color: #24a7c6;
+          &::after {
+            content: "";
+            position: absolute;
+            top: calc(12% - .7rem);
+            left: -1.4rem;
+            border-top: .7rem solid transparent;
+            border-right: 1.5rem solid #24a7c6;
+            border-bottom: .7rem solid transparent;
+          }
+        }
+        .tte2 {
+          margin-top: 2rem;
+          color: white;
+          background-color: #24a7c6;
+          &::after {
+            content: "";
+            position: absolute;
+            top: calc(29% - .7rem);
+            left: -1.4rem;
+            border-top: .7rem solid transparent;
+            border-right: 1.5rem solid #24a7c6;
+            border-bottom: .7rem solid transparent;
+          }
+        }
+        .tte3 {
+          margin-top: 2rem;
+          color: white;
+          background-color: #24a7c6;
+          &::after {
+            content: "";
+            position: absolute;
+            top: calc(45% - .7rem);
+            left: -1.4rem;
+            border-top: .7rem solid transparent;
+            border-right: 1.5rem solid #24a7c6;
+            border-bottom: .7rem solid transparent;
+          }
+        }
+        .tte4 {
+          margin-top: 2rem;
+          color: white;
+          background-color: #24a7c6;
+          &::after {
+            content: "";
+            position: absolute;
+            top: calc(61% - .7rem);
+            left: -1.4rem;
+            border-top: .7rem solid transparent;
+            border-right: 1.5rem solid #24a7c6;
+            border-bottom: .7rem solid transparent;
+          }
+        }
+
+      }
+      .moon {
+        position: relative;
+        left: -20%;
+        top: -20.8rem;
+        border: 1px solid #9a9a9a;
+        border-radius: 50%;
+        padding: .5rem;
+        margin: 1rem;
+        width: 3rem;
+        height: 3rem;
+        background: url("../img/js2img/moon.png") no-repeat #fff center / contain;
+        background-origin: content-box;
+      }
+      .sun {
+        position: relative;
+        left: -20%;
+        top: -20.8rem;
+        border: 1px solid #9a9a9a;
+        border-radius: 50%;
+        padding: .5rem;
+        margin: 1rem;
+        width: 3rem;
+        height: 3rem;
+        background: url("../img/js2img/sun.png") no-repeat #fff center / contain;
+        background-origin: content-box;
+      }
+
+    }
+  }
+}
+
+
+nav {
+  width: @fullwidth;
+  height: 10rem;
+  background-color: rgba(41, 189, 224, .5);
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+
+  button {
+    background: #f66f6f;
+    font-size: 40px;
+    text-align: center;
+    height: 6rem;
+    line-height: 6rem;
+    border-radius: 1rem;
+    outline-style: none;
+    margin: 2rem 5rem;
+    a {
+      text-decoration: none !important;
+      color: white;
+      padding: 0 3rem;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 770px) {
+  nav {
+    width: @fullwidth;
+    height: 10rem;
+    background-color: rgba(41, 189, 224, .5);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+
+    .col-xs-12 {
+      width: 100%;
+      text-align: center;
+      button {
+        background: #f66f6f;
+        font-size: 20px;
+        text-align: center;
+        line-height: 4rem;
+        border-radius: 1rem;
+        outline-style: none;
+        margin: 2rem 1.1em;
+
+        a {
+          text-decoration: none !important;
+          color: white;
+          padding: 0 3%;
+          &:hover {
+            color: white;
+          }
+        }
+      }
+
+    }
+  }
+}

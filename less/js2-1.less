@@ -7,7 +7,7 @@ html {
   font-size: 62.5%;
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
   background-color: @bgcolor;
@@ -29,12 +29,14 @@ header {
     position: relative;
     top: 2.6rem;
     left: 2%;
+    cursor: pointer;
   }
   .top-right {
     float: right;
     position: relative;
     top: 2.6rem;
     right: 2%;
+    cursor: pointer;
   }
 
   a {
@@ -56,15 +58,47 @@ main {
     background-color: #ffedc5;
     border: 5px solid white;
     margin: 0 13%;
-    .circle {
+
+    .maintop {
+      font-size: 25px;
+      width: 5rem;
+      height: 2.5em;
+      border-radius: 50%;
+      margin: 0 auto;
+      border: 1px solid #ffedc5;
+      background-color: white;
+      text-align: center;
+      line-height: 2.5em;
+      cursor: pointer;
+      color: red;
       position: relative;
-      top: -38px;
+      top:-3rem;
 
     }
-
-    .logo img {
+    img {
       display: block;
       width: 230px;
+      margin: 5% auto;
+
+    }
+    .hide {
+      display: none;
+    }
+    .ttt {
+      font-size: 20px;
+      color: #24a7c6;
+      display: none;
+      .text {
+        height: 100px;
+        border-top: 3px solid white;
+        p {
+          text-align: left;
+          padding: 0 25%;
+          margin-top: 1em;
+          font-size: 20px;
+          color: orange;
+        }
+      }
     }
   }
 }
@@ -85,4 +119,24 @@ footer {
 
   }
 
+}
+
+@media (min-width: 320px) and(max-width: 460px){
+  footer {
+    text-align: center;
+    button {
+      background-color: orange;
+      width: 80%;
+      height: 85px;
+      color: white;
+      font-size: 27px;
+      margin-top: .5em;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      margin-bottom: .5em;
+
+    }
+
+  }
 }

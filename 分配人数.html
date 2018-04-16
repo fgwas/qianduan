@@ -7,8 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet/less" type="text/css" href="less/js2-3.less">
     <script src="https://cdn.bootcss.com/less.js/3.0.1/less.min.js"></script>
-
-
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
 
 
     <title>Title</title>
@@ -30,33 +29,13 @@
         <div class="left">
             玩家配比
         </div>
-
         <div class="left-right">
-            <div class="right" style="float: left">
-                <ul>
-                    <li><span>杀手1人</span></li>
-                    <li><span>杀手1人</span></li>
-                    <li><span>杀手1人</span></li>
-                    <li><span>杀手1人</span></li>
-                    <li><span>杀手1人</span></li>
-                </ul>
-            </div>
-            <div class="right" >
-                <ul>
-                    <li><span>平民1人</span></li>
-                    <li><span>平民1人</span></li>
-                    <li><span>平民1人</span></li>
-                    <li><span>平民1人</span></li>
-                    <li><span>平民1人</span></li>
-                </ul>
-            </div>
-
             <div id="hum" onclick="hum()">
                 点击设置<img src="img/js2img/8888.png">
             </div>
             <div id="hum-1">
-                平民<input type="text" name="" value="" min="4" max="18" id="ping">人
-                杀手<input type="text" name="" value="" min="4" max="18" id="sha">人
+                平民<input type="text" name="" value="" min="4" max="18" id="people">人
+                杀手<input type="text" name="" value="" min="4" max="18" id="killer">人
             </div>
         </div>
     </div>
@@ -71,7 +50,7 @@
             <input type="text" value="4" min="4" max="18" id="overall" oninput="overall()">人
         </div>
         <div class="rry">
-            <button  id="sub">-</button>
+            <button id="sub">-</button>
             <input type="range" value="4" min="4" max="18" id="nn" oninput="setVal()" onchange="setVal()">
             <button id="add">+</button>
         </div>

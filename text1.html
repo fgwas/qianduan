@@ -1,261 +1,293 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-
-
+    <title>发牌</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <style type="text/css">
-
-        .container {
-            display: table;
-        }
-        .row {
-            display: table-row;
-        }
-        .cell {
-            display: table-cell;
-            margin: 100px 100px;
-            width: 100px;
-            height: 100px;
-            border: 1px solid blue;
-            padding: 1em;
-            text-align: center;
-            line-height: 100px;
+        body {
+            background: #29bde0;
+            min-width: 54rem;
         }
 
-        /*................*/
-        .parent {
-            display: table;
-            width: 100%;
-            height: 300px;
-            background-color: red;
-        }
-        .son {
-            display: table-cell;
-            background-color: yellow;
-            height: 100px;
-            text-align: center;
-            vertical-align: middle;
-            padding:10px 10px;
-
-            /*margin:100px 100px 500px 10000px;*/
+        .wear {
+            height: 9.5rem;
+            border-bottom: 0.1rem solid #FFFFFF;
         }
 
-        /*..................................................................*/
-
-        .table {
-            display: table;
-            background-color: snow;
-            width: 70%;
-            margin: 0 auto;
+        .wear img {
+            position: absolute;
+            top: 4rem;
         }
 
-        .cell {
-            display: table-cell;
-            width: 30%;
-            margin: 10px;
-        }
-
-        /*.....................*/
-
-        .container {
-            overflow: hidden;
-            background-color: blue;
-            width: 70%;
-            margin: 0 auto;
-        }
-        .fl {
-            float: left;
-        }
-        .right {
-            display: table-cell;
-            font-size: 2rem;
-        }
-
-        /*......................*/
-
-        .box {
+        .wear span {
             display: block;
-            line-height: 20px;
-            padding: 0 20px 20px;
-            background-color: red;
+            font-size: 3rem;
+            color: #FFFFFF;
+            text-align: center;
+            line-height: 9.5rem;
         }
 
-        .list-row {
-            display: table-row;
+        .print {
+            width: 50%;
+            margin: auto;
+            text-align: center;
         }
 
-        .list-cell {
-            display: table-cell;
-            width: 33.3%;
-            padding-bottom: 30px;
-            vertical-align: top;
+        .print img {
+            max-width: 100%;
         }
 
+        .wear-1 {
+            width: 50%;
+            margin: auto;
+            padding-top: 20%;
+            padding-bottom: 10%;
+        }
+
+        .wear-a img {
+            margin-bottom: 2rem;
+            min-width: 100%;
+        }
+
+        .wear-3 {
+            width: 8rem;
+            height: 8rem;
+            line-height: 8rem;
+            background: #FFFFFF;
+            border-radius: 50%;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            top: 4rem;
+            border: 0.2rem solid lightgoldenrodyellow;
+        }
+
+        .ipt-a {
+            width: 7rem;
+            line-height: 7rem;
+            text-align: center;
+            border: none;
+            border-radius: 50%;
+            outline-style: none;
+            color: red;
+            font-size: 2.5rem;
+        }
+
+        .end {
+            padding-left: 8rem;
+            padding-right: 8rem;
+            margin-top: 3rem;
+        }
+
+        .end input {
+            width: 100%;
+            height: 8rem;
+            background: orange;
+            margin-bottom: 5rem;
+            border: none;
+            font-size: 1.8rem;
+            color: #FFFFFF;
+        }
+
+        .wear .ent {
+            position: absolute;
+            right: 0;
+            margin-right: 1rem;
+        }
+
+        .wear-a {
+            text-align: center;
+        }
+
+        .bese {
+            margin: auto;
+            padding-top: 4%;
+            padding-bottom: 2rem;
+            color: orange;
+            background: lightgoldenrodyellow;
+            border-top: 0.2rem solid #FFFFFF;
+            text-align: center;
+        }
+
+        .bese span {
+            margin-left: -10rem;
+        }
+
+        .wear-a span {
+            color: #29BDE0;
+            font-size: 1.5rem;
+        }
+
+        .wear-a b {
+            font-size: 1.5rem;
+            color: orangered;
+        }
+
+        #too {
+            display: none;
+        }
+
+        #tion {
+            cursor: pointer
+        }
+
+        .tap {
+            width: 50%;
+            line-height: 80rem;
+            border: 0.5rem solid #FFFFFF;
+            background: lightgoldenrodyellow;
+            margin: auto;
+        }
+
+        .bat {
+            width: 50%;
+            height: 80rem;
+            border: 0.5rem solid #FFFFFF;
+            background: lightgoldenrodyellow;
+            margin: auto;
+        }
+
+        @media (max-width: 768px) {
+            .tap {
+                line-height: 40rem;
+            }
+            .bat {
+                height: 40rem;
+            }
+            .wear-1 {
+                padding-top: 10%;
+                padding-bottom: 0;
+            }
+            .wear-a {
+                margin-bottom: 1rem;
+            }
+            .best {
+                margin-bottom: 1rem;
+                padding-top: 2%;
+                padding-bottom: 1rem;
+            }
+            .wear-a img {
+                margin-bottom: 0.1rem;
+            }
+        }
     </style>
 </head>
+
 <body>
+<div class="container-fluid" style="padding: 0;">
 
+    <!--头部-->
+    <div class="wear">
 
-<div class="container">
-    <div class="row">
-        <div class="cell">CELL A</div>
-        <div class="cell">CELL B</div>
-        <div class="cell">CELL C</div>
+        <a href="桌游匹配.html"><img src="../img/back.png" /></a>
+
+        <img src="../img/headerbar-close.png" class="ent" id="tion" />
+        <span> 查看身份</span>
     </div>
-</div>
-<!--..............-->
 
-
-<div class="parent">
-    <div class="son">sdgsdagsdg</div>
-    <div class="son">sdgsdagsdg</div>
-    <div class="son">sdgsdagsdg</div>
-    <div class="son">sdgsdagsdg</div>
-    <div class="son">sdgsdagsdg</div>
-    <div class="son">sdgsdagsdg</div>
-
-</div>
-
-<!--..............-->
-<!--使用table-cell实现等高布局-->
-<div class="table">
-    <div class="cell">
-        <p><a href="#"></a> 来自北京</p>
-        <p>签名：想找个保鲜盒把你给我的那些感动都装起来。当你让我伤心的时候就拿出来回味一下。</p>
-        <!--<p>签名：想找个保鲜盒把你给我的那些感动都装起来。当你让我伤心的时候就拿出来回味一下。</p>-->
-    </div>
-    <div class="cell">
-        <p><a href="#"></a> 来自北京</p>
-        <p>签名：想找个保鲜盒把你给我的那些感动都装起来。当你让我伤心的时候就拿出来回味一下。</p>
-        <!--<p>签名：想找个保鲜盒把你给我的那些感动都装起来。当你让我伤心的时候就拿出来回味一下。</p>-->
-    </div>
-    <div class="cell">
-        <p><a href="#"></a> 来自北京</p>
-        <p>签名：想找个保鲜盒把你给我的那些感动都装起来。当你让我伤心的时候就拿出来回味一下。</p>
-        <!--<p>签名：想找个保鲜盒把你给我的那些感动都装起来。当你让我伤心的时候就拿出来回味一下。</p>-->
-    </div>
-</div>
-
-<!--..................-->
-
-<!--使用table-ceil实现左侧浮动右侧自适应-->
-<div class="container">
-    <a class="fl"><img width="300px" height="200px"
-                       src="img/img2/1.png"></a>
-    <div class="right">
-        <p><a href="#"></a> 来自北京</p>
-        <p>签名：想找个保鲜盒把你给我的那些感动都装起来。当你让我伤心的时候就拿出来回味一下。</p>
-        <p>
-            微博：坐在办公室，只听轰隆隆几声巨响，晴天也能打雷吗？原来街对面的芭莎咖啡厅被炸成了两截。这定点爆破也太失败了，也不清下场，把路过的汽车震得灰头土脸，愣在路中央不知如何是好。其次，房子只炸了一半，另一半屹立不倒，是乍药太水还是房子质量太好？</p>
-    </div>
-</div>
-
-
-<!--...................-->
-
-
-<div class="box">
-    <div class="box1">
-        <div class="list-row">
-            <div class="list-cell">
-                <ul>
-                    <li>中央政治局同志向党中央和习近平总书记述职</li>
-                    <li>中共中央印发《深化党和国家机构改革方案》</li>
-                    <li>社评论员：创造新时代的光辉业绩</li>
-                    <li>环保部:拟确定邢台等7地为环境改善成效明显市州</li>
-                    <li>百度获得北京市首批自动驾驶汽车测试牌照</li>
-                    <li>市民领独生子女奖金后生二孩 卫计局：至少双倍返还</li>
-                    <li>央行决定停止第四套人民币部分券别在市场上流通</li>
-                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
-                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
-                </ul>
-            </div>
-            <div class="list-cell">
-                <ul>
-                    <li>中央政治局同志向党中央和习近平总书记述职</li>
-                    <li>中共中央印发《深化党和国家机构改革方案》</li>
-                    <li>社评论员：创造新时代的光辉业绩</li>
-                    <li>环保部:拟确定邢台等7地为环境改善成效明显市州</li>
-                    <li>百度获得北京市首批自动驾驶汽车测试牌照</li>
-                    <li>市民领独生子女奖金后生二孩 卫计局：至少双倍返还</li>
-                    <li>央行决定停止第四套人民币部分券别在市场上流通</li>
-                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
-                    <li>政协委员谈两会：开创社会主义现代化建设新局面</l
-                    <li>央行决定停止第四套人民币部分券别在市场上流通</li>
-                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
-                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
-                </ul>
-            </div>
-            <div class="list-cell">
-                <ul>
-                    <li>中央政治局同志向党中央和习近平总书记述职</li>
-                    <li>中共中央印发《深化党和国家机构改革方案》</li>
-                    <li>社评论员：创造新时代的光辉业绩</li>
-                    <li>环保部:拟确定邢台等7地为环境改善成效明显市州</li>
-                    <li>百度获得北京市首批自动驾驶汽车测试牌照</li>
-                    <li>市民领独生子女奖金后生二孩 卫计局：至少双倍返还</li>
-                    <li>央行决定停止第四套人民币部分券别在市场上流通</li>
-                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
-                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
-                    <li>央行决定停止第四套人民币部分券别在市场上流通</li>
-                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
-                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
-                    <li>央行决定停止第四套人民币部分券别在市场上流通</li>
-                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
-                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
-                    <li>央行决定停止第四套人民币部分券别在市场上流通</li>
-                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
-                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
-
-                </ul>
-            </div>
+    <div id="one">
+        <div class="wear-3">
+            <input type="text" value="1" id="ipt" class="ipt-a" />
         </div>
-        <div class="list-row">
-            <div class="list-cell">
-                <ul>
-                    <li>中央政治局同志向党中央和习近平总书记述职</li>
-                    <li>中共中央印发《深化党和国家机构改革方案》</li>
-                    <li>社评论员：创造新时代的光辉业绩</li>
-                    <li>环保部:拟确定邢台等7地为环境改善成效明显市州</li>
-                    <li>百度获得北京市首批自动驾驶汽车测试牌照</li>
-                    <li>市民领独生子女奖金后生二孩 卫计局：至少双倍返还</li>
-                    <li>央行决定停止第四套人民币部分券别在市场上流通</li>
-                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
-                    <li>政协委员谈两会：开创社会主义现代化建设新局面</l
-                    <li>央行决定停止第四套人民币部分券别在市场上流通</li>
-                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
-                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
-                </ul>
-            </div>
-            <div class="list-cell">
-                <ul>
-                    <li>中央政治局同志向党中央和习近平总书记述职</li>
-                    <li>中共中央印发《深化党和国家机构改革方案》</li>
-                    <li>社评论员：创造新时代的光辉业绩</li>
-                    <li>环保部:拟确定邢台等7地为环境改善成效明显市州</li>
-                    <li>百度获得北京市首批自动驾驶汽车测试牌照</li>
-                    <li>市民领独生子女奖金后生二孩 卫计局：至少双倍返还</li>
-                    <li>央行决定停止第四套人民币部分券别在市场上流通</li>
-                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
-                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
-                    <li>央行决定停止第四套人民币部分券别在市场上流通</li>
-                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
-                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
-                    <li>央行决定停止第四套人民币部分券别在市场上流通</li>
-                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
-                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
-                    <li>央行决定停止第四套人民币部分券别在市场上流通</li>
-                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
-                    <li>政协委员谈两会：开创社会主义现代化建设新局面</li>
+        <div class="tap">
 
-                </ul>
+            <div class="print img-responsive">
+                <img src="../img/fanpai-3.png" />
             </div>
         </div>
     </div>
+    <div id="too">
+        <div class="wear-3">
+            <input type="text" value="1" id="ipt_1" class="ipt-a" />
+        </div>
+        <div class="bat">
+            <div class="wear-1">
+                <div class="wear-a img-responsive">
+                    <img src="../img/spirit-card-front.png" class="img-responsive" /><br />
+                    <span id="role"></span><br />
+                    <b id="phrase">词 组：</b>
+                </div>
+            </div>
+            <div class="bese">
+                <p>想办法猜到人的词，同时还要注意</p>
+                <span>不要暴露自己哦！</span>
+            </div>
+        </div>
+    </div>
+    <div class="end">
+        <input type="button" value="查看1号身份" id="but" />
+    </div>
 </div>
 
-
+<script type="text/javascript">
+    var tion = document.getElementById('tion');
+    tion.onclick = function() {
+        if(window.confirm('你确定要取消游戏吗？')) {
+            localStorage.clear();
+            window.location.href = "桌游首页.html";
+        }
+    }
+    var i = 1;
+    var flag = true;
+    var but = document.getElementById('but');
+    var ipt = document.getElementById('ipt');
+    var ipt_1 = document.getElementById('ipt_1');
+    var one = document.getElementById('one');
+    var too = document.getElementById('too');
+    var role = document.getElementById('role');
+    var phrase = document.getElementById('phrase');
+    if(!window.localStorage) {
+        alert("支持");
+    } else {
+        var roles = localStorage.getItem("roles").split(',');
+        var folk = localStorage.getItem('folk');
+        var killer = localStorage.getItem('killer');
+    }
+    var goFlag = false;
+    but.onclick = function() {
+        if(goFlag) {
+            window.location.href = "桌面-法官日记.html";
+            return true;
+        } else {
+            ipt.value = i;
+            ipt_1.value = i;
+            switchRole();
+        }
+        function switchRole() {
+            if(flag) {
+                but.value = "隐藏并传递给" + (i + 1) + "号";
+                role.innerHTML = "角色：" + roles[i - 1];
+                if(roles[i - 1] == '杀手') {
+                    phrase.innerHTML = "词组：" + killer;
+                } else if(roles[i - 1] == '水民') {
+                    phrase.innerHTML = "词组：" + folk;
+                } else {
+                    console.log('error')
+                }
+                i++;
+            } else {
+                but.value = "查看" + i + "号身份";
+            }
+            console.log(i);
+            if(i == roles.length + 1) {
+                but.value = "法官日记";
+                goFlag = true;
+                console.log(i);
+            }
+        }
+        flag = !flag;
+        if(flag) {
+            too.style = "display: none";
+            one.style = "display: block";
+        } else {
+            too.style = "display:block";
+            one.style = "display:none";
+        }
+    }
+</script>
 </body>
+
 </html>
