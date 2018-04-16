@@ -5,7 +5,6 @@
 
 html {
   font-size: 62.5%;
-  min-width: 810px;
 }
 
 body {
@@ -19,6 +18,9 @@ header {
   line-height: 6rem;
   font-size: @font-size;
   text-align: center;
+  position: fixed;
+  left: 0;
+  top: 0;
 
   a {
     float: left;
@@ -68,28 +70,27 @@ main {
   }
 
   dl {
-    display: flex;
-    height: 5rem;
+    display: block;
     line-height: 5rem;
     margin: 0 2rem;
     border-bottom: 1px solid #f5f6f7;
 
     dd {
-      display: inline-flex;
+      display: inline-block;
       font-size: 2rem;
       color: #d2d2d2;
     }
     .lastdd {
-      display: inline-flex;
+      display: inline-block;
       font-size: 2rem;
       color: black;
     }
 
     .ddr {
-      display: inline-flex;
+      display: inline-block;
       color: black;
-      justify-content: flex-start;
-
+      width: 40%;
+      line-height: 1;
     }
   }
 }
