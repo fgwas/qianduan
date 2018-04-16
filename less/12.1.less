@@ -55,7 +55,7 @@ main {
     select {
       color: #b5b5b5;
       line-height: 4rem;
-      margin: 1em 0;
+      margin: 1em -2em;
       border: 0;
 
 
@@ -72,8 +72,8 @@ main {
 
   }
 
-  .col-xs-12 {
-    width: 50%;
+  .col-md-12 {
+    width: 100%;
     line-height: 5rem;
 
     p {
@@ -101,18 +101,89 @@ main {
 
     .time {
       color: black;
-      padding: 0 4.7rem;
+      padding-left: 4.7rem;
+
+      .right {
+        color: red;
+        float: right;
+
+      }
     }
 
   }
-  .right {
-    text-align: right;
-    line-height: 13rem;
-    color: red;
-    float: right;
+
+
+}
+@media (min-width: 320px)and(max-width: 450px){
+
+  main {
+
+    .col-xs-4 {
+      text-align: center;
+
+      select {
+        color: #b5b5b5;
+        line-height: 4rem;
+        margin: 1em -2em;
+        border: 0;
+
+
+      }
+
+      .left {
+        display: inline-block;
+        width: 3rem;
+        height: 3rem;
+        background-image: url("../img/ico.png");
+        background-position: 0 1.3rem;
+        float: right;
+      }
+
+    }
+
+    .col-md-12 {
+      width: 100%;
+      line-height: 5rem;
+
+      p {
+        line-height: 4rem;
+        color: #b3bec3;
+      }
+
+      a {
+        display: inline-block;
+        margin: -.3rem 1rem;
+        width: 2.2rem;
+        height: 2rem;
+        background-image: url("../img/ico.png");
+        background-position: -7.2rem 8.7rem;
+      }
+
+      .add {
+        display: inline-block;
+        margin: -.3rem 1rem;
+        width: 2.2rem;
+        height: 2rem;
+        background-image: url("../img/ico.png");
+        background-position: -3.2rem 8.7rem;
+      }
+
+      .time {
+        color: black;
+        padding-left: 4.7rem;
+        font-size: 14px;
+
+        .right {
+          color: red;
+          float: right;
+
+        }
+      }
+
+    }
+
 
   }
-
 }
 
 
@@ -128,6 +199,7 @@ footer {
     display: inline-block;
 
     .left {
+      text-align: center;
       display: inline-block;
       width: 7.5rem;
       height: 7rem;
@@ -138,6 +210,7 @@ footer {
 
     }
     .mid {
+      margin:0 2em;
       display: inline-block;
       width: 9rem;
       height: 9rem;
@@ -146,6 +219,7 @@ footer {
     }
 
     .right {
+      text-align: center;
       display: inline-block;
       width: 7.5rem;
       height: 7rem;
@@ -180,9 +254,11 @@ footer {
         background-image: url("../img/ico.png");
         background-position: -19.5rem 8.7rem;
         margin: 1rem 0;
+        text-align: right;
 
       }
       .mid {
+        margin:0 2em;
         display: inline-block;
         width: 8.1rem;
         height: 9rem;
@@ -190,19 +266,19 @@ footer {
         background-position: -27.2rem 9.7rem;
       }
 
-      .right {
+      .right {  text-align: right;
         display: inline-block;
         width: 6rem;
         height: 4rem;
         background-image: url("../img/ico.png");
         background-position: -9.4rem 8.7rem;
-
         margin: 1rem 0;
 
       }
       span {
         display: inline-block;
         color: #5fc0cd;
+        font-size: 2.5rem;
       }
     }
   }
