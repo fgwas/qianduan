@@ -11,7 +11,7 @@
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <title>Title</title>
     <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/less.js/3.0.1/less.min.js"></script>
     <link rel="stylesheet/less" type="text/css" href="less/10.less">
     <script src="https://cdn.bootcss.com/less.js/3.0.1/less.min.js"></script>
 </head>
@@ -34,29 +34,29 @@
 
 
 <nav>
-    <div class="box" onclick="ttt1">
-        <div class="list">
-            <div class="listsrc">1</div>
+    <div class="box" id="tt1">
+        <div class="list" id="list1">
+            <div class="listsrc" id="listsrc1">1</div>
         </div>
-        <p class="text">1.定制纸箱</p>
+        <p class="text" id="text1">1.定制纸箱</p>
     </div>
-    <div class="box" onclick="ttt1">
-        <div class="list">
-            <div class="listsrc">2</div>
+    <div class="box" id="tt2">
+        <div class="list" id="list2">
+            <div class="listsrc" id="listsrc2">2</div>
         </div>
-        <p class="text">2.选择数量</p>
+        <p class="text" id="text2">2.选择数量</p>
     </div>
-    <div class="box" onclick="ttt1">
-        <div class="list">
-            <div class="listsrc">3</div>
+    <div class="box" id="tt3">
+        <div class="list" id="list3">
+            <div class="listsrc" id="listsrc3">3</div>
         </div>
-        <p class="text">3.上传附件</p>
+        <p class="text" id="text3">3.上传附件</p>
     </div>
-    <div class="box" onclick="ttt1">
-        <div class="list">
-            <div class="listsrc">4</div>
+    <div class="box" id="tt4">
+        <div class="list" id="list4">
+            <div class="listsrc" id="listsrc4">4</div>
         </div>
-        <p class="text">4.确认下单</p>
+        <p class="text" id="text4">4.确认下单</p>
     </div>
 </nav>
 
@@ -212,17 +212,28 @@
 
 </body>
 <script>
-
-    var list = document.getElementsByClassName('list');
-    var listsrc = document.getElementsByClassName('listsrc');
-    var text = document.getElementsByClassName('text');
-
-    function ttt1() {
-        list.style.backgroundColor = 'orange';
-        listsrc.style.backgroundColor='orange';
-        text.style.color='orange';
-u
-    }
+    $(document).ready(function () {
+        $('#tt1').click(function () {
+            $('#list1').css('background','orange');
+            $('#listsrc1').css('background','orange');
+            $('#text1').css('color','orange');
+        });
+        $('#tt2').click(function () {
+            $('#list2').css('background','orange');
+            $('#listsrc2').css('background','orange');
+            $('#text2').css('color','orange');
+        });
+        $('#tt3').click(function () {
+            $('#list3').css('background','orange');
+            $('#listsrc3').css('background','orange');
+            $('#text3').css('color','orange');
+        });
+        $('#tt4').click(function () {
+            $('#list4').css('background','orange');
+            $('#listsrc4').css('background','orange');
+            $('#text4').css('color','orange');
+        })
+    });
 
 
 </script>
