@@ -50,6 +50,7 @@ header {
 }
 
 main {
+  padding:0 1em;
   .box1 {
     width: 96%;
     height: 380px;
@@ -71,69 +72,27 @@ main {
       .right {
         position: relative;
         float: right;
-        width: 80%;
+        width: 70%;
 
-        .tte1 {
+        .tte {
+          position: relative;
           margin-top: 2rem;
           color: white;
           background-color: #24a7c6;
           &::after {
             content: "";
             position: absolute;
-            top: calc(12% - .7rem);
+            top: calc(50% - .7rem);
             left: -1.4rem;
             border-top: .7rem solid transparent;
             border-right: 1.5rem solid #24a7c6;
             border-bottom: .7rem solid transparent;
           }
         }
-        .tte2 {
-          margin-top: 2rem;
-          color: white;
-          background-color: #24a7c6;
-          &::after {
-            content: "";
-            position: absolute;
-            top: calc(29% - .7rem);
-            left: -1.4rem;
-            border-top: .7rem solid transparent;
-            border-right: 1.5rem solid #24a7c6;
-            border-bottom: .7rem solid transparent;
-          }
-        }
-        .tte3 {
-          margin-top: 2rem;
-          color: white;
-          background-color: #24a7c6;
-          &::after {
-            content: "";
-            position: absolute;
-            top: calc(45% - .7rem);
-            left: -1.4rem;
-            border-top: .7rem solid transparent;
-            border-right: 1.5rem solid #24a7c6;
-            border-bottom: .7rem solid transparent;
-          }
-        }
-        .tte4 {
-          margin-top: 2rem;
-          color: white;
-          background-color: #24a7c6;
-          &::after {
-            content: "";
-            position: absolute;
-            top: calc(61% - .7rem);
-            left: -1.4rem;
-            border-top: .7rem solid transparent;
-            border-right: 1.5rem solid #24a7c6;
-            border-bottom: .7rem solid transparent;
-          }
-        }
-
       }
       .moon {
         position: relative;
-        left: -20%;
+        left: -40%;
         top: -20.8rem;
         border: 1px solid #9a9a9a;
         border-radius: 50%;
@@ -146,7 +105,7 @@ main {
       }
       .sun {
         position: relative;
-        left: -20%;
+        left: -40%;
         top: -20.8rem;
         border: 1px solid #9a9a9a;
         border-radius: 50%;
@@ -165,7 +124,7 @@ main {
 
 nav {
   width: @fullwidth;
-  height: 10rem;
+  height: 8rem;
   background-color: rgba(41, 189, 224, .5);
   text-align: center;
   position: fixed;
@@ -180,7 +139,7 @@ nav {
     line-height: 6rem;
     border-radius: 1rem;
     outline-style: none;
-    margin: 2rem 5rem;
+    margin: 1rem 5rem;
     a {
       text-decoration: none !important;
       color: white;
@@ -195,7 +154,7 @@ nav {
 @media screen and (max-width: 770px) {
   nav {
     width: @fullwidth;
-    height: 10rem;
+    height: 7rem;
     background-color: rgba(41, 189, 224, .5);
     position: fixed;
     left: 0;
@@ -211,7 +170,7 @@ nav {
         line-height: 4rem;
         border-radius: 1rem;
         outline-style: none;
-        margin: 2rem 1.1em;
+        margin: 1rem 1.1em;
 
         a {
           text-decoration: none !important;

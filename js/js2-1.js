@@ -48,6 +48,7 @@ $(document).ready(function () {
     var $num = Math.floor(i / 2) + 1;
 
     $(".title").text("查看" + ($num) + "号玩家");
+
     $(".but1").text("查看玩家");
     $("#but").click(function () {
         $num = Math.floor(i / 2) + 1;
@@ -57,21 +58,21 @@ $(document).ready(function () {
             $(".hide").css("display", "block");
             $(".but1").text("隐藏并传给" + ($num + 1) + "号玩家");
             $(".ttt").css("display", "block");
-            $('.zhiye').append(peoplerel[$num - 2]);
+            $('.zhiye').append(peoplerel[$num - 1]);
 
         } else {
             $num = Math.floor(i / 2 + 1);
             console.log('隐藏身份的逻辑');
             $(".show").css("display", "block");
             $(".hide").css("display", "none");
-            $(".title").text("查看" + ($num) + "号玩家")
+            $(".title").text("查看" + ($num) + "号玩家");
             $(".but1").text("查看玩家");
             $(".ttt").css("display", "none");
             $(".maintop").text($num);
             $('.zhiye').empty();
-            if (($num) === peoplerel.length) {
-                $(".but1").text("查看玩家");
-                window.location.href = "法官日记.html";
+            if (($num-1) === peoplerel.length) {
+                $(".but1").text("法官日志");
+                window.location.href = "法官日志.html";
             }
         }
         i++;
