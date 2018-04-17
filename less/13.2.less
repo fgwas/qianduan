@@ -108,21 +108,25 @@ nav {
   left: 0;
   bottom: 0;
 
-  button {
-    background: #f66f6f;
-    font-size: 40px;
-    text-align: center;
-    height: 6rem;
-    line-height: 6rem;
-    border-radius: 1rem;
-    outline-style: none;
-    margin: 2rem 0;
-    a {
-      text-decoration: none !important;
-      color: white;
-      padding: 0 3rem;
-      &:hover {
+  .navbutton {
+    width: 50%;
+    float: left;
+    button {
+      background: #f66f6f;
+      font-size: 40px;
+      text-align: center;
+      height: 6rem;
+      line-height: 6rem;
+      border-radius: 1rem;
+      outline-style: none;
+      margin: 2rem 0;
+      a {
+        text-decoration: none !important;
         color: white;
+        padding: 0 3rem;
+        &:hover {
+          color: white;
+        }
       }
     }
   }
@@ -137,8 +141,9 @@ nav {
     left: 0;
     bottom: 0;
 
-    .col-xs-6 {
+    .navbutton {
       width: 50%;
+      float: left;
       button {
         background: #f66f6f;
         font-size: 20px;
@@ -157,7 +162,6 @@ nav {
           }
         }
       }
-
     }
   }
 }

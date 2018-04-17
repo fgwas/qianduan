@@ -38,25 +38,25 @@
         <div class="list">
             <div class="listsrc">1</div>
         </div>
-        <p>1.定制纸箱</p>
+        <p class="text">1.定制纸箱</p>
     </div>
     <div class="box" onclick="ttt1">
         <div class="list">
             <div class="listsrc">2</div>
         </div>
-        <p>2.选择数量</p>
+        <p class="text">2.选择数量</p>
     </div>
     <div class="box" onclick="ttt1">
         <div class="list">
             <div class="listsrc">3</div>
         </div>
-        <p>3.上传附件</p>
+        <p class="text">3.上传附件</p>
     </div>
     <div class="box" onclick="ttt1">
         <div class="list">
             <div class="listsrc">4</div>
         </div>
-        <p>4.确认下单</p>
+        <p class="text">4.确认下单</p>
     </div>
 </nav>
 
@@ -212,12 +212,17 @@
 
 </body>
 <script>
-   var box=document.getElementsByClassName('box');
-   var list=document.getElementsByClassName('list');
-   var listsrc=document.getElementsByClassName('listsrc');
-   function ttt1() {
-       box.style.backgroundColor='orange';
-   }
+
+    var list = document.getElementsByClassName('list');
+    var listsrc = document.getElementsByClassName('listsrc');
+    var text = document.getElementsByClassName('text');
+
+    function ttt1() {
+        list.style.backgroundColor = 'orange';
+        listsrc.style.backgroundColor='orange';
+        text.style.color='orange';
+u
+    }
 
 
 </script>
