@@ -68,7 +68,7 @@ main {
     }
 
     .mid {
-      background-color: white;
+      background-color: white!important;
       .right {
         position: relative;
         float: right;
@@ -79,6 +79,7 @@ main {
           margin-top: 2rem;
           color: white;
           background-color: #24a7c6;
+          cursor: pointer;
           &::after {
             content: "";
             position: absolute;
@@ -88,6 +89,10 @@ main {
             border-right: 1.5rem solid #24a7c6;
             border-bottom: .7rem solid transparent;
           }
+        }
+
+        .die{
+          background-color: #746b5c;
         }
       }
       .moon {

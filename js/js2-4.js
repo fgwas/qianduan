@@ -14,28 +14,39 @@ $(document).ready(function () {
     });
 
 
-    var day = new StateMachine({
 
-        init: '0',
+    //创建一个控制阶段的有限状态机$state;
+    var fsm = new StateMachine({
+        init: 'ready',
         transitions: [
-            {name: 'time', form: '0', to: '1'},
-            {name: 'time', form: '1', to: '2'},
-            {name: 'time', form: '2', to: '2'},
-            {name: 'time', form: '3', to: '4'},
-            {name: 'time', form: '4', to: '5'},
-            {name: 'time', form: '5', to: '6'},
-            {name: 'time', form: '6', to: '7'},
-            {name: 'time', form: '7', to: '8'},
-            {name: 'time', form: '8', to: '9'}
+            {name: 'tokill', form: 'ready', to: 'kill'},
+            {name: 'towords', form: 'kill', to: 'words'},
+            {name: 'tospeak', form: 'words', to: 'speak'},
+            {name: 'tovote', form: 'speak', to: 'vote'},
+            {name: 'toready', form: '*', to: 'ready'}
         ],
         methods:{
-          ontime:function () {
-              
-          }
+            ontokill: function () {
+                alert(1)
+                // $('tte1').click(function () {
+                //     console.log(2);
+                //     alert('开始杀人');
+                //     $('tte').css('background-color','#746b5c');
+                // })
+            },
+            ontte2: function () {
+                $('tte').css('backgroundColor','#746b5c;');
+            },
+            ontte3: function () {
+                $('tte').css('backgroundColor','#746b5c;');
+            },
+            ontte4: function () {
+                $('tte').css('backgroundColor','#746b5c;');
+            }
         }
-
-
     })
+
+
 
 
 });
