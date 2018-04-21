@@ -24,13 +24,25 @@ $(document).ready(function () {
 
         }
     };
-    window.sessionStorage.setItem('peoplerel', JSON.stringify(peoplerel));
 
-    $('.box').click(function () {
 
-        $('.top').css('background', 'black');
-        $('.top').css('color', 'white');
-    })
+    $('#start').click(function () {
+        window.sessionStorage.setItem('peoplerelstate', JSON.stringify(peoplerelstate));
+        window.sessionStorage.setItem('peoplerel',JSON.stringify(peoplerel));
+        window.location.href='法官日记.html';
+    });
+
+    var peoplerelstate=[];
+    for(var a=0;a<peoplerel.length;a++){
+        peoplerelstate[a]={};
+        peoplerelstate[a].id=peoplerel[a];
+        peoplerelstate[a].status='live';
+        peoplerelstate[a].num=a+1;
+    }
+
+
+
+
 
 
 });

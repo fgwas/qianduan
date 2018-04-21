@@ -1,8 +1,9 @@
 $(document).ready(function () {
     //取上一个页面保存的玩家分配信息
     //获取总人数状态
+    var peoplerelstate = JSON.parse(sessionStorage.getItem('peoplerelstate'));
+    console.log(peoplerelstate);
     var peoplerel = JSON.parse(sessionStorage.getItem('peoplerel'));
-    console.log(peoplerel);
     //被杀人数
     var akiller = JSON.parse(sessionStorage.getItem('akiller'));
     console.log(akiller);
@@ -16,7 +17,7 @@ $(document).ready(function () {
     }
     console.log(days);
 
-    var step=sessionStorage.getItem('step');
+    var step = sessionStorage.getItem('step');
     console.log(step);
 
 
@@ -35,7 +36,7 @@ $(document).ready(function () {
     if (days > 1) {
         for (var i = 0; i < days - 1; i++) {
             var day = i + 1;
-            $('#day').text('第' + day + '天');
+            $('this').text('第' + day + '天');
         }
     }
     console.log(day);
@@ -71,19 +72,20 @@ $(document).ready(function () {
     //         }
     //     }
     // })
-
+    //点击杀手杀人
     $('#tokill').click(function () {
-        if(step===1){
+        if (step === 1) {
             alert("你今天已经杀过人了！");
-        }else {
+        } else {
             alert('你准备好了吗？');
-            window.location.href='法官日志.html';
-            $('#tokill').css('background','#18758D');
+            sessionStorage.setItem('peoplerelstate', JSON.stringify(peoplerelstate));
+            sessionStorage.setItem('peoplerel', JSON.stringify(peoplerel));
+            sessionStorage.setItem('akiller',JSON.stringify(akiller));
+            window.location.href = '杀手杀人.html';
+            $(this).css('background', '#18758D');
 
         }
     })
-
-
 
 
 });
