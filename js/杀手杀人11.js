@@ -34,21 +34,6 @@ $(document).ready(function () {
         console.log(peoplerelstate[o].id);//验证下标id
 
 
-        function changeUI() {
-            if (peoplerelstate[o].id === "平民") {
-                if ($('.box+.top')) {
-                    console.log(121212121212);
-                    $(this).find('.top').css('background','black')
-                    // $(this).toggleClass('.black');
-                }else {
-
-                }
-            } else {
-                alert('自己人 别杀！')
-            }
-        }
-
-
         //判断
         //如果是杀手
         if (peoplerelstate[o].id === "杀手") {
@@ -61,11 +46,14 @@ $(document).ready(function () {
                     alert('已经被杀！');
                 } else {
                     //或如果平民状态是存在
-                    // changeUI();
-                    // $(this).find('.top').css('background', 'black');
+                    console.log(this);
+                    $('.box').find('.top').css('background','#f5c97b');
+                    $(this).find('.top').css('background', 'black');
+
                     $('#start').click(function () {
-                        window.location.href = '法官日记.html';
                         peoplerelstate[o].status = 'die';
+                        window.location.href = '法官日记.html';
+
                     });
 
                 }
@@ -75,33 +63,8 @@ $(document).ready(function () {
 
             }
         }
-
-
-        // var k = 1;
-        // var $num = Math.floor(k / 2) + 1;
-        //
-        // function changeUI() {
-        //     //点击改变颜色，再点击颜色取消，且颜色改变每次只能一个盒子
-        //     if ($num) {
-        //         $(this).find('.top').css('background', 'black');
-        //     } else {
-        //         $(this).find('.top').css('background', '#f5c97b')
-        //     }
-        //     k++;
-        //
-        // }
-
-
     });
-    // sessionStorage.setItem('akiller', JSON.stringify(akiller));
 
-    //
-    // function isInArray(arr, value) {
-    //     for (var i = 0; i < arr.length; i++) {
-    //         if (value === arr[i]) {
-    //             return true;
-    //         }
-    //     }
-    //     return false;
-    // }
 });
+
+
