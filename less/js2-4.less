@@ -51,7 +51,7 @@ header {
 
 main {
   padding:0 1em;
-  .box1 {
+  .box {
     width: 96%;
     margin: 2% 2%;
     font-size: 30px;
@@ -75,7 +75,7 @@ main {
 
         .tte {
           position: relative;
-          margin-top: 2rem;
+          margin-top: 1rem;
           color: white;
           background-color: #24a7c6;
           cursor: pointer;
@@ -90,14 +90,36 @@ main {
           }
         }
 
-        .die{
-          background-color: #746b5c;
+        .eer{
+          font-size: 15px;
+          margin-top:.5rem ;
+        }
+        .eef{
+          font-size: 15px;
+          margin:1rem 0;
+        }
+
+        .death {
+          position: relative;
+          margin-top: 2rem;
+          color: white;
+          background-color: gray;
+          cursor: pointer;
+          &::after {
+            content: "";
+            position: absolute;
+            top: calc(50% - .7rem);
+            left: -1.4rem;
+            border-top: .7rem solid transparent;
+            border-right: 1.5rem solid #24a7c6;
+            border-bottom: .7rem solid transparent;
+          }
         }
       }
       .moon {
-        position: relative;
-        left: -40%;
-        top: -20.8rem;
+        position: absolute;
+        left: -37%;
+        top: 0.2rem;
         border: 1px solid #9a9a9a;
         border-radius: 50%;
         padding: .5rem;
@@ -108,9 +130,9 @@ main {
         background-origin: content-box;
       }
       .sun {
-        position: relative;
-        left: -40%;
-        top: -20.8rem;
+        position: absolute;
+        left: -37%;
+        top: 6.2rem;
         border: 1px solid #9a9a9a;
         border-radius: 50%;
         padding: .5rem;

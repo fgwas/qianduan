@@ -1,21 +1,24 @@
+var peoplerelstate = JSON.parse(sessionStorage.getItem('peoplerelstate'));
+console.log(peoplerelstate);
+var peoplerel = JSON.parse(sessionStorage.getItem('peoplerel'));
+var akiller = JSON.parse(sessionStorage.getItem('akiller'));
+console.log(akiller);
+
+var deathnum = JSON.parse(sessionStorage.getItem('deathnum'));
+
 $(document).ready(function () {
-    //
-    var peoplerelstate = JSON.parse(sessionStorage.getItem('peoplerelstate'));
-    console.log(peoplerelstate);
-    var peoplerel = JSON.parse(sessionStorage.getItem('peoplerel'));
-    var akiller = JSON.parse(sessionStorage.getItem('akiller'));
-    console.log(akiller);
-
-
     for (var i = 0; i < peoplerel.length; i++) {
         var num = i + 1;
         var tt1 = $('<div></div>').text(peoplerel[i]).addClass('top');
         var tt2 = $('<div></div>').text(num + '号').addClass('mid');
         var tt3 = $('<div></div>').addClass('box');
+        if (peoplerelstate[i].status === 'die') {
+            $(tt1).removeClass('.top');
+            $(tt1).addClass('black');
+            console.log(peoplerelstate[i]);
+        }
         $('main').append(tt3);
         $(tt3).append(tt1, tt2);
-
-
     }
 
 
@@ -47,24 +50,38 @@ $(document).ready(function () {
                 } else {
                     //或如果平民状态是存在
                     console.log(this);
-                    $('.box').find('.top').css('background','#f5c97b');
-                    $(this).find('.top').css('background', 'black');
-
-                    $('#start').click(function () {
-                        peoplerelstate[o].status = 'die';
-                        window.location.href = '法官日记.html';
-
-                    });
-
+                    $('.top').removeClass('black2');
+                    $(this).find('.top').addClass('black2');
+                    sessionStorage.setItem('o', JSON.stringify(o));
                 }
             } else {
                 //玩家身份是杀手
                 alert('自己人 别杀！')
-
             }
         }
     });
 
+
 });
 
+
+function www() {
+    var o = JSON.parse(sessionStorage.getItem('o'));
+    console.log(o);
+    if(o===undefined){
+        alert("最少选择一人")
+    }else{
+
+    } if(alert("确定杀他吗？"))
+
+    peoplerelstate[o].status = 'die';
+    peoplerelstate[o].type = 'akiller';
+
+    sessionStorage.setItem('peoplerelstate', JSON.stringify(peoplerelstate));
+
+    console.log(deathnum);
+    window.location.href = '法官日记.html';
+
+
+}
 
