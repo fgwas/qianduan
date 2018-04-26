@@ -1,8 +1,22 @@
+//总玩家状态的信息
 var peoplerelstate = JSON.parse(sessionStorage.getItem('peoplerelstate'));
 console.log(peoplerelstate);
+//玩家总人数
 var peoplerel = JSON.parse(sessionStorage.getItem('peoplerel'));
+//死亡的玩家总数
+var deathnum = JSON.parse(sessionStorage.getItem('deathnum'));
+//定义死亡的平民
+var deathpeople = JSON.parse(sessionStorage.getItem('deathpeople'));
+//定义死亡的杀手
+var deathkiller = JSON.parse(sessionStorage.getItem('deathkiller'));
+//平民人数
+people = JSON.parse(sessionStorage.getItem('people'));
+//杀手人数
+killer = JSON.parse(sessionStorage.getItem('killer'));
+
+//天数days
 var days = JSON.parse(sessionStorage.getItem('days'));
-var akiller = JSON.parse(sessionStorage.getItem('akiller'));
+console.log(days);
 
 
 $(document).ready(function () {
@@ -34,16 +48,29 @@ $(document).ready(function () {
     });
 });
 
+
 function eee() {
     var m = JSON.parse(sessionStorage.getItem('m'));
     console.log(m);
     alert("确定杀他吗？");
     peoplerelstate[m].status = 'die';
-    peoplerelstate[m].type='avoter';
+    peoplerelstate[m].type = 'avoter';
     days = days + 1;
-    peoplerelstate.days++;
-    days++;
+    console.log(days);
     sessionStorage.setItem('peoplerelstate', JSON.stringify(peoplerelstate));
-    window.location.href = '法官日记.html';
+    peoplerelstate.days = days;
+    sessionStorage.setItem('days', JSON.stringify(days));
+    sessionStorage.setItem('deathpeople', JSON.stringify(deathpeople));
+    sessionStorage.setItem('deathkiller', JSON.stringify(deathkiller));
+
+    if (killer - deathkiller.length === 0) {
+        alert('平民胜利');
+        window.location.href = '游戏结束.html';
+    } else if (killer - deathkiller.length >= people - deathpeople.length) {
+        alert('杀手胜利');
+        window.location.href = '游戏结束.html';
+    } else {
+        window.location.href = '法官日记.html';
+    }
 }
 

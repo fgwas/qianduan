@@ -3,17 +3,25 @@ $(document).ready(function () {
     var peoplerel = JSON.parse(sessionStorage.getItem("peoplerel"));
     console.log(peoplerel);
 
+    people=JSON.parse(sessionStorage.getItem('people'));
+    killer=JSON.parse(sessionStorage.getItem('killer'));
+
+
     days = 1;//初始化游戏天数
     akiller = [];//存放被杀玩家
     avoter = [];//存放被投票玩家
     deathnum=[];//玩家死亡数
+    deathpeople=[];//死亡平民
+    deathkiller=[];//死亡杀手
 
     sessionStorage.setItem('days', JSON.stringify(days));
     sessionStorage.setItem('akiller', JSON.stringify(akiller));
     sessionStorage.setItem('avoter', JSON.stringify(avoter));
     sessionStorage.setItem('deathnum', JSON.stringify(deathnum));
-
-
+    sessionStorage.setItem('deathpeople', JSON.stringify(deathpeople));
+    sessionStorage.setItem('deathkiller', JSON.stringify(deathkiller));
+    sessionStorage.setItem('people', JSON.stringify(people));
+    sessionStorage.setItem('killer', JSON.stringify(killer));
     window.onload = function () {
         for (var i = 0; i < peoplerel.length; i++) {
             var num = i + 1;

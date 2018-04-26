@@ -70,9 +70,11 @@ $(document).ready(function () {
             $(".ttt").css("display", "none");
             $(".maintop").text($num);
             $('.zhiye').empty();
-            if (($num-1) === peoplerel.length) {
+            if (($num - 1) === peoplerel.length) {
                 $(".but1").text("法官日志");
                 window.location.href = "法官日志.html";
+                sessionStorage.setItem('people', JSON.stringify(people));
+                sessionStorage.setItem('killer', JSON.stringify(killer));
             }
         }
         i++;

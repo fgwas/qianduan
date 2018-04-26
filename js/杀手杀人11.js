@@ -1,10 +1,21 @@
+//总玩家状态的信息
 var peoplerelstate = JSON.parse(sessionStorage.getItem('peoplerelstate'));
 console.log(peoplerelstate);
+//玩家总人数
 var peoplerel = JSON.parse(sessionStorage.getItem('peoplerel'));
-var akiller = JSON.parse(sessionStorage.getItem('akiller'));
-console.log(akiller);
-
+//死亡的玩家总数
 var deathnum = JSON.parse(sessionStorage.getItem('deathnum'));
+//定义死亡的平民
+var deathpeople = JSON.parse(sessionStorage.getItem('deathpeople'));
+//定义死亡的杀手
+var deathkiller = JSON.parse(sessionStorage.getItem('deathkiller'));
+console.log(deathpeople);
+
+//平民人数
+people = JSON.parse(sessionStorage.getItem('people'));
+//杀手人数
+killer = JSON.parse(sessionStorage.getItem('killer'));
+
 
 $(document).ready(function () {
     for (var i = 0; i < peoplerel.length; i++) {
@@ -68,20 +79,45 @@ $(document).ready(function () {
 function www() {
     var o = JSON.parse(sessionStorage.getItem('o'));
     console.log(o);
-    if(o===undefined){
+    if (o === undefined) {
         alert("最少选择一人")
-    }else{
-
-    } if(alert("确定杀他吗？"))
-
-    peoplerelstate[o].status = 'die';
-    peoplerelstate[o].type = 'akiller';
-
-    sessionStorage.setItem('peoplerelstate', JSON.stringify(peoplerelstate));
-
-    console.log(deathnum);
-    window.location.href = '法官日记.html';
+    } else if (peoplerelstate[o].status === 'die') {
+        alert('不要鞭尸！')
+    } else {
+        alert("确定杀他吗？");
+        $('.box').eq(o).addClass('black2');
+        peoplerelstate[o].status = 'die';
+        peoplerelstate[o].type = 'akiller';
+        sessionStorage.setItem('peoplerelstate', JSON.stringify(peoplerelstate));
 
 
+        if (peoplerelstate[o].id === '平民') {
+            deathpeople.push(peoplerelstate[o]);
+
+            console.log(deathpeople);
+        } else {
+            deathkiller.push(peoplerelstate[o]);
+            console.log(deathkiller);
+        }
+
+        deathnum.push(deathpeople);
+        deathnum.push(deathkiller);
+        console.log(deathnum);
+        sessionStorage.setItem('deathpeople', JSON.stringify(deathpeople));
+        sessionStorage.setItem('deathkiller', JSON.stringify(deathkiller));
+
+
+        if (killer - deathkiller.length === 0) {
+            alert('平民胜利');
+            window.location.href = '游戏结束.html';
+        } else if (killer - deathkiller.length >= people - deathpeople.length) {
+            alert('杀手胜利');
+            window.location.href = '游戏结束.html';
+        } else {
+            window.location.href = '法官日记.html';
+        }
+
+
+    }
 }
 
