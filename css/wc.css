@@ -1,6 +1,5 @@
 .btn {
     padding: 0 !important; }
-
 .display-center-center, .day-title, .flow-son, .over-btn, .daily-btn {
     display: flex;
     justify-content: center;

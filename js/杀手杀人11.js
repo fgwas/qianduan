@@ -10,11 +10,18 @@ var deathpeople = JSON.parse(sessionStorage.getItem('deathpeople'));
 //定义死亡的杀手
 var deathkiller = JSON.parse(sessionStorage.getItem('deathkiller'));
 console.log(deathpeople);
+var akiller=JSON.parse(sessionStorage.getItem('akiller'));
+
+var avoter=JSON.parse(sessionStorage.getItem('avoter'));
+
+var death=JSON.parse(sessionStorage.getItem('death'));
 
 //平民人数
 people = JSON.parse(sessionStorage.getItem('people'));
 //杀手人数
 killer = JSON.parse(sessionStorage.getItem('killer'));
+//游戏天数
+days = JSON.parse(sessionStorage.getItem('days'));
 
 
 $(document).ready(function () {
@@ -88,23 +95,33 @@ function www() {
         $('.box').eq(o).addClass('black2');
         peoplerelstate[o].status = 'die';
         peoplerelstate[o].type = 'akiller';
-        sessionStorage.setItem('peoplerelstate', JSON.stringify(peoplerelstate));
+        peoplerelstate[o].days = days;
+        days = days;
 
 
         if (peoplerelstate[o].id === '平民') {
             deathpeople.push(peoplerelstate[o]);
-
-            console.log(deathpeople);
         } else {
             deathkiller.push(peoplerelstate[o]);
-            console.log(deathkiller);
         }
 
-        deathnum.push(deathpeople);
-        deathnum.push(deathkiller);
-        console.log(deathnum);
+        if(peoplerelstate[o].type==='akiller'){
+            akiller.push(peoplerelstate[o]);
+        }else {
+            avoter.push(peoplerelstate[o]);
+        }
+
+
+        death.push(peoplerelstate[o]);
+
+
+        sessionStorage.setItem('death',JSON.stringify(death));
+        sessionStorage.setItem('akiller',JSON.stringify(akiller));
+        sessionStorage.setItem('avoter',JSON.stringify(avoter));
         sessionStorage.setItem('deathpeople', JSON.stringify(deathpeople));
         sessionStorage.setItem('deathkiller', JSON.stringify(deathkiller));
+        sessionStorage.setItem('deathnum', JSON.stringify(deathnum));
+        sessionStorage.setItem('peoplerelstate', JSON.stringify(peoplerelstate));
 
 
         if (killer - deathkiller.length === 0) {

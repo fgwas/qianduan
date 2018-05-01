@@ -3,17 +3,21 @@ $(document).ready(function () {
     var peoplerel = JSON.parse(sessionStorage.getItem("peoplerel"));
     console.log(peoplerel);
 
-    people=JSON.parse(sessionStorage.getItem('people'));
-    killer=JSON.parse(sessionStorage.getItem('killer'));
+    people = JSON.parse(sessionStorage.getItem('people'));
+    killer = JSON.parse(sessionStorage.getItem('killer'));
 
 
     days = 1;//初始化游戏天数
     akiller = [];//存放被杀玩家
     avoter = [];//存放被投票玩家
-    deathnum=[];//玩家死亡数
-    deathpeople=[];//死亡平民
-    deathkiller=[];//死亡杀手
+    deathnum = [];//玩家死亡数
+    deathpeople = [];//死亡平民
+    deathkiller = [];//死亡杀手
+    move = 'none';
+    death = [];//死亡总人
 
+    console.log(move);
+    sessionStorage.setItem('death', JSON.stringify(death));
     sessionStorage.setItem('days', JSON.stringify(days));
     sessionStorage.setItem('akiller', JSON.stringify(akiller));
     sessionStorage.setItem('avoter', JSON.stringify(avoter));
@@ -22,6 +26,7 @@ $(document).ready(function () {
     sessionStorage.setItem('deathkiller', JSON.stringify(deathkiller));
     sessionStorage.setItem('people', JSON.stringify(people));
     sessionStorage.setItem('killer', JSON.stringify(killer));
+    sessionStorage.setItem("move", move);
     window.onload = function () {
         for (var i = 0; i < peoplerel.length; i++) {
             var num = i + 1;
@@ -34,25 +39,22 @@ $(document).ready(function () {
 
         }
     };
-    var peoplerelstate=[];//所有玩家的状态
-    for(var a=0;a<peoplerel.length;a++){
-        peoplerelstate[a]={};
-        peoplerelstate[a].id=peoplerel[a];
-        peoplerelstate[a].status='live';
-        peoplerelstate[a].num=a+1;
-        peoplerelstate[a].days=days;
-        peoplerelstate[a].type='none';
+    var peoplerelstate = [];//所有玩家的状态
+    for (var a = 0; a < peoplerel.length; a++) {
+        peoplerelstate[a] = {};
+        peoplerelstate[a].id = peoplerel[a];
+        peoplerelstate[a].status = 'live';
+        peoplerelstate[a].num = a + 1;
+        peoplerelstate[a].days = days;
+        peoplerelstate[a].type = 'none';
     }
 
     $('#start').click(function () {
         window.sessionStorage.setItem('peoplerelstate', JSON.stringify(peoplerelstate));
-        window.sessionStorage.setItem('peoplerel',JSON.stringify(peoplerel));
-        window.sessionStorage.setItem('deathnum',JSON.stringify(deathnum));
-        window.location.href='法官日记.html';
+        window.sessionStorage.setItem('peoplerel', JSON.stringify(peoplerel));
+        window.sessionStorage.setItem('deathnum', JSON.stringify(deathnum));
+        window.location.href = '法官日记.html';
     });
-
-
-
 
 });
 

@@ -46,9 +46,7 @@ $(document).ready(function () {
     var i = 1;
     var flag = true;
     var $num = Math.floor(i / 2) + 1;
-
     $(".title").text("查看" + ($num) + "号玩家");
-
     $(".but1").text("查看玩家");
     $("#but").click(function () {
         $num = Math.floor(i / 2) + 1;
@@ -59,7 +57,6 @@ $(document).ready(function () {
             $(".but1").text("隐藏并传给" + ($num + 1) + "号玩家");
             $(".ttt").css("display", "block");
             $('.zhiye').append(peoplerel[$num - 1]);
-
         } else {
             $num = Math.floor(i / 2 + 1);
             console.log('隐藏身份的逻辑');
@@ -70,7 +67,7 @@ $(document).ready(function () {
             $(".ttt").css("display", "none");
             $(".maintop").text($num);
             $('.zhiye').empty();
-            if (($num - 1) === peoplerel.length) {
+            if (($num) === peoplerel.length) {
                 $(".but1").text("法官日志");
                 window.location.href = "法官日志.html";
                 sessionStorage.setItem('people', JSON.stringify(people));
@@ -83,17 +80,17 @@ $(document).ready(function () {
     });
 
 
-    $("#topleft").click(function () {
+    $(".top-left").click(function () {
         window.location.href = "分配人数.html";
     });
 
-    $("#topright").click(function () {
+    $(".top-right").click(function () {
 
         if (window.confirm("你确定要退出游戏？")) {
-            // alert("确定")
+            alert("确定")
             return ture;
         } else {
-            //alert("取消")
+            alert("取消")
             return false;
         }
 

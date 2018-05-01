@@ -1,4 +1,4 @@
-"use strict"
+
 
 //实现加减按钮与滑动条的联动
 document.getElementById("add").onclick = function () {
@@ -79,13 +79,23 @@ function uuu() {
 
 
 $(document).ready(function () {
-    $('top-left').click(function () {
+    //点击退后三角跳转前一个页面
+    $('.topleft').click(function () {
         window.location.href='捉鬼游戏.html';
     });
-    $('top-right').click(function () {
+
+    //跳转帮助页面
+    $('.topright').click(function () {
         window.location.href='帮助.html';
-    })
+    });
+
 });
+
+
+
+
+
+
 
 
 

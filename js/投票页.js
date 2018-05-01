@@ -13,6 +13,12 @@ var deathkiller = JSON.parse(sessionStorage.getItem('deathkiller'));
 people = JSON.parse(sessionStorage.getItem('people'));
 //杀手人数
 killer = JSON.parse(sessionStorage.getItem('killer'));
+//被杀死的人
+var akiller=JSON.parse(sessionStorage.getItem('akiller'));
+//被投死的人
+var avoter=JSON.parse(sessionStorage.getItem('avoter'));
+
+var death=JSON.parse(sessionStorage.getItem('death'));
 
 //天数days
 var days = JSON.parse(sessionStorage.getItem('days'));
@@ -57,11 +63,34 @@ function eee() {
     peoplerelstate[m].type = 'avoter';
     days = days + 1;
     console.log(days);
+    peoplerelstate[m].days = days-1;
+    console.log(peoplerelstate[m].days+'21212121212');
+
+    if( peoplerelstate[m].id==='平民'){
+        deathpeople.push(peoplerelstate[m]);
+    }else {
+        deathkiller.push(peoplerelstate[m]);
+    }
+
+    if(peoplerelstate[m].type==='akiller'){
+        akiller.push(peoplerelstate[m]);
+    }else {
+        avoter.push(peoplerelstate[m]);
+    }
+
+
+    death.push(peoplerelstate[m]);
+
+
+    sessionStorage.setItem('death',JSON.stringify(death));
+
+    sessionStorage.setItem('akiller',JSON.stringify(akiller));
+    sessionStorage.setItem('avoter',JSON.stringify(avoter));
     sessionStorage.setItem('peoplerelstate', JSON.stringify(peoplerelstate));
-    peoplerelstate.days = days;
     sessionStorage.setItem('days', JSON.stringify(days));
     sessionStorage.setItem('deathpeople', JSON.stringify(deathpeople));
     sessionStorage.setItem('deathkiller', JSON.stringify(deathkiller));
+    sessionStorage.setItem('deathnum', JSON.stringify(deathnum));
 
     if (killer - deathkiller.length === 0) {
         alert('平民胜利');
@@ -71,6 +100,9 @@ function eee() {
         window.location.href = '游戏结束.html';
     } else {
         window.location.href = '法官日记.html';
+
     }
+
+
 }
 
