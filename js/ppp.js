@@ -5,15 +5,12 @@ app.config(["$stateProvider", function ($stateProvider) {
             url: '/back',
             templateUrl: '#'
         })
-        .state('Article', {
-            url: '/Article',
-            templateUrl: 'task6-2.html'
+        .state('list', {
+            url: '/list',
+            templateUrl: 'lianxi2.html'
         })
-        .state('company', {
-            url: 'company',
-            templateUrl: 'task6-3.html'
+        .state('date', {
+            url: 'date',
+            templateUrl: 'laixi3.html'
         })
 }]);
-
-
-
