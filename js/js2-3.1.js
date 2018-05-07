@@ -48,7 +48,6 @@ function overall() {
     } else {
         document.getElementById("hum-1").style.display = "none";
     }
-
     document.getElementById("people").value = people;
     document.getElementById("killer").value = killer;
     document.getElementById("overall").value = overall;
@@ -68,7 +67,7 @@ function uuu() {
     } else if (killer.length !== 0) {
         sessionStorage.setItem("player", people);
         sessionStorage.setItem("killernum", killer);
-        window.location.href = "../qianduan/查看身份.html";
+        window.location.href = "查看身份.html";
     }
 
     else {

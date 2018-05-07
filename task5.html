@@ -9,20 +9,21 @@
     <link rel="stylesheet" type="text/css" href="css/wc.css">
     <link rel="stylesheet"  type="text/css" href="css/task5.css">
     <link href="https://cdn.bootcss.com/normalize/7.0.0/normalize.css" rel="stylesheet">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <title>Title</title>
 </head>
 <body>
 
-<div class="body">
+<div class="body" >
     <div class="bezel">
         <h3>后台登陆</h3>
         <div class="inputbox">
-            <input type="text" id="username" class="user" placeholder="请输入用户名">
-            <br>
+            <input type="text" id="username" class="username" placeholder="请输入用户名">
+            <p  class="userverify"></p>
             <input type="password" id="password" class="password" placeholder="请输入密码">
-            <p  class="verify"></p>
-            <button type="button" class="btn" id="btn">登陆</button>
+            <p  class="passwordverify"></p>
+            <button type="button" class="btn" id="btn"  onclick="login()">登陆</button>
         </div>
     </div>
 </div>
@@ -31,4 +32,6 @@
 
 
 </body>
+
+<script src="js/task5.js"></script>
 </html>

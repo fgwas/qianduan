@@ -33,10 +33,8 @@
 <div class="reveal">
     <div class="slides">
         <section>
-            <h2>
-                IE事件流和W3C事件流有什么区别，参数分别是什么，以及如何阻止事件冒泡？
-            </h2>
-            <h3></h3>
+            <h3>【JS-task04】如何实现数组的深拷贝和浅拷贝?</h3>
+            <h3>小课堂【西安】</h3>
             <p>分享人：杨星</p>
         </section>
         <section>
@@ -48,183 +46,188 @@
             <p>5.编码实战</p>
             <p>6.扩展思考</p>
             <p>7.参考文献</p>
-            <p>8.更多讨论</p>
+            <p>8.更多提问</p>
         </section>
         <section>
-            <h3>1.背景介绍</h3>
-        </section>
-        <section style="text-align: center;">
             <section>
-                <h4>事件</h4>
-                <div style="text-align: left;overflow: auto;text-indent: 60px;font-size: 30px;line-height: 50px;">
-                    <p >
-                        JavaScript与HTML之间的交互是通过事件实现的。事件就是文档或浏览器窗口中发生的一些特定的交互瞬间。
-                        它是用户或浏览器自身执行的某种动作，如click,load和mouseover都是事件的名字。
-                    </p>
-                    <p>
-                        事件是javaScript和DOM之间交互的桥梁。
-                    </p>
-                    <p>
-                        你若触发，我便执行——事件发生，调用它的处理函数执行相应的JavaScript代码给出响应。
-                        典型的例子有：页面加载完毕触发load事件；用户单击元素，触发click事件。
-                    </p>
-
-                </div>
+                <h3>1.背景介绍</h3>
             </section>
-            <section >
-                <h4>事件流</h4>
-                <div style="text-align: left;text-indent: 60px;font-size: 30px;line-height: 50px;">
-                    <p>
-                        事件流描述的是从页面中接收事件的顺序。
-                    </p>
-                    <p>
-                        当浏览器发展到第四代时(IE4及Netscape4)，浏览器开发团队遇到了一个很有意思的问题：页面的哪一部分会拥有某个特定的事件？
-                        可以想象画在一张纸上的一组同心圆。如果你把手指放在圆心上，那么你的手指指向的不是同一个圆，而是纸上的所有圆。
-                    </p>
-                    <p>
-                        IE和网景两家公司的浏览器开发团队在看待浏览器事件方面还是一致的。如果单击了某个按钮，他们都认为单击事件不仅仅发生在按钮上。
-                        在单击按钮的同时，也单击了按钮的容器元素，甚至也单击了整个页面。
-                    </p>
-                    <p>
-                        IE提出的是冒泡流,而网景提出的是捕获流,后来在W3C组织的统一之下,JS支持了冒泡流和捕获流,
-                        但是目前低版本的IE浏览器还是只能支持冒泡流(IE6,IE7,IE8均只支持冒泡流),所以为了能够兼容更多的浏览器,建议大家使用冒泡流。
-                    </p>
-                </div>
+            <section>
+                <h4> 1.深复制和浅复制</h4>
+                <p style="text-align: left">
+                    在JavaScript中，对于Object和Array这类引用类型值，他的复制有两种情况：深复制、浅复制。</p>
+                <p style="text-align: left"> 浅复制：浅复制是复制引用，复制后的引用都是指向同一个对象的实例，彼此之间的操作会互相影响</p>
+                <p style="text-align: left">
+                    深复制：深复制不是简单的复制引用，而是在堆中重新分配内存，并且把源对象实例的所有属性都进行新建复制，以保证深复制的对象的引用图不包含任何原有对象或对象图上的任何对象，复制后的对象与原来的对象是完全隔离的</p>
+
             </section>
-
-
         </section>
         <section>
-            <h3>2.知识剖析</h3>
-        </section>
-        <section >
-            <section >
-                <h4>事件冒泡</h4>
-                <div style="text-align: left;text-indent: 60px;font-size: 30px;line-height: 50px;">
-                    <p>
-                        IE的事件流叫做事件冒泡（event bubbling），即事件开始时由最具体的元素（文档中嵌套层次最深的那个节点）接收，
-                        然后逐级向上传播到较为不具体的节点（文档）。也就是子级元素先触发，父级元素后触发。
-                    </p>
-                </div>
-                <h4>事件捕获</h4>
-                <div style="text-align: left;text-indent: 60px;font-size: 30px;line-height: 50px;">
-                    <p>
-                        网景团队提出的另一种事件流叫事件捕获（event capturing)。
-                        事件捕获的思想是不太具体的节点应该更早接收到事件，而最具体的节点应该最后接收到事件。
-                        也就是父级元素先触发，子级元素后触发。
-                    </p>
-                </div>
+            <section>
+                <h3>2.知识剖析</h3>
             </section>
             <section>
-                <img src="img/123.png">
-                <div style="overflow-y: auto;height:300px;">
-                    <p style="text-align: left;text-indent: 60px;font-size: 27px;line-height: 60px;">
-
-                        在冒泡型事件流中click事件传播顺序为div—》body—》html—》document<br/>
-                        在捕获型事件流中click事件传播顺序为document—》html—》body—》div<br/>
-                    </p>
-
-                </div>
+                <h4>浅拷贝</h4>
+                <p style="text-align: left">Js的数据类型分为两种，基本类型和引用类型</p>
+                <ul>
+                    <li>基本类型:是指Number、String、Boolean、null、undefined</li>
+                    <li>引用类型:是指对象、数组等，就是像这样的东西<br/>{ name: 'Larry', skill: 'Node.js' }</li>
+                    <li>引用类型跟基本类型最大的区别就在于他们的传值方式</li>
+                </ul>
             </section>
             <section>
-            <h4>DOM事件流</h4>
-            <p style="text-align: left;font-size: 27px;line-height: 40px;overflow-y: scroll;height:260px">
-                DOM标准采用捕获+冒泡。两种事件流都会触发DOM的所有对象，从document对象开始，也在document对象结束。<br/>
-                DOM标准规定事件流包括三个阶段：事件捕获阶段、处于目标阶段和事件冒泡阶段。<br/>
-                事件捕获阶段：实际目标div在捕获阶段不会接收事件。也就是在捕获阶段，事件从document到html再到body就停止了。(图中为1~3.)<br/>
-                处于目标阶段：事件在div上发生并处理。但是事件处理会被看成是冒泡阶段的一部分。<br/>
-                冒泡阶段：事件又传播回文档。
-            </p>
+                <h4>基本类型是传 value，像是这样</h4>
+                <pre><code>
+                    var a = 10;
+                    var b = a;
+                    b = 20;
 
-        </section>
-        <section>
-            <p style="text-align: left;font-size: 27px;line-height: 40px;text-indent: 60px">
-                可以自己选择绑定事件时采用事件捕获还是事件冒泡，方法就是绑定事件时通过addEventListener函数，
-                它有三个参数，第三个参数若是true，则表示采用事件捕获，若是false，则表示采用事件冒泡。
-            </p>
-            <pre style="height:40px;">
-                    <code>element.addEventListener(event, function, useCapture)</code>
-                </pre>
-            <p style="text-align: left;font-size: 27px;line-height: 40px;">
-                event:字符串，指定事件名。（不要使用 "on" 前缀。 例如，使用 "click" ,而不是使用 "onclick"。）<br/>
-                function:指定要事件触发时执行的函数。<br/>
-                useCapture:可选。布尔值，指定事件是否在捕获或冒泡阶段执行。(true - 事件句柄在捕获阶段执行;false- false- 默认。事件句柄在冒泡阶段执行)
-            </p>
-            <p style="text-align: left;font-size: 27px;line-height: 40px;">
-                IE只支持事件冒泡，不支持事件捕获，它也不支持addEventListener函数，不会用第三个参数来表示是冒泡还是捕获，它提供了另一个函数attachEvent。
-            <pre style="height:40px;">
-                        <code> element.attachEvent("onclick", doSomething2);</code>
-                    </pre>
-            </p>
-        </section>
-        </section>
-        <section style="text-align: left">
-            <section style="text-align: center"><h3>3.常见问题</h3></section>
-            <section style="text-align: left">
-                <h4 style="text-align: center">如何阻止事件冒泡？</h4>
-
+                    console.log(a); // 10
+                    console.log(b); // 20
+                </code></pre>
+                <p>在修改b时并不会改到a</p>
             </section>
-        </section>
-        <section style="text-align: left">
-            <section style="text-align: center"><h3>4 解决方案</h3></section>
             <section>
-                <p>
-                    事件的传播是可以阻止的：<br/>
-                    • 在W3c中，使用event.stopPropagation()方法<br/>
-                    • 在IE下设置event.cancelBubble = true；
+                <h4>但引用类型不同，引用类型传的是引用指针</h4>
+                <pre><code>
+                    var array1 = [0,1,2,3];
+                    var array2 = array1;
+                    array2[0] = 100;
+
+                    console.log(array1); // [100,1,2,3] <-- 数组第一位 被改到了
+                    console.log(array2); // [100,1,2,3]
+                </code></pre>
+                <ul style="text-align: left;display:block">
+                    <li>复制一份array1叫做array2</li>
+                    <li>然後把array2[0]改成100</li>
+                    <li>但卻不小心改到array1[0]</li>
+                    <li>因为他们根本就是同一个对象</li>
+                    <li>这就是所谓的浅复制</li>
+                </ul>
+            </section>
+            <section>
+                <p>为了避免这种错误发生就要写成这样</p>
+                <pre><code>
+                    var array1 = [0,1,2,3];
+                    var array2 = [array1[0],array1[1],array1[2],array1[3]];
+                    array2[0] = 100;
+
+                    console.log(array1); // [0,1,2,3] <-- 数组第一位没被改到了
+                    console.log(array2); // [100,1,2,3]
+                </code></pre>
+                <p style="text-align: left">
+                    这就是深拷贝，改变复制后的值并不会影响之前的值
                 </p>
             </section>
 
-
-        </section>
-        <section style="text-align: left">
-            <section style="text-align: center"><h3>5.编码实战</h3></section>
-
-        </section>
-        <section style="text-align: left">
             <section>
-                <h3 style="text-align: center">6.扩展思考</h3>
-            </section>
-            <section style="text-align: center">
-                <h4>事件委托</h4>
-                <div style="overflow-y: auto;height:586px">
-                    <p style="text-align: left;text-indent: 60px;font-size: 27px;line-height: 50px;">
-                        事件委托呢？它还有一个名字叫事件代理，JavaScript高级程序设计上讲：事件委托就是利用事件冒泡，只指定一个事件处理程序，就可以管理某一类型的所有事件。
-                        通俗地来讲，就是把一个元素响应事件（click、keydown......）的函数委托到另一个元素；一般来讲，会把一个或者一组元素的事件委托到它的父层或者更外层元素上，
-                        真正绑定事件的是外层元素，当事件响应到需要绑定的元素上时，会通过事件冒泡机制从而触发它的外层元素的绑定事件上，然后在外层元素上去执行函数。
-                    </p>
-                    <p style="text-align: left;text-indent: 60px;font-size: 27px;line-height: 50px;">
-                        有三个同事预计会在周一收到快递。为签收快递，有两种办法：一是三个人在公司门口等快递；二是委托给前台MM代为签收。现实当中，我们大都采用委托的方案（公司也不会容忍那么多员工站在门口就为了等快递）。
-                        前台MM收到快递后，她会判断收件人是谁，然后按照收件人的要求签收，甚至代为付款。这种方案还有一个优势，那就是即使公司里来了新员工（不管多少），前台MM也会在收到寄给新员工的快递后核实并代为签收。
-                        这里其实还有2层意思的：
-                        第一，现在委托前台的同事是可以代为签收的，即程序中的现有的dom节点是有事件的；
-                        第二，新员工也是可以被前台MM代为签收的，即程序中新添加的dom节点也是有事件的。
-                    </p>
-                    <p style="text-align: left;text-indent: 60px;font-size: 27px;line-height: 50px;">
-                        一般来说，dom需要有事件处理程序，我们都会直接给它设事件处理程序就好了，那如果是很多的dom需要添加事件处理呢？比如我们有100个li，每个li都有相同的click点击事件，可能我们会用for循环的方法，来遍历所有的li，然后给它们添加事件，那这么做会存在什么影响呢？
-                        在JavaScript中，添加到页面上的事件处理程序数量将直接关系到页面的整体运行性能，因为需要不断的与dom节点进行交互，访问dom的次数越多，引起浏览器重绘与重排的次数也就越多，就会延长整个页面的交互就绪时间，这就是为什么性能优化的主要思想之一就是减少DOM操作的原因；如果要用事件委托，就会将所有的操作放到js程序里面，与dom的操作就只需要交互一次，这样就能大大的减少与dom的交互次数，提高性能；
-                        每个函数都是一个对象，是对象就会占用内存，对象越多，内存占用率就越大，自然性能就越差了，比如上面的100个li，就要占用100个内存空间，如果是1000个，10000个呢，如果用事件委托，那么我们就可以只对它的父级（如果只有一个父级）这一个对象进行操作，这样我们就需要一个内存空间就够了，自然性能就会更好。
-                    </p>
+                <h4>如何实现数组的深复制？</h4>
+                <p style="text-align: left">一、Object.assign</p>
+                <pre><code>
+                    var array1 = [0,1,2,3];
+                    var array2 = Object.assign([], array1);
+                    array2[0] = 100;
 
+                    console.log(array1); // [0,1,2,3] <-- 沒被改到
+                    console.log(array2); // [100,1,2,3]
+                </code></pre>
+                <p style="text-align: left">Object.assign是 ES6 的新函式可以实现跟上面一样的效果</p>
+                <p style="text-align: left">Object.assign([], obj1)的意思是先建议一个对象（数组）[]
+                    接著把array1中所有的属性复制过去
+                    所以array2会长得跟array1一样
+                    这时候再修改array2[0]也不會影响array[1]
+
+                    因为Object.assign跟我们手动复制的效果相同
+                    所以一样只能处理深度只有一层的对象
+                    沒办法做到真正的 Deep Copy
+                    不过如果要复制的对象只有一层的話可以考虑使用他</p>
+            </section>
+            <section>
+                <p>Jq的$.map和$.extend</p>
+                <pre><code>
+                     var x = [{b:0},1,2,3];
+                    var b=Object.assign([],x);
+                    b[0].b=2;
+                    console.log(x[0].b);
+                    console.log(b[0].b);
+
+                    var y = $.map(x,function (obj) {
+                        return $.extend(true,{},obj)//深复制
+                    });
+                    y[0].b=1;
+                    console.log(x[0].b);
+                    console.log(y[0].b);
+                 </code></pre>
+                <p>使用jq的方法可以实现深复制，无论数组里面嵌套了几层都可以深复制出来</p>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>3.常见问题</h3>
+            </section>
+            <section>
+                <div style="text-align:left ; padding:0% 12% ;font-size:30px">
+                    <p>除了以上方法还有其他深复制数组的方法吗？</p>
                 </div>
+            </section>
+        </section>
 
+        <section>
+            <section>
+                <h3>4.解决办法</h3>
+            </section>
+            <section>
+                <h4>Json转换的方法</h4>
+                <pre><code>
+                   var x = [{b:0},1,2,3];
+                    function jsonClone(obj) {
+                        return JSON.parse(JSON.stringify(obj));
+                    }
+                    var clone = jsonClone(x);
+                    clone[0].b=2
+                    console.log(x[0].b)
+                    console.log(clone[0].b)
+                </code></pre>
+                <p></p>
             </section>
         </section>
         <section>
-            <h3>7.参考文献</h3>
-            <p>参考1：<a href="http://www.cnblogs.com/starof/p/4066381.html">javaScript事件（一）事件流</a></p>
-            <p>参考2：<a href="http://www.jb51.net/article/42492.htm">js之事件冒泡和事件捕获详细介绍</a></p>
-            <p>参考3：<a href="https://zhuanlan.zhihu.com/p/26536815">JavaScript 事件委托详解</a></p>
-            <p>参考2：<a href="http://www.cnblogs.com/liugang-vip/p/5616484.html">js中的事件委托或是事件代理详解</a></p>
+            <h3>5.编码实战</h3>
         </section>
         <section>
-            <h3>8 更多讨论</h3>
-        </section>
-        <section>
+            <section>
+                <h3>6、扩展思考</h3>
+            </section>
+            <section>
+                <h4 style="text-align: left">使用Json深复制数组的方法有哪些缺点</h4>
+                <p style="text-align: left">Json方法深复制的缺点：Json的方法只能用于引用类型中的Number, String, Boolean, Array, 扁平对象，
+                    对于像function这种对象无法复制</p>
+            </section>
 
-            <h4>鸣谢</h4>
-            <p>感谢大家观看</p>
-            <p><small>BY : 杨星</small></p>
+        </section>
+        <section>
+            <section>
+                <h3>7、参考文献：</h3>
+                <div style="text-align:left ; padding:0% 12% ;font-size:34px">
+                    <p>参考一：
+                        <a href="http://larry850806.github.io/2016/09/20/shallow-vs-deep-copy/" target="_blank">
+                            [Javascript] 關於 JS 中的淺拷貝和深拷貝
+                        </a>
+                    </p>
+                    <p>参考二：
+                        <a href="http://jerryzou.com/posts/dive-into-deep-clone-in-javascript/" target="_blank">深入剖析 JavaScript 的深复制</a>
+                    </p>
+                </div>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>8、更多提问</h3>
+            </section>
+        </section>
+        <section>
+            <p>谢谢大家</p>
+            <p>制作人：杨星</p>
         </section>
 
     </div>
