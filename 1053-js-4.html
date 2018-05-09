@@ -16,11 +16,11 @@
 
     <!-- 打印和PDF输出样式 -->
     <script>
-        var link = document.createElement( 'link' );
+        var link = document.createElement('link');
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = window.location.search.match( /print-pdf/gi ) ? 'https://ptteng.github.io/PPT/css/reveal/print/pdf.css' : '../css/reveal/print/paper.css';
-        document.getElementsByTagName( 'head' )[0].appendChild( link );
+        link.href = window.location.search.match(/print-pdf/gi) ? 'https://ptteng.github.io/PPT/css/reveal/print/pdf.css' : '../css/reveal/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
     </script>
 </head>
 <body>
@@ -122,43 +122,55 @@
 
             <section>
                 <h4>如何实现数组的深复制？</h4>
-                <p style="text-align: left">一、Object.assign</p>
+                <p style="text-align: left">slice和concat使用方法</p>
+                <p>slice()：
+                    语法：arrayObject.slice(start,end)
+                    slice() 方法可从已有的数组中返回选定的元素（请注意，该方法并不会修改数组，而是返回一个子数组）。</p>
+                <p>start：必需。规定从何处开始选取。如果是负数，那么它规定从数组尾部开始算起的位置。也就是说，-1 指最后一个元素，-2 指倒数第二个元素，以此类推。
+                    end:可选。规定从何处结束选取。该参数是数组片断结束处的数组下标。如果没有指定该参数，那么切分的数组包含从 start
+                    到数组结束的所有元素。如果这个参数是负数，那么它规定的是从数组尾部开始算起的元素。
+                    返回值:返回一个新的数组，包含从 start 到 end （不包括该元素）的 arrayObject 中的元素（如果 end 未被规定，那么 slice() 方法会选取从 start
+                    到数组结尾的所有元素）。</p>
                 <pre><code>
-                    var array1 = [0,1,2,3];
-                    var array2 = Object.assign([], array1);
-                    array2[0] = 100;
+                   <script type="text/javascript">
+                            var arr = new Array(3);
+                            arr[0] = "George";
+                            arr[1] = "John";
+                            arr[2] = "Thomas";
 
-                    console.log(array1); // [0,1,2,3] <-- 沒被改到
-                    console.log(array2); // [100,1,2,3]
+                            document.write(arr + "<br />");
+                            document.write(arr.slice(1) + "<br />");
+                            document.write(arr);
+                        </script>George,John,Thomas<br>John,Thomas<br>George,John,Thomas
+
                 </code></pre>
-                <p style="text-align: left">Object.assign是 ES6 的新函式可以实现跟上面一样的效果</p>
-                <p style="text-align: left">Object.assign([], obj1)的意思是先建议一个对象（数组）[]
-                    接著把array1中所有的属性复制过去
-                    所以array2会长得跟array1一样
-                    这时候再修改array2[0]也不會影响array[1]
 
-                    因为Object.assign跟我们手动复制的效果相同
-                    所以一样只能处理深度只有一层的对象
-                    沒办法做到真正的 Deep Copy
-                    不过如果要复制的对象只有一层的話可以考虑使用他</p>
+                <p style="text-align: left">concat()：
+
+                    concat() 方法用于连接两个或多个数组。 该方法不会改变现有的数组，而仅仅会返回被连接数组的一个副本。
+
+                    语法：arrayObject.concat(arrayX,arrayX,......,arrayX)
+
+                    返回一个新的数组。该数组是通过把所有 arrayX 参数添加到 arrayObject 中生成的。如果要进行 concat() 操作的参 数是数组，那么添加的是数组中的元素，而不是数组。
+
+                    arrayX：必需。该参数可以是具体的值，也可以是数组对象。可以是任意多个。</p>
             </section>
             <section>
-                <p>Jq的$.map和$.extend</p>
+                <p>Jq的$.extend</p>
+                <p>jQuery.extend() 函数用于将一个或多个对象的内容合并到目标对象。
+                    注意：1. 如果只为$.extend()指定了一个参数，则意味着参数target被省略。此时，target就是jQuery对象本身。通过这种方式，我们可以为全局对象jQuery添加新的函数。
+                    2. 如果多个对象具有相同的属性，则后者会覆盖前者的属性值。</p>
                 <pre><code>
-                     var x = [{b:0},1,2,3];
-                    var b=Object.assign([],x);
-                    b[0].b=2;
-                    console.log(x[0].b);
-                    console.log(b[0].b);
+                    var arr = [['a','b'],0,1,2,{name:'old'}];
+                    var newArr = $.extend(true, [], arr);
+                    newArr[4].name = 'new';
+                    newArr[0].push('c');
+                    console.log(newArr);
+                    console.log(arr);
+                 </code>$.extend( target [, object1 ] [, objectN ] )指示是否深度合并
+$.extend( [deep ], target, object1 [, objectN ] )
+</pre>
 
-                    var y = $.map(x,function (obj) {
-                        return $.extend(true,{},obj)//深复制
-                    });
-                    y[0].b=1;
-                    console.log(x[0].b);
-                    console.log(y[0].b);
-                 </code></pre>
-                <p>使用jq的方法可以实现深复制，无论数组里面嵌套了几层都可以深复制出来</p>
             </section>
         </section>
         <section>
@@ -166,7 +178,7 @@
                 <h3>3.常见问题</h3>
             </section>
             <section>
-                <div style="text-align:left ; padding:0% 12% ;font-size:30px">
+                <div style="text-align:left ; padding:0 12% ;font-size:30px">
                     <p>除了以上方法还有其他深复制数组的方法吗？</p>
                 </div>
             </section>
@@ -176,20 +188,7 @@
             <section>
                 <h3>4.解决办法</h3>
             </section>
-            <section>
-                <h4>Json转换的方法</h4>
-                <pre><code>
-                   var x = [{b:0},1,2,3];
-                    function jsonClone(obj) {
-                        return JSON.parse(JSON.stringify(obj));
-                    }
-                    var clone = jsonClone(x);
-                    clone[0].b=2
-                    console.log(x[0].b)
-                    console.log(clone[0].b)
-                </code></pre>
-                <p></p>
-            </section>
+
         </section>
         <section>
             <h3>5.编码实战</h3>
@@ -197,11 +196,6 @@
         <section>
             <section>
                 <h3>6、扩展思考</h3>
-            </section>
-            <section>
-                <h4 style="text-align: left">使用Json深复制数组的方法有哪些缺点</h4>
-                <p style="text-align: left">Json方法深复制的缺点：Json的方法只能用于引用类型中的Number, String, Boolean, Array, 扁平对象，
-                    对于像function这种对象无法复制</p>
             </section>
 
         </section>
@@ -215,7 +209,8 @@
                         </a>
                     </p>
                     <p>参考二：
-                        <a href="http://jerryzou.com/posts/dive-into-deep-clone-in-javascript/" target="_blank">深入剖析 JavaScript 的深复制</a>
+                        <a href="http://jerryzou.com/posts/dive-into-deep-clone-in-javascript/" target="_blank">深入剖析
+                            JavaScript 的深复制</a>
                     </p>
                 </div>
             </section>
@@ -234,18 +229,18 @@
 </div>
 <script>
     angular.module("myApp", [])
-        .controller('demoCtrl',function ($scope) {
-            $scope.aa='as111111'
+        .controller('demoCtrl', function ($scope) {
+            $scope.aa = 'as111111'
         })
-        .directive('demoOne',function () {
+        .directive('demoOne', function () {
 
-            return{
-                restrict:"AECM",
-                template:'<input type="text" ng-model="aa">',
+            return {
+                restrict: "AECM",
+                template: '<input type="text" ng-model="aa">',
                 replace: true,
-                scope:{},
-                controller:['$scope',function ($scope) {
-                    $scope.aa='ss1212'
+                scope: {},
+                controller: ['$scope', function ($scope) {
+                    $scope.aa = 'ss1212'
                 }]
 
 
@@ -279,10 +274,14 @@
     Reveal.initialize({
         history: true,
         dependencies: [
-            { src: 'https://ptteng.github.io/PPT/plugin/markdown/marked.js' },
-            { src: 'https://ptteng.github.io/PPT/plugin/markdown/markdown.js' },
-            { src: 'https://ptteng.github.io/PPT/plugin/notes/notes.js', async: true },
-            { src: 'https://ptteng.github.io/PPT/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+            {src: 'https://ptteng.github.io/PPT/plugin/markdown/marked.js'},
+            {src: 'https://ptteng.github.io/PPT/plugin/markdown/markdown.js'},
+            {src: 'https://ptteng.github.io/PPT/plugin/notes/notes.js', async: true},
+            {
+                src: 'https://ptteng.github.io/PPT/plugin/highlight/highlight.js', async: true, callback: function () {
+                    hljs.initHighlightingOnLoad();
+                }
+            }
         ]
     });
 </script>
