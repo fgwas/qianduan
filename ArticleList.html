@@ -1,0 +1,88 @@
+
+
+<div class="content">
+<div class="choose">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                发布时间<input type="text">
+            </div>
+            <div class="col-md-4">
+                －<input type="text">
+            </div>
+            <div class="col-md-4">
+                类型<select>
+                <option value="全部">全部</option>
+                <option value="首页Banner">首页Banner</option>
+                <option value="找职位Banner">找职位Banner</option>
+                <option value="找精英Banner">找精英Banner</option>
+            </select>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-4">
+                状态<select>
+                <option value="全部">全部</option>
+                <option value="上线">上线</option>
+                <option value="草稿">草稿</option>
+            </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <button ng-click="btnclear" class="btn   btnclear">清空</button>
+                <button ng-click="btnres" class=" btn  btnres">搜索</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="news">
+    <div class="news-head">
+        <strong>Article列表</strong>
+        <button type="button" class="btn add">+新增</button>
+    </div>
+
+    <div class="news-body" ng-controller="articleList">
+        <table class="table-news">
+            <thead>
+            <tr>
+                <th>序号</th>
+                <th>在招公司</th>
+                <th>职位名称</th>
+                <th>职业类别</th>
+                <th>薪资</th>
+                <th>学历要求</th>
+                <th>工作经验</th>
+                <th>发布时间</th>
+                <th>状态</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <thead>
+            <tr ng-repeat="article in data">
+                <td>{{$index+1}}</td>
+                <td>{{article.id}}</td>
+                <td>{{article.type}}</td>
+                <td>{{article.createBy}}</td>
+                <td>{{article.title}}</td>
+                <td>{{article.order}}</td>
+                <td>{{article.publishat}}</td>
+                <td>{{article.source}}</td>
+                <td>{{article.status}}</td>
+                <td><span>下架</span>
+                    <span>编辑</span>
+                    <span>删除</span>
+                </td>
+            </tr>
+            </thead>
+        </table>
+
+        <div class="pag">
+
+        </div>
+    </div>
+</div>
+</div>

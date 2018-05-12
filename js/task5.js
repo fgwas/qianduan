@@ -42,37 +42,63 @@
 //     });
 // });
 
+//
+// var username = document.getElementById('username');//获取用户框
+// var pwd = document.getElementById('password');//获取密码框
+//
+// var userverify = document.getElementsByClassName('userverify');//获取用户框提示
+// var passwordverify = document.getElementsByClassName('passwordverify');//获取密码框提示
+//
+// function login() {
+//     console.log(username.value);
+//     console.log(pwd.value);
+//     var xhr = new XMLHttpRequest();
+//     xhr.open('post', '/carrots-admin-ajax/a/login', true);
+//     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+//     xhr.send('name=' + username.value + '&pwd=' + pwd.value);
+//     xhr.onreadystatechange = function () {
+//
+//         if (xhr.readyState == 4) {
+//             if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
+//                 if(JSON.parse(xhr.responseText).code==0){
+//                     window.location.href = 'task6.html';
+//                 }else {
+//                     alert('账号密码不正确');
+//                 }
+//
+//             }
+//         }
+//     }
+// }
 
-var username = document.getElementById('username');//获取用户框
-var pwd = document.getElementById('password');//获取密码框
-
-var userverify = document.getElementsByClassName('userverify');//获取用户框提示
-var passwordverify = document.getElementsByClassName('passwordverify');//获取密码框提示
-
-function login() {
-    console.log(username.value);
-    console.log(pwd.value);
-    var xhr = new XMLHttpRequest();
-    xhr.open('post', '/carrots-admin-ajax/a/login', true);
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhr.send('name=' + username.value + '&pwd=' + pwd.value);
-    xhr.onreadystatechange = function () {
-
-        if (xhr.readyState == 4) {
-            if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
-                if(JSON.parse(xhr.responseText).code==0){
-                    window.location.href = 'task6.html';
-                }else {
-                    alert('账号密码不正确');
-                }
-
+var app = angular.module('admin', []);
+app.controller('loginCtr1', function ($scope, $http) {
+    $scope.loginInit = function () {
+        // $scope.$watch('username',function (newVal) {
+        //     var name=$scope.username;
+        //     console.log(name);
+        // });
+        var name=$scope.username;
+        var pwd=$scope.password;
+        var promise = $http({
+            method: 'POST',
+            url: '/carrots-admin-ajax/a/login',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                'Accept': '*/*'
+            },
+            params: {'name':name , 'pwd':pwd }
+        });
+        console.log($scope.username);
+        promise.then(function (res) {
+            if (res.data.message == 'success') {
+               location.href='home.html';
+            }else {
+                alert(res.data.message);
             }
-        }
-    }
-
-
-}
-
+        });
+    };
+})
 
 
 
