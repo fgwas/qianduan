@@ -1,0 +1,150 @@
+<div class="content"  ng-controller="Article">
+    <div class="choose">
+        <div class="row">
+            <div class="col-md-8" style="display: inline-block">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <p>发布时间</p>
+                        <input type="text"
+                               style="float: left;width: 70%; border-radius: 4px;"
+                               ng-click="openpop1()"
+                               class="form-control"
+                               uib-datepicker-popup="{{format}}"
+                               ng-model="dt1"
+                               is-open="pop1.opened"
+                               ng-required="true"
+                               close-text="关闭"
+                               clear-text="清空"
+                               current-text="今天"
+                               alt-input-formats="yyyy-MM-dd"
+                               datepicker-options="datepickerOptions1"/>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <p>------</p>
+                        <input type="text"
+                               style="float: left;width: 70%; border-radius: 4px;"
+                               ng-click="openpop2()"
+                               class="form-control"
+                               uib-datepicker-popup="{{format}}"
+                               ng-model="dt2" is-open="pop2.opened"
+                               ng-required="true"
+                               close-text="关闭"
+                               clear-text="清空"
+                               current-text="今天"
+                               alt-input-formats="yyyy-MM-dd"
+                               datepicker-options="datepickerOptions2"/>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <p>类&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp型</p>
+                    <select style="float: left;width: 70%" ng-model="type">
+                        <option value="">全部</option>
+                        <option value="0">首页Banner</option>
+                        <option value="1">找职位Banner</option>
+                        <option value="2">找精英Banner</option>
+                        <option value="3">行业大图</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <p>状&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp态</p>
+                        <select style="float: left;width: 70%" ng-model="status">
+                            <option value="">全部</option>
+                            <option value="2">上线</option>
+                            <option value="1">草稿</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="rightbut">
+                    <button ng-click="clear()" class="btn  btnclear">清空</button>
+                    <button ng-click="search()" class=" btn  btnres">搜索</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="news">
+        <div class="news-head">
+            <strong>Article列表</strong>
+            <button type="button" class="btn add" ng-click="add"><a ui-sref="base.add" style="color: white">+新增</a>
+            </button>
+        </div>
+
+        <div class="news-body">
+            <table class="table-news">
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>名称</th>
+                    <th>类型</th>
+                    <th>发布时间</th>
+                    <th>修改时间</th>
+                    <th>发布者</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <thead>
+                <tr ng-repeat="article in data">
+                    <td>{{$index+1}}</td>
+                    <td>{{article.title}}</td>
+                    <td>{{article.type|typefilter}}</td>
+                    <td>{{article.createAt| date : 'yyyy-MM-dd hh:mm:ss '}}</td>
+                    <td>{{article.updateAt| date : 'yyyy-MM-dd hh:mm:ss '}}</td>
+                    <td>{{article.author}}</td>
+                    <td>{{article.status|statusfilter}}</td>
+                    <td>
+                        <span><a ng-click="under()" href="">下架</a></span>
+                        <span><a ng-click="edit()"   ui-sref="base.edit">编辑</a></span>
+                        <span><a ng-click="cut()" href="">删除</a></span>
+                    </td>
+                </tr>
+                </thead>
+            </table>
+
+            <ul class="page"  >
+                <li class=" pagebtn    input-group  btn  " >
+                    每页显示<input type="text" class="btn" style="border-color: #ddd;width: 50px"  value="{{size}}">条
+                </li>
+                <uib-pagination
+                        style="float:left"
+                        total-items="totalItems"
+                        ng-model="currentPage"
+                        items-per-page="size"
+                        max-size="5"
+                        first-text="首页"
+                        previous-text="上一页"
+                        next-text="下一页"
+                        last-text="末页"
+                        boundary-links="true"
+                        force-ellipses="true"
+                        ng-click="pageGo(currentPage)"
+                        boundary-link-numbers="true">
+                </uib-pagination>
+                <li class=" pagebtn   input-group  btn "    >
+                    去第几 <input type="text"  class="btn"  ng-model="currentPage"   style="border-color:  #ddd;width: 50px">页
+                    <button  class="btn"  ng-click="sure()" ng-model="currentPage" value="currentPage">确定</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+

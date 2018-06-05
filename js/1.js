@@ -1,4 +1,3 @@
-
 function start() {
     var arr = [0, 1, 2, 3, 4, 5, 6, 7, 8];
     for (i = 0; i < 3; i++) {
@@ -22,22 +21,22 @@ function start() {
         return 'rgb( ' + r + ',' + g + ',' + b + ')';
     }
 
-    square[a].style.background=color();
-    square[b].style.background=color();
-    square[c].style.background=color();
-
+    square[a].style.background = color();
+    square[b].style.background = color();
+    square[c].style.background = color();
 
     t = setTimeout("start()", 500);
-
+    clearTimeout(t);
 }
 
 
- var t;
+var t;
+
 function stop() {
-    console.log(t)
+    console.log(t);
     clearInterval(t);
     var square = document.getElementsByClassName("square");
-    for (h = 0; h <square.length; h++) {
+    for (h = 0; h < square.length; h++) {
         square[h].style.background = "orange";
     }
 

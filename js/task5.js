@@ -92,13 +92,13 @@ app.controller('loginCtr1', function ($scope, $http) {
         console.log($scope.username);
         promise.then(function (res) {
             if (res.data.message == 'success') {
-               location.href='home.html';
+               location.href='/task/homepage.html';
             }else {
                 alert(res.data.message);
             }
         });
     };
-})
+});
 
 
 

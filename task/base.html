@@ -1,0 +1,38 @@
+<div class="header">
+    <div class="navheader"><a ui-sref="base.welcome">萝卜多后台管理系统</a></div>
+    <div class="contheader">
+        <div class="contheader-right">
+            <span><a href="#">管理员</a></span>
+            <span>|</span>
+            <span><a href="">admin</a></span>
+            <span>|</span>
+            <span><img src="img/end.png"></span>
+        </div>
+    </div>
+</div>
+
+
+<nav ng-controller="listCtrl">
+    <div class="list-box">
+        <div class="list" ng-repeat="item in articleList" >
+            <label class="list-news" ng-click="showface($index)">
+                <span class="glyphicon glyphicon-pencil"></span>
+                <span class="text">{{item.x}}</span>
+                <span class="glyphicon glyphicon-chevron-left   listnewsimg"></span>
+            </label>
+            <div class="listhide" ng-show="$index==current" >
+                <div class="child-list-news" ng-repeat="x in item.y" ng-click="childList($index)" ng-class="{'sss':light1==$index} ">
+                    <a ui-sref="{{x.URL}}">
+                        <span>{{x.name}}</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<!--//正文文本 二级路由-->
+<main>
+    <div ui-view></div>
+</main>

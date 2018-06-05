@@ -51,7 +51,7 @@ $(document).ready(function () {
         );
 
     }
-    ;
+
     $("main").html(contentlist.join(''));
 
     //给页面添加杀人  投票信息

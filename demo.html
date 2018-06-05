@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css">
+
+    <title>demo</title>
+    <script src="https://cdn.bootcss.com/angular.js/1.6.6/angular.min.js"></script>
+    <script src="https://cdn.bootcss.com/angular-ui-bootstrap/1.3.3/ui-bootstrap.min.js"></script>
+
+
+    <script type="text/javascript">
+        function validate(obj) {
+            if (confirm("提交表单?")) {
+                alert(obj.value);
+                return true;
+            } else {
+                alert(obj.value);
+                return false;
+            }
+        }
+    </script>
+
+
+
+</head>
+<body>
+
+<!--//h5  表单验证方法-->
+<!--//1. required    必须输入文本，-->
+<!--//2.type 的值可以变为如number(必须是数字)、email(比如没有@会报错)、URL(输入网址格式)等-->
+<!--//3. pattern   根据表单控件上设置的格式规则验证输入是否为有效格式pattern="[0-9]{16}"-->
+<!--//4. max   min  (range里面)属性  表示最大最小值    maxLength  最大输入长度-->
+<!--//5. step 为表单控件设置step特性，指定数值的增量。-->
+<form onsubmit="return validate(document.getElementById('myText'));"> <!—参数的这种写法注意下-->
+
+    <input type="text" id="myText" max="5" required>
+    <input type="submit" value="submit"/>
+
+</form>
+
+
+
+
+
+</body>
+</html>

@@ -1,27 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/task6.css">
+
+    <link rel="stylesheet" href="css/wangEditor.min.css">
     <script src="https://cdn.bootcss.com/angular.js/1.6.9/angular.min.js"></script>
-    <script src="https://cdn.bootcss.com/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+    <!--<script src="js/angular.min.js"></script>-->
+
+    <script src="js/angular-datepicker.js"></script>
+    <script src="js/ui-bootstrap-tpls-1.3.2.js"></script>
+    <script src="js/animate/angular-animate.js"></script>
+    <script src="js/sanitize/angular-sanitize.js"></script>
     <script src="https://cdn.bootcss.com/less.js/3.0.1/less.min.js"></script>
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.js"></script>
+    <script src="js/bootbox.min.js"></script>
+    <script src="https://cdn.bootcss.com/angular-i18n/1.5.8/angular-locale_zh-cn.js"></script>
+
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css">
+
+    <script type="text/javascript" src="https://unpkg.com/wangeditor@3.1.1/release/wangEditor.min.js"></script>
+
+    <script src="https://cdn.bootcss.com/oclazyload/1.1.0/ocLazyLoad.min.js"></script>
+    <script src="js/angular-file-upload.min.js"></script>
+
     <script src="js/app.js"></script>
     <script src="js/router.js"></script>
+    <script src="js/filter.js"></script>
     <script src="js/articleList.js"></script>
+    <script src="js/navlist.js"></script>
+    <script src="js/upload.js"></script>
+    <script src="js/editor.js"></script>
+    <script src="js/Datepicker.js"></script>
 
 
     <title>Title</title>
 </head>
-<body ng-app="myApp">
-
+<body ng-controller="articleList">
 <div class="header">
     <div class="navheader"><a ui-sref="welcome">萝卜多后台管理系统</a></div>
     <div class="contheader">
@@ -35,10 +55,11 @@
     </div>
 </div>
 
+
 <nav>
     <div class="list">
         <ul>
-            <p>
+            <p class="navlist">
                 <img src="img/elc.png">
                 <a>信息管理</a>
                 <img src="img/err.png" style="float: right">
@@ -46,7 +67,8 @@
             <li><a ui-sref="company">公司列表</a></li>
             <li><a>职业列表</a></li>
         </ul>
-        <ul><p><img src="img/elc.png">
+        <ul><p class="navlist">
+            <img src="img/elc.png">
             Article管理
             <img src="img/err.png" style="float: right"></p>
             <li><a ui-sref="Article">Article列表</a></li>
@@ -54,18 +76,19 @@
             <li><a href="">文章管理</a></li>
         </ul>
         <ul>
-            <p><img src="img/elc.png">
+            <p class="navlist"><img src="img/elc.png">
                 用户管理
                 <img src="img/err.png" style="float: right"></p>
             <li><a href="">用户管理</a></li>
         </ul>
         <ul>
-            <p><img src="img/elc.png">
+            <p class="navlist"><img src="img/elc.png">
                 内容管理
                 <img src="img/err.png" style="float: right"></p>
             <li><a href="">视频管理</a></li>
         </ul>
     </div>
+
 </nav>
 
 <main>
@@ -74,5 +97,4 @@
 
 
 </body>
-
 </html>
