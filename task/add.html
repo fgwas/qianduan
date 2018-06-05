@@ -6,23 +6,23 @@
 
         <div class="news-body">
             <div class="news-box">
-                <div class="input-group">
-                    <p>标题名称</p><input type="text" class="addinput" name="usertittle" ng-model="usertittle" placeholder="{{usertittle}}" required>
+                <div class="input-group" >
+                    <p>标题名称</p><input type="text" class="addinput" name="usertittle" ng-model="usertittle" placeholder="{{article.tittle}}" required>
                 </div>
                 <div class="input-group">
                     <p>类&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp型</p>
-                    <select style="float: left;"   name="userselect" ng-model="userselect" required   value="{{userselect}}">
-                        <option value="">请选择</option>
-                        <option value="0">首页Banner</option>
-                        <option value="1">找职位Banner</option>
-                        <option value="2">找精英Banner</option>
-                        <option value="3">行业大图</option>
+                    <select style="float: left;"   name="userselect" ng-model="userselect"    >
+                        <option value={{article.type}}>请选择</option>
+                        <option value=0>首页Banner</option>
+                        <option value=1>找职位Banner</option>
+                        <option value=2>找精英Banner</option>
+                        <option value=3>行业大图</option>
                     </select>
                 </div>
                 <div class="input-group">
                     <p>说&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp明</p>
                     <div id="div1" class="addeditor" ng-model="content">
-                        <p>请输入内容{{content}}</p>
+                        <p>请输入内容{{article.content}}</p>
                     </div>
                 </div>
                 <div class="input-group">

@@ -1,6 +1,6 @@
 // 上传controller
 angular.module('myApp')
-    .controller('addimg', function ($scope, FileUploader, $http, $state,$stateParams) {
+    .controller('addimg', function ($scope, FileUploader, $http, $state, $stateParams) {
         var uploader = $scope.uploader = new FileUploader({
             method: 'POST',
             url: '/carrots-admin-ajax/a/u/img/task'
@@ -58,6 +58,7 @@ angular.module('myApp')
                 }
             }).then(function (res) {
                 $scope.data = res.data;
+
             })
         };
 
@@ -70,34 +71,31 @@ angular.module('myApp')
 
 
         //编辑
-     $scope.editor=function () {
-         var id=$stateParams.id;
-         console.log($stateParams.id);
-         $http({
-             method: 'get',
-             url: '/carrots-admin-ajax/a/article/' + id,
-             params:{
-                 img:$scope.imgshow,
-                 url:$scope.userurl,
-                 tittle:$scope.usertittle,
-                 status:$scope.userselect
-             }
-         }).then(function (res) {
-             console.log($scope.userselect);
-             console.log($scope.usertittle);
-             console.log($scope.userurl);
-             console.log($scope.imgshow);
+        $scope.editor = function () {
+            var id = $stateParams.id;
+            console.log($stateParams.id);
+            $http({
+                method: 'get',
+                url: '/carrots-admin-ajax/a/article/' + id
+            }).then(function (res) {
+                $scope.usertittle = res.data.data.article.title;
+                $scope.userselect=res.data.data.article.type;
+                $scope.userurl=res.data.data.article.url;
+                $scope.imgshow=res.data.data.article.img;
+                $scope.content=res.data.data.article.content;
+                console.log($scope.userselect);
+                console.log($scope.usertittle);
+                console.log($scope.userurl);
+                console.log($scope.imgshow);
 
 
+                $scope.data = res.data;
+                console.log($scope.data)
+            })
+        };
 
-             $scope.data = res.data;
-             console.log($scope.data)
-         })
-     };
-
-     //编辑进来显示
+        //编辑进来显示
         $scope.editor();
-
 
 
     });

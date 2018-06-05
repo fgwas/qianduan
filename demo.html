@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="loginMod">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css">
@@ -7,20 +7,39 @@
     <title>demo</title>
     <script src="https://cdn.bootcss.com/angular.js/1.6.6/angular.min.js"></script>
     <script src="https://cdn.bootcss.com/angular-ui-bootstrap/1.3.3/ui-bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/angular-messages/1.3.16/angular-messages.js"></script>
+    <style type="text/css">
+        input.ng-invalid {
+            border: 1px solid red;
+        }
+        input.ng-valid {
+            border: 1px solid green;
+        }
+    </style>
+
 
 
     <script type="text/javascript">
-        function validate(obj) {
-            if (confirm("提交表单?")) {
-                alert(obj.value);
-                return true;
-            } else {
-                alert(obj.value);
-                return false;
-            }
-        }
-    </script>
+        // function validate(obj) {
+        //     if (confirm("提交表单?")) {
+        //         alert(obj.value);
+        //         return true;
+        //     } else {
+        //         alert(obj.value);
+        //         return false;
+        //     }
+        // }
 
+
+
+        var loginMod = angular.module('loginMod', ['ngMessages']);
+        loginMod.controller("LoginController",function($scope,$log){
+            $scope.login = function()
+            {
+                $log.info("点击了按钮");
+            }
+        });
+    </script>
 
 
 </head>
@@ -37,10 +56,30 @@
     <input type="text" id="myText" max="5" required>
     <input type="submit" value="submit"/>
 
+
+</form>
+
+<form onsubmit="return validate(document.getElementById('ttt'));">
+    <input type="number" id="ttt" required>
+    <input type="submit" value="submit">
 </form>
 
 
 
+<form name="loginForm" novalidate ng-submit="login()"  ng-controller="LoginController">
+    <div style="width:280px;float:left">
+        <label>用户名：</label>
+        <input type="text" placeholder="请输入用户名" name="uname" ng-model="uname" ng-minlength=
+                3 ng-maxlength=10 required />
+    </div>
+    <div class="error" ng-messages="loginForm.uname.$error" style="color:red;">
+        <div ng-message="required">用户名不能为空</div>
+        <div ng-message="minlength">用户名长度至少为3</div>
+        <div ng-message="maxlength">用户名长度不能超过10</div>
+    </div>
+    <br/><br/>
+    <button type="submit">提交</button>
+</form>
 
 
 </body>
