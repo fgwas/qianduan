@@ -32,14 +32,15 @@ angular.module('myApp')
                 method: 'POST',
                 url: '/carrots-admin-ajax/a/u/article',
                 params: {
-                    type: $scope.user.userselect,
-                    title: $scope.user.usertittle,
-                    url: $scope.user.userurl,
+                    type: $scope.type,
+                    title: $scope.usertittle,
+                    url: $scope.userurl,
                     img: $scope.imgshow,
                     status: 2
                 }
             }).then(function (res) {
                 $scope.data = res.data;
+                $state.go("base.Article")
             })
         };
 
@@ -50,14 +51,15 @@ angular.module('myApp')
                 method: 'POST',
                 url: '/carrots-admin-ajax/a/u/article',
                 params: {
-                    type: $scope.user.userselect,
-                    title: $scope.user.usertittle,
-                    url: $scope.user.userurl,
+                    type: $scope.type,
+                    title: $scope.usertittle,
+                    url: $scope.userurl,
                     img: $scope.imgshow,
                     status: 1
                 }
             }).then(function (res) {
                 $scope.data = res.data;
+                $state.go("base.Article")
 
             })
         };
@@ -70,7 +72,7 @@ angular.module('myApp')
         editor.create();
 
 
-        //编辑
+        // 编辑
         $scope.editor = function () {
             var id = $stateParams.id;
             console.log($stateParams.id);
@@ -79,14 +81,18 @@ angular.module('myApp')
                 url: '/carrots-admin-ajax/a/article/' + id
             }).then(function (res) {
                 $scope.usertittle = res.data.data.article.title;
-                $scope.userselect=res.data.data.article.type;
-                $scope.userurl=res.data.data.article.url;
-                $scope.imgshow=res.data.data.article.img;
-                $scope.content=res.data.data.article.content;
-                console.log($scope.userselect);
+                $scope.usertype = res.data.data.article.type;
+                $scope.userurl = res.data.data.article.url;
+                $scope.imgshow = res.data.data.article.img;
+                $scope.content = res.data.data.article.content;
+                console.log($scope.usertype);
+                $scope.type = $scope.usertype.toString();
+                $("#editortxt").replaceWith($scope.content);
+                console.log($scope.type);
                 console.log($scope.usertittle);
                 console.log($scope.userurl);
                 console.log($scope.imgshow);
+                console.log($scope.content);
 
 
                 $scope.data = res.data;
@@ -94,7 +100,7 @@ angular.module('myApp')
             })
         };
 
-        //编辑进来显示
+        // 编辑进来显示
         $scope.editor();
 
 

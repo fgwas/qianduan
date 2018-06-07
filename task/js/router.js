@@ -2,6 +2,7 @@ app.config(['$stateProvider',
     '$urlRouterProvider',
     '$locationProvider',
     '$ocLazyLoadProvider',
+
     function ($stateProvider,
               $urlRouterProvider,
               $locationProvider,
@@ -36,16 +37,6 @@ app.config(['$stateProvider',
             .state('base.Article', {
                 url: '/Article?:page=&:size=&:type=&:status=&:startAt=&:endAt',
                 templateUrl: 'Article.html',
-                params:{
-                    type: null,
-                    status: null,
-                    createAt: null,
-                    updateAt: null,
-                    page: null,
-                    startAt:null,
-                    endAt:null,
-                    size:null
-                },
                 controller: function ($state) {
                     $state.go('base.Article')
                 },
@@ -61,7 +52,7 @@ app.config(['$stateProvider',
                 url: '/add?:page=&:size=&:type=&:status=&:startAt=&:endAt&:id=',
                 templateUrl: 'add.html',
                 controller: function ($state) {
-                    $state.go('base.edit')
+                    $state.go('base.add')
                 },
                 resolve: {
                     loadMyFile: _lazyLoad([

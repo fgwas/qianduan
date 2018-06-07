@@ -11,18 +11,18 @@
                 </div>
                 <div class="input-group">
                     <p>类&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp型</p>
-                    <select style="float: left;"   name="userselect" ng-model="userselect"    >
-                        <option value={{article.type}}>请选择</option>
-                        <option value=0>首页Banner</option>
-                        <option value=1>找职位Banner</option>
-                        <option value=2>找精英Banner</option>
-                        <option value=3>行业大图</option>
+                    <select style="float: left;"   name="userselect" ng-model="type"   required   >
+                        <option value="">请选择</option>
+                        <option value="0">首页Banner</option>
+                        <option value="1">找职位Banner</option>
+                        <option value="2">找精英Banner</option>
+                        <option value="3">行业大图</option>
                     </select>
                 </div>
                 <div class="input-group">
                     <p>说&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp明</p>
-                    <div id="div1" class="addeditor" ng-model="content">
-                        <p>请输入内容{{article.content}}</p>
+                    <div id="div1" class="addeditor" ng-model="content" >
+                        <p id="editortxt">请输入内容</p>
                     </div>
                 </div>
                 <div class="input-group">

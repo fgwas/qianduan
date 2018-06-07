@@ -74,10 +74,6 @@
 var app = angular.module('admin', []);
 app.controller('loginCtr1', function ($scope, $http) {
     $scope.loginInit = function () {
-        // $scope.$watch('username',function (newVal) {
-        //     var name=$scope.username;
-        //     console.log(name);
-        // });
         var name=$scope.username;
         var pwd=$scope.password;
         var promise = $http({

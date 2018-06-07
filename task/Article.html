@@ -1,4 +1,4 @@
-<div class="content"  ng-controller="Article">
+<div class="content" ng-controller="Article">
     <div class="choose">
         <div class="row">
             <div class="col-md-8" style="display: inline-block">
@@ -112,17 +112,18 @@
                     <td>{{article.author}}</td>
                     <td>{{article.status|statusfilter}}</td>
                     <td>
+                        <span><a ng-click="online()" href="">上线</a></span>
                         <span><a ng-click="under()" href="">下架</a></span>
-                        <span><a ng-click="edit()"   ui-sref="base.edit">编辑</a></span>
+                        <span><a ng-click="edit()" ui-sref="base.edit">编辑</a></span>
                         <span><a ng-click="cut()" href="">删除</a></span>
                     </td>
                 </tr>
                 </thead>
             </table>
 
-            <ul class="page"  >
-                <li class=" pagebtn    input-group  btn  " >
-                    每页显示<input type="text" class="btn" style="border-color: #ddd;width: 50px"  value="{{size}}">条
+            <ul class="page">
+                <li class=" pagebtn    input-group  btn  ">
+                    每页显示<input type="text" class="btn" style="border-color: #ddd;width: 50px" value="{{size}}">条
                 </li>
                 <uib-pagination
                         style="float:left"
@@ -139,9 +140,9 @@
                         ng-click="pageGo(currentPage)"
                         boundary-link-numbers="true">
                 </uib-pagination>
-                <li class=" pagebtn   input-group  btn "    >
-                    去第几 <input type="text"  class="btn"  ng-model="currentPage"   style="border-color:  #ddd;width: 50px">页
-                    <button  class="btn"  ng-click="sure()" ng-model="currentPage" value="currentPage">确定</button>
+                <li class=" pagebtn   input-group  btn ">
+                    去第几 <input type="text" class="btn" ng-model="currentPage" style="border-color:  #ddd;width: 50px">页
+                    <button class="btn" ng-click="sure()" ng-model="currentPage" value="currentPage">确定</button>
                 </li>
             </ul>
         </div>

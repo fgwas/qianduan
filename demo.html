@@ -12,24 +12,23 @@
         input.ng-invalid {
             border: 1px solid red;
         }
+
         input.ng-valid {
             border: 1px solid green;
         }
     </style>
 
 
-
     <script type="text/javascript">
-        // function validate(obj) {
-        //     if (confirm("提交表单?")) {
-        //         alert(obj.value);
-        //         return true;
-        //     } else {
-        //         alert(obj.value);
-        //         return false;
-        //     }
-        // }
-
+        function validate(obj) {
+            if (confirm("提交表单?")) {
+                alert(obj.value);
+                return true;
+            } else {
+                alert(obj.value);
+                return false;
+            }
+        }
 
 
         var loginMod = angular.module('loginMod', ['ngMessages']);
@@ -42,6 +41,23 @@
     </script>
 
 
+
+
+
+    <!--//长度限制-->
+    <!--<script>-->
+    <!--function test()-->
+    <!--{-->
+    <!--if(document.a.b.value.length>50)-->
+    <!--{-->
+    <!--alert("不能超过50个字符！");-->
+    <!--document.a.b.focus();-->
+    <!--return false;-->
+    <!--}-->
+    <!--}-->
+    <!--// </script>-->
+
+
 </head>
 <body>
 
@@ -51,26 +67,24 @@
 <!--//3. pattern   根据表单控件上设置的格式规则验证输入是否为有效格式pattern="[0-9]{16}"-->
 <!--//4. max   min  (range里面)属性  表示最大最小值    maxLength  最大输入长度-->
 <!--//5. step 为表单控件设置step特性，指定数值的增量。-->
-<form onsubmit="return validate(document.getElementById('myText'));"> <!—参数的这种写法注意下-->
+<!--<form onsubmit="return validate(document.getElementById('myText'));"> <!—参数的这种写法注意下&ndash;&gt;-->
 
-    <input type="text" id="myText" max="5" required>
-    <input type="submit" value="submit"/>
+    <!--<input type="pattern" id="myText" max="5"   pattern="[0-9]{16}" required>-->
+    <!--<input type="submit" value="submit"/>-->
 
+<!--</form>-->
 
-</form>
-
-<form onsubmit="return validate(document.getElementById('ttt'));">
-    <input type="number" id="ttt" required>
-    <input type="submit" value="submit">
-</form>
-
+<!--<form onsubmit="return validate(document.getElementById('ttt'));">-->
+    <!--<input type="number" id="ttt" required>-->
+    <!--<input type="submit" value="submit">-->
+<!--</form>-->
 
 
-<form name="loginForm" novalidate ng-submit="login()"  ng-controller="LoginController">
+<form name="loginForm" novalidate ng-submit="login()" ng-controller="LoginController">
     <div style="width:280px;float:left">
         <label>用户名：</label>
         <input type="text" placeholder="请输入用户名" name="uname" ng-model="uname" ng-minlength=
-                3 ng-maxlength=10 required />
+                3 ng-maxlength=10 required/>
     </div>
     <div class="error" ng-messages="loginForm.uname.$error" style="color:red;">
         <div ng-message="required">用户名不能为空</div>
@@ -80,6 +94,14 @@
     <br/><br/>
     <button type="submit">提交</button>
 </form>
+
+
+<!--<p>1. 长度限制</p>-->
+<!--<form name=a onsubmit="return test()">-->
+    <!--<textarea name="b" cols="40" rows="6" placeholder="不能超过50个字符！"></textarea>-->
+    <!--<br/>-->
+    <!--<input type="submit" name="Submit" value="check">-->
+<!--</form>-->
 
 
 </body>
