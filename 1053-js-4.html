@@ -33,9 +33,11 @@
 <div class="reveal">
     <div class="slides">
         <section>
-            <h2>【JS-task10】有哪些常见的验证表单方式（即时输入验证，失去焦点验证等），他们各自的优缺点是什么？</h2>
-            <h3>小课堂</h3>
-            <p>分享人：杨星</p>
+            <h2>【js-11】</h2>
+
+            <h3>如何开发小程序？</h3>
+
+            <p style="text-align: center;">分享人：杨星</p>
         </section>
         <section>
             <p>目录</p>
@@ -49,113 +51,255 @@
             <p>8.更多讨论</p>
         </section>
         <section>
-            <h3>一.背景介绍</h3>
+            <section>
+                <h3>1.背景介绍</h3>
+            </section>
+            <section>
+                <p style="text-align: left;text-indent: 2cm">
+                    微信小程序，简称小程序，英文名mini program，是一种不需要下载安装即可使用的应用，它实现了应用“触手可及”的梦想，用户扫一扫或搜一下即可打开应用。
+                    全面开放申请后，主体类型为企业、政府、媒体、其他组织或个人的开发者，均可申请注册小程序。小程序、订阅号、服务号、企业号是并行的体系。
+                    2017年1月9日，张小龙在2017微信公开课Pro上发布的小程序正式上线。
+                </p>
+            </section>
         </section>
         <section>
-
-            <p>表单验证是javascript中的高级选项之一。JavaScript 可用来在数据被送往服务器前对 HTML 表单中的这些输入数据进行验证,以减轻后台数据传送压力，提高数据传送的质量和效率。</p>
-
+            <section>
+                <h3>2.知识剖析</h3>
+            </section>
+            <section>
+                <h4 style="text-align:left">2.1 小程序是什么？它有着什么样的功能？</h4>
+                <p style="text-align:left">
+                    小程序是一种不需要下载安装即可使用的应用，它实现了应用“触手可及”的梦想，用户扫一扫或者搜一下即可打开应用。也体现了“用完即走”的理念，用户不用关心是否安装太多应用的问题。应用将无处不在，随时可用，但又无需安装卸载。对于开发者而言，小程序开发门槛相对较低，难度不及APP，能够满足简单的基础应用，hishop小程序开发认为适合生活服务类线下商铺以及非刚需低频应用的转换。小程序能够实现消息通知、线下扫码、公众号关联等七大功能。其中，通过公众号关联，用户可以实现公众号与小程序之间相互跳转。
+                </p>
+            </section>
+            <section style="text-align:left">
+                <h4 style="text-align:left">2.2  小程序的开发前准备：</h4>
+                <p style="text-align:left">
+                    ①在微信公众平台官网首页（mp.weixin.qq.com）点击右上角的“立即注册”按钮；
+                </p>
+                <p>
+                    ②填写邮箱和密码:请填写未注册过公众平台、开放平台、企业号、未绑定个人号的邮箱。
+                </p>
+                <p>
+                    ③绑定微信进行登录：微信需要绑定银行卡。
+                </p>
+                <p>
+                    ④绑定开发者:进入“设置-开发设置”，获取AppID信息,添加项目必须要有AppId;个人主体小程序最多可绑定5个开发者，10个体验者;
+                </p>
+                <p>⑤下载小程序开发工具开发</p>
+            </section>
         </section>
-
         <section>
-            <h3>
-                二.知识剖析
-            </h3>
+            <h3>3.常见问题</h3>
         </section>
         <section>
-            <h3>表单验证的作用</h3>
+            <h4>3.1  基本目录结构</h4>
+            <p style="text-align: left">一个小程序主体部分由三个文件组成，必须放在项目的根目录，如下：</p>
+            <table>
+                <thead>
+                <tr>
+                    <th>文件</th>
+                    <th>必填</th>
+                    <th>作用</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><a href="app-service/app.html">app.js</a></td>
+                    <td>是</td>
+                    <td>小程序逻辑</td>
+                </tr>
+                <tr>
+                    <td><a href="config.html">app.json</a></td>
+                    <td>是</td>
+                    <td>小程序公共设置</td>
+                </tr>
+                <tr>
+                    <td><a href="view/wxss.html">app.wxss</a></td>
+                    <td>否</td>
+                    <td>小程序公共样式表</td>
+                </tr>
+                </tbody>
+            </table>
         </section>
         <section>
-            用户是否已填写表单中的必填项目？<br>
-            用户输入的邮件地址是否合法？<br>
-            用户是否已输入合法的日期？<br>
-            用户是否在数据域(numeric field) 中输入了文本？
+            <p>一个小程序页面由四个文件组成，分别是：</p>
+            <table>
+                <thead>
+                <tr>
+                    <th>文件类型</th>
+                    <th>必填</th>
+                    <th>作用</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><a href="app-service/page.html">js</a></td>
+                    <td>是</td>
+                    <td>页面逻辑</td>
+                </tr>
+                <tr>
+                    <td><a href="view/wxml/">wxml</a></td>
+                    <td>是</td>
+                    <td>页面结构</td>
+                </tr>
+                <tr>
+                    <td><a href="view/wxss.html">wxss</a></td>
+                    <td>否</td>
+                    <td>页面样式表</td>
+                </tr>
+                <tr>
+                    <td><a href="config.html#pagejson">json</a></td>
+                    <td>否</td>
+                    <td>页面配置</td>
+                </tr>
+                </tbody>
+            </table>
         </section>
         <section>
-            <h3>如何使用表单验证</h3>
+            <h4>3.2 主体部分的配置</h4>
+            <p style="text-align: left">app.json 配置项解释</p>
+            <table>
+                <thead>
+                <tr>
+                    <th>属性</th>
+                    <th>类型</th>
+                    <th>必填</th>
+                    <th>描述</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><a href="#pages">pages</a></td>
+                    <td>String Array</td>
+                    <td>是</td>
+                    <td>设置页面路径</td>
+                </tr>
+                <tr>
+                    <td><a href="#window">window</a></td>
+                    <td>Object</td>
+                    <td>否</td>
+                    <td>设置默认页面的窗口表现</td>
+                </tr>
+                <tr>
+                    <td><a href="#tabbar">tabBar</a></td>
+                    <td>Object</td>
+                    <td>否</td>
+                    <td>设置底部 tab 的表现</td>
+                </tr>
+                <tr>
+                    <td><a href="#networktimeout">networkTimeout</a></td>
+                    <td>Object</td>
+                    <td>否</td>
+                    <td>设置网络超时时间</td>
+                </tr>
+                <tr>
+                    <td><a href="#debug">debug</a></td>
+                    <td>Boolean</td>
+                    <td>否</td>
+                    <td>设置是否开启 debug 模式</td>
+                </tr>
+                </tbody>
+            </table>
         </section>
         <section>
-            <h3>利用手工js代码</h3>
-            <p>if/switch，或者正则表达式，+DOM操作</p>
-            <p>缺点：代码量大，耗时多<br>
-                优点：相比于第三方库，可以减少加载的js文件大小，样式灵活<br>
-                如果网站的表但很少，或者格式简单，或者对性能的要求高，可以手工写
+            <h4>3.3 子页面app.json</h4>
+            <p style="text-align: left">
+                每一个小程序页面也可以使用.json文件来对本页面的窗口表现进行配置。 页面的配置比app.json全局配置简单得多，只是设置 app.json 中的 window 配置项的内容，页面中配置项会覆盖 app.json 的 window 中相同的配置项。
+                页面的.json只能设置 window 相关的配置项，以决定本页面的窗口表现，所以无需写 window 这个键
             </p>
         </section>
         <section>
-            <h3>利用js第三方插件</h3>
-            <p>优点：全站适用，手工代码量少</p>
-            <p>缺点：有可能加重服务器负担，样式相对固定</p>
+            <section>
+                <h3>4.解决方案</h3>
+            </section>
+            <section style="text-align: left">
+                <h4 style="text-align: center">4.1 html标签</h4>
+                <p>视图容器：view,scroll-view,swiper,movable-view</p>
+                <p>基本内容：icon,text,progress</p>
+                <p>表单组件：button，checkbox，form，input，label，picker，picker-view，radio，slider，switch，textarea</p>
+                <p>导航：navigator</p>
+                <p>媒体组件：audio，image，video</p>
+                <p>地图：map</p>
+                <p>画布：canvas</p>
+                <p>客服绘画：contact-button</p>
+            </section>
+            <section style="text-align: left">
+                <h4 style="text-align: center">4.2 WXSS样式</h4>
+                <p>基本和我们平常的一样，有两个拓展特性：尺寸单位，样式导入</p>
+                <p>尺寸单位：rpx（responsive pixel）: 可以根据屏幕宽度进行自适应。规定屏幕宽为750rpx。如在 iPhone6 上，屏幕宽度为375px，共有750个物理像素，则750rpx = 375px = 750物理像素，1rpx = 0.5px = 1物理像素。</p>
 
+            </section>
+            <section style="text-align: left">
+                <p>样式导入：使用@import语句可以导入外联样式表，@import后跟需要导入的外联样式表的相对路径，用;表示语句结束。</p>
+                <p>选择器支持：class,id,element,:before,:after</p>
+                <p>全局样式与局部样式:定义在 app.wxss 中的样式为全局样式，作用于每一个页面。在 page 的 wxss 文件中定义的样式为局部样式，只作用在对应的页面，并会覆盖 app.wxss 中相同的选择器。</p>
+            </section>
+            <section>
+                <h4>4.3 事件</h4>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>类型</th>
+                        <th>触发条件</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>touchstart</td>
+                        <td>手指触摸动作开始</td>
+                    </tr>
+                    <tr>
+                        <td>touchmove</td>
+                        <td>手指触摸后移动</td>
+                    </tr>
+                    <tr>
+                        <td>touchcancel</td>
+                        <td>手指触摸动作被打断，如来电提醒，弹窗</td>
+                    </tr>
+                    <tr>
+                        <td>touchend</td>
+                        <td>手指触摸动作结束</td>
+                    </tr>
+                    <tr>
+                        <td>tap</td>
+                        <td>手指触摸后马上离开</td>
+                    </tr>
+                    <tr>
+                        <td>longtap</td>
+                        <td>手指触摸后，超过350ms再离开</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
         </section>
         <section>
-            <h3>
-                三.常见问题
-            </h3>
+            <h3>5.编码实战</h3>
         </section>
-
-        <section>
-            <p>表单验证有那几种方式？</p>
-
-        </section>
-
-        <section>
-            <h3>
-                四.解决方案
-            </h3>
+        <section style="text-align: left">
+            <h3 style="text-align: center">6.扩展思考</h3>
+            <p>小程序能否使用windows对象的方法？</p>
+            <p>小程序中没有原生js中的window对象，因此现暂时无法使用第三方框架以及使用window对象中的方法</p>
         </section>
         <section>
-
-            <ul>
-                <li>输入时进行实时验证(.keydown)
-
-                <li>退出焦点时验证(.onblur)
-
-                <li>提交表单时进行本地验证
-
-            </ul>
+            <h3>7.参考文献</h3>
         </section>
         <section>
-            <h3>五.编码实战</h3>
+            <p>参考一：<a href=" https://mp.weixin.qq.com/debug/wxadoc/dev/">简明教程</a></p>
+        </section>
+        <section style="text-align: left">
+            <h3 style="text-align: center">8.更多讨论</h3>
+            <!--<p>1 除了指定的路由页可以进行页面跳转，还有其他页面跳转方法么？</p>-->
+            <!--<p>wx.navigateTo(OBJECT)方法:保留当前页面，跳转到应用内的某个页面，使用wx.navigateBack可以返回到原页面。</p>-->
+            <!--<p>2 从电脑上可否访问到相应小程序？</p>-->
+            <!--<p>小程序相当于一个app工具，并不是一个网址，所以无法访问。</p>-->
         </section>
         <section>
-            见demo
+            <h4>感谢观看</h4>
+            <p>
+                <small>BY :王姣妍|杨星</small>
+            </p>
         </section>
-        <section>
-            <h3>6.拓展思考</h3>
-        </section>
-
-        <section>
-            <p>这些验证方法的优缺点是什么？</p>
-        </section>
-        <section>
-            <p>第一种输入时进行实时验证，获取焦点时显示提示，随着输入的过程，符合要求后给予用户通过验证的反馈，缺点是会影响一些性能，这个缺点也是很小的，一般情况下注册页都是单独出现的，所以只是执行几个keydown这种小函数应该也谈不上影响性能。
-                第二种失去焦点验证，会导致用户输入完账号后发现上边不符合标准，还要点回去进行修改，也是会影响一些用户体验。第三种提交时才验证，这种就有些故意为了降低服务器而设置的表单验证了，考虑机器的成分大，对用户体验不够重视，是不被推荐的验证方式。</p>
-        </section>
-
-        <section>
-            <h3>7.参考资料</h3>
-        </section>
-
-        <section>
-
-            <p><a href="http://validform.rjboy.cn/demo.html" target="_blank">表单展示</a></p>
-            <p><a href="https://reg.jd.com/reg/person?ReturnUrl=http%3A%2F%2Fwww.jd.com" target="_blank" ></a></p>
-            <p><a href="https://www.amazon.cn/" target="_blank" >亚马逊注册</a></p>
-            <!-- <p><a href="" target="_blank" ></a></p> -->
-        </section>
-        <section>
-            <h3>8.更多讨论</h3>
-        </section>
-        <section>
-            <p>还有那些判断方式</p>
-        </section>
-        <section>
-            <h4>鸣谢： 冯馨雨</h4>
-            <p>感谢大家观看</p>
-            <p><small>BY : 杨星</small></p>
-        </section>
-
     </div>
 </div>
 
