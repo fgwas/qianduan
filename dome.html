@@ -4,162 +4,19 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <style type="text/css">
-        html {
-            font-size: 14px;
-        }
 
-        .table {
-            border: 1px grey solid;
-        }
-
-        .table tr {
-            height: 2rem;
-        }
-
-        .table td {
-            width: 15rem;
-        }
-    </style>
-
-    <script>
-        // 日期选择
-        function layDate() {
-
-        }
-
-        // 验证雇员编号,4位纯数字编号
-        function validateEmpnb() {
-            return validateRegexp("empnb", /^\d{4}$/);
-        }
-        // 验证雇员姓名,不为空
-        function validateEname() {
-            return validateNull("ename");
-        }
-        // 验证雇员职位,不为空
-        function validateEpost() {
-            return validateNull("epost");
-        }
-        // 验证雇员日期
-        function validateEdate() {
-            return validateRegexp("edate", /^\d{4}-\d{2}-\d{2}$/)
-        }
-        // 验证基本工资
-        function validateEsalary() {
-            return validateRegexp("esalary", /^\d+(\.\d{1,2})?$/)
-        }
-        // 验证佣金
-        function validateEbrok() {
-            return validateRegexp("ebrok", /^\d+(\.\d{1,2})?$/)
-        }
-
-        // 提交时全部重新验证
-        function validate() {
-            return validateEmpnb() && validateEname() && validateEpost() && validateEdate() && validateEsalary() && validateEbrok();
-        }
-        // 正则表达式验证
-        function validateRegexp(elemName, regexp) {
-            var elem = document.getElementById(elemName);
-            var msg = document.getElementById(elemName + 'Msg')
-            console.log(regexp);
-            console.log(elem.value);
-            if (regexp.test(elem.value)) {
-                msg.innerHTML = 'ok';
-                msg.style.color = 'green';
-                return true;
-            } else {
-                msg.innerHTML = '您的输入不符合规则';
-                msg.style.color = 'red';
-                return false;
-            }
-        }
-        // 不为空验证
-        function validateNull(elemName) {
-            var elem = document.getElementById(elemName);
-            var msg = document.getElementById(elemName + 'Msg');
-            console.log(elem.value);
-            console.log(msg);
-            if (elem.value == '' || elem.value == ' ') {
-                msg.innerHTML = '您的输入不能为空';
-                msg.style.color = 'red';
-                return false;
-            } else {
-                msg.innerHTML = 'ok';
-                msg.style.color = 'green';
-                return true;
-            }
-        }
-    </script>
 
 
 </head>
 
 <body>
-<form id="form" action="" method="post" onsubmit="return vilidate()">
-    <table class="table">
-        <tr>
-            <td>雇员编号</td>
-            <td>
-                <input type="text" id="empnb" name="empnb" onblur="validateEmpnb()">
-            </td>
-            <td>
-                <span id="empnbMsg"></span>
-            </td>
-        </tr>
-        <tr>
-            <td>雇员姓名</td>
-            <td>
-                <input type="text" id="ename" name="ename" onblur="validateEname()">
-            </td>
-            <td>
-                <span id="enameMsg"></span>
-            </td>
-        </tr>
-        <tr>
-            <td>雇员职位</td>
-            <td>
-                <input type="text" name="epost" id="epost" onblur="validateEpost()">
-            </td>
-            <td>
-                <span id="epostMsg"></span>
-            </td>
-        </tr>
-        <tr>
-            <td>雇员日期</td>
-            <td>
-                <input type="text" name="" id="edate" name="edate" onblur="validateEdate()">
-            </td>
-            <td>
-                <span id="edateMsg"></span>
-            </td>
-        </tr>
-        <tr>
-            <td>基本工资</td>
-            <td>
-                <input type="text" name="esalary" id="esalary" onblur="validateEsalary()">
-            </td>
-            <td>
-                <span id="esalaryMsg"></span>
-            </td>
-        </tr>
-        <tr>
-            <td>佣金</td>
-            <td>
-                <input type="text" name="ebrok" id="ebrok" onblur="validateEbrok()">
-            </td>
-            <td>
-                <span id="ebrokMsg"></span>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="3">
-                <input type="submit" autofocus="autofocus">
-                <input type="reset">
-            </td>
-        </tr>
-    </table>
-</form>
+
+<input id="fileId1" type="file" accept="image/png,image/gif" name="file" />
+npm install vue-cli -g
+
+
+<input id="fileId2" type="file" multiple="multiple" name="file" />
 </body>
-<script type="text/javascript" src="./FormValidation.js"></script>
+
 
 </html>

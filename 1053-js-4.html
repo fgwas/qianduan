@@ -33,275 +33,218 @@
 <div class="reveal">
     <div class="slides">
         <section>
-            <h2>【js-11】</h2>
+            <h2>【JS-task11】</h2>
 
-            <h3>如何开发小程序？</h3>
+            <h3>小程序的授权机制</h3>
 
-            <p style="text-align: center;">分享人：杨星</p>
+            <h3>小课堂</h3>
+
+            分享人：杨星
         </section>
         <section>
-            <p>目录</p>
-            <p>1.背景介绍</p>
-            <p>2.知识剖析</p>
-            <p>3.常见问题</p>
-            <p>4.解决方案</p>
-            <p>5.编码实战</p>
-            <p>6.扩展思考</p>
-            <p>7.参考文献</p>
-            <p>8.更多讨论</p>
+            <p style="text-align: center;">目录</p>
+            <p style="text-align: center;">1.背景介绍</p>
+            <p style="text-align: center;">2.知识剖析</p>
+            <p style="text-align: center;">3.常见问题</p>
+            <p style="text-align: center;">4.解决方案</p>
+            <p style="text-align: center;">5.编码实战</p>
+            <p style="text-align: center;">6.扩展思考</p>
+            <p style="text-align: center;">7.参考文献</p>
+            <p style="text-align: center;">8.更多讨论</p>
         </section>
+        <!--1.背景介绍-->
         <section>
             <section>
                 <h3>1.背景介绍</h3>
             </section>
             <section>
-                <p style="text-align: left;text-indent: 2cm">
-                    微信小程序，简称小程序，英文名mini program，是一种不需要下载安装即可使用的应用，它实现了应用“触手可及”的梦想，用户扫一扫或搜一下即可打开应用。
-                    全面开放申请后，主体类型为企业、政府、媒体、其他组织或个人的开发者，均可申请注册小程序。小程序、订阅号、服务号、企业号是并行的体系。
-                    2017年1月9日，张小龙在2017微信公开课Pro上发布的小程序正式上线。
+                <p>说到这，我们需要先了解一下微信小程序是啥？简单说，它就是一个可以实现之前只能是原生态APP可以实现的效果和功能。比如说，一些酷炫的页面与转场，一些可以直接和手机硬件交互的功能，录音啊，拍视频啊，调用手机的重力感应啊，GPS啊等等。
+                </p>
+                <p>
+                    从目前来讲，APP比手机网页好，手机网页比电脑网页好。手机网页在电脑上看起来还行，但需要我们输入网址域名，这在电脑上还好操作，在手机上，简单是让人抓狂。
+                </p>
+                <p>
+                    虽然APP在体验上非常突出，但需要安装，需要消耗流量，占用手机有限的桌面空间。这种麻烦程序，甚至超出了APP的优势本身。
+                </p>
+
+            </section>
+            <section>
+                <p>
+                    从这里就能看出微信小程序的好处了</br>
+                    1，不用安装，即开即用，用完就走。省流量，省安装时间，不占用桌面；</br>
+                    2，体验上虽然没法完全媲美原生APP，但综合考虑还是更优；</br>
+                    3，对于小程序拥有者来说，开发成本更低，他们可以更多财力，人力，精力放在如何运营好产品，做好内容本身；</br>
+                    4，对于用户来说，相较于各种APP，微信小程序UI和操作流程会更统一。这也会降低用户的使用难度；</br>
+                    5，对于小程序拥有者来说，相较于原生APP，推广更容易更简单，更省成本。</br>
+
                 </p>
             </section>
         </section>
+        <!--2.知识剖析-->
         <section>
-            <section>
-                <h3>2.知识剖析</h3>
-            </section>
-            <section>
-                <h4 style="text-align:left">2.1 小程序是什么？它有着什么样的功能？</h4>
-                <p style="text-align:left">
-                    小程序是一种不需要下载安装即可使用的应用，它实现了应用“触手可及”的梦想，用户扫一扫或者搜一下即可打开应用。也体现了“用完即走”的理念，用户不用关心是否安装太多应用的问题。应用将无处不在，随时可用，但又无需安装卸载。对于开发者而言，小程序开发门槛相对较低，难度不及APP，能够满足简单的基础应用，hishop小程序开发认为适合生活服务类线下商铺以及非刚需低频应用的转换。小程序能够实现消息通知、线下扫码、公众号关联等七大功能。其中，通过公众号关联，用户可以实现公众号与小程序之间相互跳转。
-                </p>
-            </section>
-            <section style="text-align:left">
-                <h4 style="text-align:left">2.2  小程序的开发前准备：</h4>
-                <p style="text-align:left">
-                    ①在微信公众平台官网首页（mp.weixin.qq.com）点击右上角的“立即注册”按钮；
-                </p>
-                <p>
-                    ②填写邮箱和密码:请填写未注册过公众平台、开放平台、企业号、未绑定个人号的邮箱。
-                </p>
-                <p>
-                    ③绑定微信进行登录：微信需要绑定银行卡。
-                </p>
-                <p>
-                    ④绑定开发者:进入“设置-开发设置”，获取AppID信息,添加项目必须要有AppId;个人主体小程序最多可绑定5个开发者，10个体验者;
-                </p>
-                <p>⑤下载小程序开发工具开发</p>
-            </section>
+            <h3>2.知识剖析</h3>
         </section>
+        <!--2.1 JS有哪些数据类型？-->
+        <section>
+            <section><B>2.1 授权</B></section>
+            <section>
+
+                <p>部分接口需要获得用户授权同意后才能调用。此类接口调用时：</p>
+                <p>
+                    如果用户未接受或拒绝过此权限，会弹窗询问用户，用户点击同意后方可调用接口；</br>
+                    如果用户已授权，可以直接调用接口；</br>
+                    如果用户已拒绝授权，则短期内不会出现弹窗，而是直接进入接口 fail 回调。请开发者兼容用户拒绝授权的场景。
+                </p>
+            </section>
+            <section>
+                <div style="text-indent:2em">
+                    <p style="text-align: left">
+                        获取授权信息
+                    </p>
+                    <p style="text-align: left">
+                        开发者可以使用 wx.getSetting 获取用户当前的授权状态。</p>
+                    <p style="text-align: left">
+                        wx.getSetting(OBJECT)获取用户的当前设置。</br>
+
+                        注：返回值中只会出现小程序已经向用户请求过的权限。</p>
+                    <p>
+                        Object 参数说明：<br/>
+                        success Function    不是必要   接口调用成功的回调函数，返回内容详见返回参数说明。<br>
+                        fail    Function    否   接口调用失败的回调函数<br/>
+                        complete    Function    否   接口调用结束的回调函数（调用成功、失败都会执行）
+
+                    </p>
+                </div>
+            </section>
+            <section>
+                <div style="text-indent:2em">
+                    <p style="text-align: left">
+                        success返回参数说明：
+                    <p style="text-align: left">
+                        authSetting  Object  用户授权结果，其中 key 为 scope 值，value 为 Bool 值，表示用户是否允许授权，详见 scope 列表</p>
+                    <pre>
+                        <code>
+wx.getSetting({
+  success: (res) => {
+    /*
+     * res.authSetting = {
+     *   "scope.userInfo": true,
+     *   "scope.userLocation": true
+     * }
+     */
+  }
+})
+                        </code>
+                    </pre>
+                </div>
+            </section>
+            <section><B>2.2 scope表</B></section>
+            <section>
+                <div style="text-indent:2em">
+                    这里介绍8种：用户信息、地理位置、通讯地址、发票抬头、微信运动步数、录音功能、保存到相册、摄像头
+                </div>
+            </section>
+            <section>
+                <p style="text-align: center;">用户信息</p>
+                <p>scope: scope.userInfo <br/> 对应接口 wx.getUserInfo</p>
+            </section>
+            <section>
+                <p style="text-align: center;">地理位置</p>
+                <p>scope:scope.userLocation <br/> 对应接口wx.getLocation, wx.chooseLocation  </p>
+            </section>
+            <section>
+                <p>通讯地址</p>
+                <p>scope: scope.address <br/> 对应接口wx.chooseAddress</p>
+            </section>
+            <section>
+                <p>发票抬头</p>
+                <p>scope:scope.invoiceTitle <br/> 对应接口wx.chooseInvoiceTitle</p>
+            </section>
+            <section>
+                <p>微信运动步数</p>
+                <p>scope:scope.werun <br/> 对应接口wx.getWeRunData</p>
+            </section>
+            <section>
+                <p>录音功能</p>
+                <p>scope:scope.record<br/> 对应接口  wx.startRecord</p>
+                <p>保存到相册</p>
+                <p>scope.writePhotosAlbum<br>wx.saveImageToPhotosAlbum, wx.saveVideoToPhotosAlbum</p>
+                <p>  摄像头</p>
+                <p>scope.camera</p>
+            </section>
+
+        </section>
+        <!--3.常见问题-->
         <section>
             <h3>3.常见问题</h3>
         </section>
         <section>
-            <h4>3.1  基本目录结构</h4>
-            <p style="text-align: left">一个小程序主体部分由三个文件组成，必须放在项目的根目录，如下：</p>
-            <table>
-                <thead>
-                <tr>
-                    <th>文件</th>
-                    <th>必填</th>
-                    <th>作用</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td><a href="app-service/app.html">app.js</a></td>
-                    <td>是</td>
-                    <td>小程序逻辑</td>
-                </tr>
-                <tr>
-                    <td><a href="config.html">app.json</a></td>
-                    <td>是</td>
-                    <td>小程序公共设置</td>
-                </tr>
-                <tr>
-                    <td><a href="view/wxss.html">app.wxss</a></td>
-                    <td>否</td>
-                    <td>小程序公共样式表</td>
-                </tr>
-                </tbody>
-            </table>
+            <B>如果用户拒绝授权该怎么办？</B>
+        </section>
+        <!--4.解决方案-->
+        <section>
+            <h3>4.解决方案</h3>
         </section>
         <section>
-            <p>一个小程序页面由四个文件组成，分别是：</p>
-            <table>
-                <thead>
-                <tr>
-                    <th>文件类型</th>
-                    <th>必填</th>
-                    <th>作用</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td><a href="app-service/page.html">js</a></td>
-                    <td>是</td>
-                    <td>页面逻辑</td>
-                </tr>
-                <tr>
-                    <td><a href="view/wxml/">wxml</a></td>
-                    <td>是</td>
-                    <td>页面结构</td>
-                </tr>
-                <tr>
-                    <td><a href="view/wxss.html">wxss</a></td>
-                    <td>否</td>
-                    <td>页面样式表</td>
-                </tr>
-                <tr>
-                    <td><a href="config.html#pagejson">json</a></td>
-                    <td>否</td>
-                    <td>页面配置</td>
-                </tr>
-                </tbody>
-            </table>
+            <pre>
+                <code>
+fail:function(){
+        wx.showModal({
+          title: '警告',
+          content: '你点击了拒绝授权将无法显示你的位置信息，点击确定重新获取授权。',
+          success: function(res){
+            if(res.confirm) {
+              wx.openSetting({
+                success:(res) => {
+                  if (res.authSetting["scope.userLocation"]){
+                    wx.getLocation({
+                      success: function(res) {
+                        that.setData({
+                          position: res
+                        })
+                      },
+                    })
+                  }
+                }
+              })
+            }
+          }
+        })
+      }
+                </code>
+            </pre>
+            <p>当用户拒绝授权时，弹出模态框来引导用户进入设置授权页面</p>
         </section>
-        <section>
-            <h4>3.2 主体部分的配置</h4>
-            <p style="text-align: left">app.json 配置项解释</p>
-            <table>
-                <thead>
-                <tr>
-                    <th>属性</th>
-                    <th>类型</th>
-                    <th>必填</th>
-                    <th>描述</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td><a href="#pages">pages</a></td>
-                    <td>String Array</td>
-                    <td>是</td>
-                    <td>设置页面路径</td>
-                </tr>
-                <tr>
-                    <td><a href="#window">window</a></td>
-                    <td>Object</td>
-                    <td>否</td>
-                    <td>设置默认页面的窗口表现</td>
-                </tr>
-                <tr>
-                    <td><a href="#tabbar">tabBar</a></td>
-                    <td>Object</td>
-                    <td>否</td>
-                    <td>设置底部 tab 的表现</td>
-                </tr>
-                <tr>
-                    <td><a href="#networktimeout">networkTimeout</a></td>
-                    <td>Object</td>
-                    <td>否</td>
-                    <td>设置网络超时时间</td>
-                </tr>
-                <tr>
-                    <td><a href="#debug">debug</a></td>
-                    <td>Boolean</td>
-                    <td>否</td>
-                    <td>设置是否开启 debug 模式</td>
-                </tr>
-                </tbody>
-            </table>
-        </section>
-        <section>
-            <h4>3.3 子页面app.json</h4>
-            <p style="text-align: left">
-                每一个小程序页面也可以使用.json文件来对本页面的窗口表现进行配置。 页面的配置比app.json全局配置简单得多，只是设置 app.json 中的 window 配置项的内容，页面中配置项会覆盖 app.json 的 window 中相同的配置项。
-                页面的.json只能设置 window 相关的配置项，以决定本页面的窗口表现，所以无需写 window 这个键
-            </p>
-        </section>
-        <section>
-            <section>
-                <h3>4.解决方案</h3>
-            </section>
-            <section style="text-align: left">
-                <h4 style="text-align: center">4.1 html标签</h4>
-                <p>视图容器：view,scroll-view,swiper,movable-view</p>
-                <p>基本内容：icon,text,progress</p>
-                <p>表单组件：button，checkbox，form，input，label，picker，picker-view，radio，slider，switch，textarea</p>
-                <p>导航：navigator</p>
-                <p>媒体组件：audio，image，video</p>
-                <p>地图：map</p>
-                <p>画布：canvas</p>
-                <p>客服绘画：contact-button</p>
-            </section>
-            <section style="text-align: left">
-                <h4 style="text-align: center">4.2 WXSS样式</h4>
-                <p>基本和我们平常的一样，有两个拓展特性：尺寸单位，样式导入</p>
-                <p>尺寸单位：rpx（responsive pixel）: 可以根据屏幕宽度进行自适应。规定屏幕宽为750rpx。如在 iPhone6 上，屏幕宽度为375px，共有750个物理像素，则750rpx = 375px = 750物理像素，1rpx = 0.5px = 1物理像素。</p>
-
-            </section>
-            <section style="text-align: left">
-                <p>样式导入：使用@import语句可以导入外联样式表，@import后跟需要导入的外联样式表的相对路径，用;表示语句结束。</p>
-                <p>选择器支持：class,id,element,:before,:after</p>
-                <p>全局样式与局部样式:定义在 app.wxss 中的样式为全局样式，作用于每一个页面。在 page 的 wxss 文件中定义的样式为局部样式，只作用在对应的页面，并会覆盖 app.wxss 中相同的选择器。</p>
-            </section>
-            <section>
-                <h4>4.3 事件</h4>
-                <table>
-                    <thead>
-                    <tr>
-                        <th>类型</th>
-                        <th>触发条件</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>touchstart</td>
-                        <td>手指触摸动作开始</td>
-                    </tr>
-                    <tr>
-                        <td>touchmove</td>
-                        <td>手指触摸后移动</td>
-                    </tr>
-                    <tr>
-                        <td>touchcancel</td>
-                        <td>手指触摸动作被打断，如来电提醒，弹窗</td>
-                    </tr>
-                    <tr>
-                        <td>touchend</td>
-                        <td>手指触摸动作结束</td>
-                    </tr>
-                    <tr>
-                        <td>tap</td>
-                        <td>手指触摸后马上离开</td>
-                    </tr>
-                    <tr>
-                        <td>longtap</td>
-                        <td>手指触摸后，超过350ms再离开</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </section>
-        </section>
+        <!--5.编码实战-->
         <section>
             <h3>5.编码实战</h3>
         </section>
-        <section style="text-align: left">
-            <h3 style="text-align: center">6.扩展思考</h3>
-            <p>小程序能否使用windows对象的方法？</p>
-            <p>小程序中没有原生js中的window对象，因此现暂时无法使用第三方框架以及使用window对象中的方法</p>
+        <!--6.拓展思考-->
+        <section>
+            <h3>6.拓展思考</h3>
+        </section>
+        <section>
+            <p>可以在什么地方安置获取授权的按钮？</p>
+            <p>比如在直播小程序中，可以设置当用户发表评论时，获取用户的头像信息和名称，然后调用发表。</p>
         </section>
         <section>
             <h3>7.参考文献</h3>
+            <p>微信公共平台——授权：https://developers.weixin.qq.com/miniprogram/dev/api/authorize-index.html</p>
+            <P>用户拒绝授权CSDN：https://blog.csdn.net/qq_28189091/article/details/75417073</P>
         </section>
         <section>
-            <p>参考一：<a href=" https://mp.weixin.qq.com/debug/wxadoc/dev/">简明教程</a></p>
-        </section>
-        <section style="text-align: left">
-            <h3 style="text-align: center">8.更多讨论</h3>
-            <!--<p>1 除了指定的路由页可以进行页面跳转，还有其他页面跳转方法么？</p>-->
-            <!--<p>wx.navigateTo(OBJECT)方法:保留当前页面，跳转到应用内的某个页面，使用wx.navigateBack可以返回到原页面。</p>-->
-            <!--<p>2 从电脑上可否访问到相应小程序？</p>-->
-            <!--<p>小程序相当于一个app工具，并不是一个网址，所以无法访问。</p>-->
+            <h3>8.更多讨论</h3>
         </section>
         <section>
-            <h4>感谢观看</h4>
-            <p>
-                <small>BY :王姣妍|杨星</small>
-            </p>
+            <p style="text-align: center">感谢大家观看
+            <p style="text-align: center">
+                <small>BY : 黄诚翰|杨星</small>
         </section>
+        <script src="./lib/reveal/js/head.min.js"></script>
+        <script src="./lib/reveal/reveal.js"></script>
     </div>
 </div>
+
 
 <script>
     angular.module("myApp", [])
